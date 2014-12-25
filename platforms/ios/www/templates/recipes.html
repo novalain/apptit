@@ -1,0 +1,125 @@
+<!-- ion view <-> a page -->
+<ion-view title="Apptit">
+<!--
+  	<ion-nav-bar class="bar-balanced">
+    	<ion-nav-back-button class="button-icon icon ion-ios7-arrow-back"></ion-nav-back-button>
+
+      <button class="button button-icon icon ion-gear-a"></button>
+
+      <!--fixat
+      <ion-nav-buttons side="right">
+         <button ng-click="openModal()" class="button button-icon icon ion-ios7-information-outline"></button>
+      </button>
+
+  	</ion-nav-bar>
+
+    <ion-header-bar class="bar-subheader bar-dark">
+
+        <div class="item item-input textInput">
+
+            <i class="icon ion-search placeholder-icon"></i>
+            <input ng-model="searchText.name" type="text" placeholder="Recept eller ingrediens">
+
+            <button id="heartButton" ng-click="showFavRecipesChange()" class="button-icon icon ion-ios7-heart-outline favHeartInMainMenu"></button>
+      
+        </div>
+
+    </ion-header-bar>-->
+
+    <div class="bar bar-subheader bar-dark">
+
+        <div class="item item-input textInput">
+
+            <i class="icon ion-search placeholder-icon"></i>
+            <input id="input" ng-model="searchText.name" type="text" placeholder="Recept eller ingrediens">
+
+            <button id="heartButton" ng-click="showFavRecipesChange()" class="button-icon icon ion-ios7-heart-outline favHeartInMainMenu"></button>
+      
+        </div>
+    </div>
+
+
+    <ion-nav-bar id="navBar" class="bar-balanced">
+      <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back"></ion-nav-back-button>
+
+
+      <button ng-click="openModal2()" class="button button-icon icon ion-compose"></button>
+      
+
+      <!--fixat-->
+      <ion-nav-buttons side="right">
+         <button ng-click="openModal()" class="button button-icon icon ion-ios7-information-outline"></button>
+      </ion-nav-buttons>
+
+    </ion-nav-bar>
+
+    <!-- Här börjar sidan -->
+
+    <ion-content class="has-header contentContainer" header-shrink scroll-event-interval="5" has-bouncing="true">
+
+      <!-- Ännu en tokbugg container, blir ultramycket padding utan denna -->
+      <div style="height:60px; background-color:white;"></div>
+        <!-- Buggar sönder utan denna, sjukt oklart varför just 1000px blir bra, medan 200buggar sönder, färg för test..-->
+    
+          <!-- För att den ska reagera på scroll event.. sen exempel-->
+          <div class="tabs"></div>
+
+          <!-- Två fall, om vi visar favoriter eller ej -->
+
+          <!--Ej favoriter-->
+      	  <a ng-if = "!checked" ng-repeat="recipe in recipes | filter:searchText:strict" ng-href="#/recipes/{{recipe.id}}">
+
+        		<div class="recipeContainer">
+        			<div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
+
+        			<img class = "recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
+
+              <span class="loading">
+
+                <div class = "loadingIconMainContainer">
+                  <i class="icon ion-loading-c loadingIconMain"></i>
+                </div>
+
+              </span>
+            </div>
+          </a>
+
+          <!-- Favoriter-->
+          <a ng-if = "checked" ng-repeat="recipe in favRecipes | filter:searchText:strict" href="#/recipes/{{recipe.id}}">
+
+        		<div class="recipeContainer">
+        			<div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
+        			<img class="recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
+
+              <span class="loading">
+
+                <div class = "loadingIconMainContainer">
+                  <i class="icon ion-loading-c loadingIconMain"></i>
+                </div>
+
+              </span>
+      	    </div>
+          </a>
+        
+        	<p class ="noResults">
+
+            <span ng-if="!checked && (recipes | filter:searchText).length == 0">Inga recept hittade</span>
+
+            <span ng-if="checked && (favRecipes | filter:searchText).length == 0 && searchText.name.length">Inga recept hittade</span>
+
+          	<span ng-if="checked && favRecipes.length === 0 && !searchText.name.length">Inga favoriter</span>
+
+          </p>
+
+        <!-- Bugg container end
+        </div>-->
+
+        <div style="height:45px; width:100%; float:left; background-color:white;">
+        <!--Ännu en bugg container -->
+        
+
+
+  
+    </ion-content>
+
+</ion-view>
