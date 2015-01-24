@@ -57,8 +57,8 @@
 
     <ion-content class="has-header contentContainer" header-shrink scroll-event-interval="5" has-bouncing="true">
 
-      <!-- Ännu en tokbugg container, blir ultramycket padding utan denna -->
-      <div style="height:60px; background-color:white;"></div>
+      <!-- Ännu en tokbugg container, blir ultramycket padding utan denna.. 60px -->
+      <div style="height:56px; background-color:white;"></div>
         <!-- Buggar sönder utan denna, sjukt oklart varför just 1000px blir bra, medan 200buggar sönder, färg för test..-->
     
           <!-- För att den ska reagera på scroll event.. sen exempel-->
@@ -70,6 +70,7 @@
       	  <a ng-if = "!checked" ng-repeat="recipe in recipes | filter:searchText:strict" ng-href="#/recipes/{{recipe.id}}">
 
         		<div class="recipeContainer">
+
         			<div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
 
         			<img class = "recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>

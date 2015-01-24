@@ -9,7 +9,7 @@ angular.module('starter.services', [])
     {id: 3, name:'Nudlar med grönsakswook och kyckling', fav:false, desc: desc3, steps: steps3, ingridients: ingredients3, cookTime: '40', servings:'3-4', picUrl:'img/mat/3.png', picUrlWide:'img/mat/wide/3wide.png'},
     {id: 4, name:'Chili con carne', fav:false, desc: desc4, steps: steps4, ingridients: ingredients4, cookTime: '30', servings:'4-5', picUrl:'img/mat/4.png', picUrlWide:'img/mat/wide/4wide.png'},
     {id: 5, name:'Lax i ugn', fav:false, desc: desc5, steps: steps5, ingridients: ingredients5, cookTime: '30', servings:'3-4', picUrl:'img/mat/5.png', picUrlWide:'img/mat/wide/5wide.png'},
-    {id: 6, name:'Stekt ris', fav:false, desc: desc6, steps: steps6, ingridients: ingredients6, cookTime: '40', servings:'3-4', picUrl:'img/mat/6.png', picUrlWide:'img/mat/wide/6wide.png'},
+    {id: 6, name:'Stekt ris med biff', fav:false, desc: desc6, steps: steps6, ingridients: ingredients6, cookTime: '40', servings:'3-4', picUrl:'img/mat/6.png', picUrlWide:'img/mat/wide/6wide.png'},
     {id: 7, name:'Persiljestuvad potatis med isterband', fav:false, desc: desc7, steps: steps7, ingridients: ingredients7, cookTime: '30', servings:'3', picUrl:'img/mat/7.png', picUrlWide:'img/mat/wide/7wide.png'},
     {id: 8, name:'Paj med rökt sidfläsk', fav:false, desc: desc8, steps: steps8, ingridients: ingredients8, cookTime: '120', servings:'4-5', picUrl:'img/mat/8.png', picUrlWide:'img/mat/wide/8wide.png'},
     {id: 9, name:'Hamburgare', fav:false, desc: desc9, steps: steps9, ingridients: ingredients9, cookTime: '40', servings:'4', picUrl:'img/mat/9.png', picUrlWide:'img/mat/wide/9wide.png'},

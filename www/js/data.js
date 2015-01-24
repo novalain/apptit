@@ -312,7 +312,7 @@ var desc11 = 'En god och enkel sallad med mycket protein.';
 var steps11 = [
     {id:0, desc: 'Öppna burkarna med tonfisk, häll ut oljan och smula sönder tonfisken i en stor skål.'},
     {id:1, desc: 'Skär cocktailtomaterna i 4 bitar. Finhacka gurkan, dillen, löken och oliverna.'},
-    {id:2, desc: 'Blanda ner grönsakerna och de frysta ärtorna i skålen tillsammans med tonfisken. Tillsätt majonäs och gräddfil och rör om. Salta och peppra.'},
+    {id:2, desc: 'Blanda ner grönsakerna och de frysta ärtorna i skålen tillsammans med tonfisken. Tillsätt majonäs och gräddfil och rör om. Salta och peppra tills du är nöjd med smaken.'},
     {id:3, desc: 'Låt stå i kylen i ca en halvtimma.'},
     {id:4, desc: 'Servera med kokta ägg och valfritt bröd.'}
    
@@ -338,17 +338,17 @@ var ingredients11 = [
 
 /** Recept här **/
 
-var desc12 = 'Budget versionen går att köra med krossade tomater istället för färska och bacon istället för sidfläsk.';
+var desc12 = 'Om du vill göra en budgetversion så går det bra att använda krossade tomater istället för färska och bacon istället för sidfläsk.';
 
 var steps12 = [
-    {id:0, desc: 'Tärna fläsket och ta bort svålen.'},
+    {id:0, desc: 'Ta bort svålen och tärna fläsket i ca 1x1 cm stora kuber.'},
     {id:1, desc: 'Värm stekpannan och fräs fläsket på hög värme tills det blir knaprigt, lägg sedan åt sidan.'},
-    {id:2, desc: 'Sätt ett kryss i tomaterna med en vass kniv och skiva vitlöken.'},
-    {id:3, desc: 'Lägg i tomaterna och tillsätt vitvinsvinägern.'},
-    {id:4, desc: 'Låt koka i ca 15 min. Börja koka spaghettin under tiden.'},
-    {id:5, desc: 'Ta upp rosmarinkvisten och piri pirin, lägg i den kokta pastan. Salta och peppra.'},
-    {id:6, desc: 'Toppa med de stekta fläsktärningarna och strö över osten. Klart.'}
+    {id:2, desc: 'Sätt ett kryss i tomaterna med en vass kniv och finhacka vitlöken.'},
+    {id:3, desc: 'Lägg tomaterna i stekpannan och tillsätt vitvinsvinäger, vitlök, rosmarin och piri piri. Låt koka i ca 15 min. Koka spaghetti under tiden.'},
+    {id:4, desc: 'Ta upp rosmarinkvisten och piri pirin ur såsen. Salta och peppra efter smak.'},
+    {id:5, desc: 'Vänd ner den kokta pastan i tomatsåsen och toppa med de stekta fläsktärningarna och riven ost.'}
 ];
+
 
 var ingredients12 = [
     {id:0, quantity:'300 g', desc: 'spaghetti'},
@@ -366,18 +366,16 @@ var ingredients12 = [
 
 /** Grekisk souvlaki **/
 
-var desc13 = 'Består av kött, grekisk sallad och tzatziki. Vill man ha äkta greklandskänsla kan man sätta kött och paprika på ett grillspett, samt ha pitabröd och såklart pommes till.';
+var desc13 = 'Består av kött, grekisk sallad och tzatziki. Vill man ha en riktig greklandskänsla kan man sätta köttet och paprikan på ett grillspett och servera rätten med pitabröd och pommes.';
 
 var steps13 = [
-    {id:0, desc: 'Börja med tzatzikin, riv 1/3 av gurkan på rivjärm (den grövsta sidan).'},
-    {id:1, desc: 'Salta och låt stå en stund tills vätskan har försvunnit.'},
-    {id:2, desc: 'Häll av vätskan och blanda med yoghurten.'},
-    {id:3, desc: 'Pressa i en vitlöksklyfta och häll i en tesked olivolja.'},
-    {id:4, desc: 'Salta, peppra rör om. Ställ sedan in i kylskåpet medan du tillagar resten.'},
-    {id:5, desc: 'Skär tomaterna, gurkan och rödlöken. Lägg sedan i dem i en skål.'},
-    {id:6, desc: 'Lägg på oliverna och toppa med en bit fetaost, krydda med oregano och ringla över lite olivolja.'},
-    {id:7, desc: 'Börja med köttet, gnid in kotletterna på varje sida med lite olivolja. Salta, peppra och krydda med rosmarin.'},
-    {id:8, desc: 'Grilla kotletterna högt upp i ugnen på högsta värmen i ca 5 min på varje sida.'}
+    {id:0, desc: 'Påbörja tzatzikin genom att riva 1/3 av gurkan på den grövsta sidan av ett rivjärn. Salta och låt stå en stund tills vätskan runnit av.'},
+    {id:1, desc: 'Häll bort vätskan och blanda gurkan med yoghurten.'},
+    {id:2, desc: 'Pressa i en vitlöksklyfta och häll i en tesked olivolja. Salta, peppra och rör om. Ställ sedan in i kylskåpet.'},
+    {id:3, desc: 'Skär upp tomaterna, gurkan och rödlöken och lägg i en skål.'},
+    {id:4, desc: 'Lägg i oliverna och toppa med en bit fetaost, krydda med oregano och ringla över lite olivolja.'},
+    {id:5, desc: 'Gnid in fläskkotletterna med lite olivolja. Salta, peppra och krydda med rosmarin.'},
+    {id:6, desc: 'Grilla kotletterna högt upp i ugnen på högsta värmen, ca 5 min på varje sida. Servera sedan tillsammans med den grekiska salladen och tzatzikin.'}
    
 ];
 
@@ -401,15 +399,14 @@ var ingredients13 = [
 
 /** Ceasarsallad **/
 
-var desc14 = 'Klassisk ceasarsallad fast med tomater. Man kan köpa färdiga krutonger om man inte orkar göra egna.';
+var desc14 = 'En god och enkel ceasarsallad som går fort att göra. Går bra att köpa färdiga krutonger om man inte orkar eller har lust att göra egna.';
 
 var steps14 = [
-    {id:0, desc: 'Börja med krutongerna. Sätt ugnen på 200 grader, skär brödet i bitar och rosta i ugnen i 5-10 minuter tills de blivit lite knaprigt och fått färg.'},
+    {id:0, desc: 'Sätt ugnen på 200 grader. Skär brödet i tärningar på cirka 2x2 cm och lägg på en plåt med bakplåtspapper. Ringla över lite olivolja och salta lätt. Rosta i ugnen cirka 5-10 minuter tills det blivit lite knaprigt och fått färg.'},
     {id:1, desc: 'Stek baconet knaprigt, låt rinna av på hushållspapper.'},
-    {id:2, desc: 'Stek kycklingen och krydda med salt och peppar.'},
-    {id:3, desc: 'Skölj salladen och tomaterna och skär dem i mindre bitar.'},
-    {id:4, desc: 'Montera ihop salladen med kycklingen och baconen. Ringa över dressing och riv på osten.'}
-   
+    {id:2, desc: 'Stek kycklingfiléerna och krydda med salt och peppar. Låt svalna och skär sedan upp i önskad storlek (förslagsvis i tjocka skivor).'},
+    {id:3, desc: 'Skölj salladen och tomaterna och skär dem i mindre bitar. Blanda med dressing.'},
+    {id:4, desc: 'Strö över kyckling, bacon och toppa med riven parmesan.'}
 ];
 
 var ingredients14 = [
@@ -424,17 +421,17 @@ var ingredients14 = [
     {id:9, quantity:'', desc:'peppar'}
 ];
 
-/**Falukorv med potatismos**/
+/**Ugnsbakad falukorv med potatismos**/
 
-var desc15 = 'Äkta svensk husmanskost.';
+var desc15 = 'Enkel klassiker!';
 
 var steps15 = [
-    {id:0, desc: 'Skala och koka potatisen i lättsaltat vatten.'},
-    {id:1, desc: 'Dra av skinnet på korven och skär skåror i den utan att skära genom den. Smeta på senap.'},
-    {id:2, desc: 'Dela tomaten och löken i halvor och skär dem i skivor. Skär även osten i tunna skivor.'},
-    {id:3, desc: 'Varva halverade tomater, lökar och ostksivor i skårorna i korven.'},
-    {id:4, desc: 'Lägg korven i en ugnsfast form och stek i 225 grader i ca 20 min tills osten smält.'},
-    {id:5, desc: 'När potatisen är färdig, häll av vattnet och ånga någon minut. Blanda i mjölken och smöret, mosa eller kör visp. Krydda med salt och vitpeppar.'},
+    {id:0, desc: 'Skala potatisen och koka i lättsaltat vatten.'},
+    {id:1, desc: 'Dra av skinnet på korven och skär skåror i den med cirka 2-3 cm mellanrum, utan att skära genom den. Lägg sedan i en ugnsfast form'},
+    {id:2, desc: 'Skär tomat, lök och ost i tunna skivor.'},
+    {id:3, desc: 'Spritsa senap i skårorna på korven och lägg sedan i tomat, lök och ostskivor.'},
+    {id:4, desc: 'Stek i ugnen på 225 grader i ca 20 min tills osten smält och fått färg.'},
+    {id:5, desc: 'När potatisen är färdig, häll av vattnet och ånga någon minut. Blanda ner smöret och mjölken och mosa eller kör med en elvisp tills moset är fluffigt. Krydda med salt och vitpeppar.'},
 ];
 
 var ingredients15 = [
@@ -452,16 +449,17 @@ var ingredients15 = [
 
 /**Italiensk pasta med gorgonzolasås**/
 
-var desc16 = 'Ostigt värre, man blir garanterat sprängmätt.';
+var desc16 = 'Ostigt värre och väldigt mättande.';
 
 var steps16 = [
-    {id:0, desc: 'Tärna skinkan i små kuber, finhacka löken och vitlöken.'},
-    {id:1, desc: 'Fräs lök och vitlök i smör tills de mjuknat (utan att få för mycket färg).'},
-    {id:2, desc: 'Lägg i champinjonerna och fräs i ytterligare några minuter.'},
-    {id:3, desc: 'Tillsätt grädden och krydda med salt och peppar.'},
-    {id:4, desc: 'Sänk till lägsta värmen, lägg i gorgonzolan under omrörning till den har smält helt.'},
-    {id:5, desc: 'Lägg till sist i den tärnade skinkan och stäng av värmen. Koka pastan och broccilin.'},
-    {id:6, desc: 'Häll i den kokta pastan i såsen och blanda runt. Servera med parmesan.'}
+    {id:0, desc: 'Koka upp pasta och broccoli i en varsinn kastrull'},
+    {id:1, desc: 'Tärna skinkan i små kuber och finhacka löken och vitlöken.'},
+    {id:2, desc: 'Fräs löken och vitlöken lätt i lite smör'},
+    {id:3, desc: 'Lägg i champinjonerna och fräs i ytterligare några minuter.'},
+    {id:4, desc: 'Tillsätt grädden och låt koka upp. Krydda med salt och peppar.'},
+    {id:5, desc: 'Sänk till lägsta värmen och tillsätt gorgonzolan under omrörning. Fortsätt röra tills den har smält helt.'},
+    {id:6, desc: 'Lägg till sist i broccolin och den tärnade skinkan och stäng av värmen.'},
+    {id:7, desc: 'Vänd ner den kokta pastan i såsen och blanda runt. Toppa med lite parmesan.'}
 ];
 
 var ingredients16 = [
@@ -479,15 +477,15 @@ var ingredients16 = [
     {id:12, quantity:'', desc:'peppar'}
 ];
 
-/**Renskavsgryta**/
+/**Renskavsgryta**/ 
+//Här slutade vi.
 
 var desc17 = 'Mustig gryta som passar bra när man vill ha något varmt på kalla vinterdagar.';
 
 var steps17 = [
-    {id:0, desc: 'Börja med att koka riset.'},
-    {id:1, desc: 'Finhacka lök och vitlök. Grovhacka kantarellerna.'},
-    {id:2, desc: 'Fräs löken, vitlöken och kantarellerna i smör.'},
-    {id:3, desc: 'Salta, peppra och lägg åt sidan i en gryta.'},
+    {id:0, desc: 'Koka upp riset i en kastrull.'},
+    {id:1, desc: 'Grovhacka kantarellerna och finhacka löken och vitlöken. '},
+    {id:2, desc: 'Fräs löken, vitlöken och kantarellerna i smör. Salta, peppra och lägg åt sidan i en gryta.'},
     {id:4, desc: 'Börja fräs renskavet i smör, krydda och lägg sedan över i grytan.'},
     {id:5, desc: 'Ha i grädde, créme fraiche och köttbuljongstärning. Red av med maizena.'},
     {id:6, desc: 'Låg puttra på svag värme i ca 10 minuter (eller tills riset är klart).'},

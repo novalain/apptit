@@ -4,6 +4,10 @@ div.toggleFavoritesText{float:left;margin-left:12px; width:155px;}
 div.toggleFavoritesText p{margin-top:14px; font-family:Verdana; font-size:0.9em;}
 div.toggleFavorites{margin-left:80%;margin-top:10px;}
 
+/*
+div.picTextContainer{z-index:30; display:none; position:absolute; width:320px; margin-left:auto; margin-right:auto; margin-top:30px; height:50px; float:left;}
+div.picTextContainer p{text-shadow: 1px 1px black;text-align:center; color:white; font-family:Verdana; font-size:0.8em;}
+*/
 div.picTextContainer{display:none;position:absolute; width:131px; margin-left:10px; margin-top:10px; height:50px; float:left;}
 div.picTextContainer p{z-index:10;text-shadow: 1px 1px black;text-align:center; color:white; font-family:Verdana; font-size:0.8em;}
 
@@ -85,19 +89,30 @@ div.recPicContainer{width:100%; height:180px;}
 
 div.recipeContainer{cursor:pointer;
 
-					margin-left:1px;
-					margin-top:8px;
-					margin-right:7px;
+					margin-left:3px;
+					margin-top:9px;
+					margin-right:0px;
 					float:left; 
 					width:151px; 
 					height:151px;
-					background-color:white;
+					background-color:green;
 					
  }
 
+ 
+.recipeContainer2{margin-left:9px;}
+
 .contentContainer{padding:0px;}
 
-img.recipePicInMainMenu{width:158px;border-radius:4px;}
+
+/*width: 158px;*/
+img.recipePicInMainMenu{border-radius:0px;
+						height:159px;
+
+	/*
+						position:absolute;
+						clip: rect(20px,320px,161px,0px);*/
+						}
 				  
 
 li{background-color:white !important;}

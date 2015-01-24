@@ -1,14 +1,14 @@
-/**Pepparpasta** Test Recept**/
+/**Krämig pastasås med fläskfilé och soltorkade tomater.'**/
 
-var desc0 = 'Fläskfilé med krämig sås på soltorkade tomater.';
+var desc0 = 'Krämig pastasås med fläskfilé och soltorkade tomater.';
 
 var steps0 = [
-    {id:0, desc:'Dela fläskfilén i skivor och krydda med salt, peppar och rosmarin. Pressa vitlöken och gnid in filén i den.'},
-    {id:1, desc: 'Stek fläskfilén i en het panna och lägg sedan åt sidan.'},
-    {id:2, desc: 'Finhacka de soltorkade tomaterna, värm en stekpanna med olja och lägg i tomaterna.'},
+    {id:0, desc: 'Skiva upp fläskfilén och krydda med salt, peppar och rosmarin. Pressa vitlöken och gnid in i filén.'},
+    {id:1, desc: 'Stek köttet i en het panna och lägg sedan åt sidan.'},
+    {id:2, desc: 'Finhacka de soltorkade tomaterna, värm olja i en stekpanna och lägg i tomaterna.'},
     {id:3, desc: 'Tillsätt tomatpuré, oxfond och grädde. Låt puttra i ca 5 min.'},
-    {id:4, desc: 'Lägg i den stekta fläskfilén i såsen, sänk värmen och låt puttra i ca 5-10 min.'},
-    {id:5, desc: 'Lägg ner spenaten precis innan det är klart. Servera med kokt färskpasta.'}
+    {id:4, desc: 'Blanda ner fläskfilén i såsen, sänk värmen och låt puttra i ca 5-10 min.'},
+    {id:5, desc: 'Tillsätt till sist spenaten i såsen och servera sedan med kokt färskpasta.'}
 ];
 
 var ingredients0 = [
@@ -25,12 +25,12 @@ var ingredients0 = [
     {id:10, quantity:'1 msk', desc: 'oxfond'},
     {id:11, quantity: '1 tsk', desc: 'paprika pulver'},
     {id:12, quantity:'3 dl', desc:'grädde'},
-    {id:13, quantity:'1 påse', desc:'babyspenat (70g)'}
+    {id:13, quantity:'1 påse', desc:'babyspenat'}
 ];
 
 /** Krämig pasta med skinka **/
 
-var desc1 = 'Skinka, paprika, pasta och grädde är alltid ett vinnande koncept.';
+var desc1 = 'Krämig pastasås med skinka och paprika.';
 
 var steps1 = [
     {id:0, desc: 'Rensa paprikan från frön och skär i bitar. Skär skinkan i centimeterstora kuber.'},
@@ -59,13 +59,13 @@ var ingredients1 = [
 
 /** Somrig couscoussallad **/
 
-var desc2 = 'Enkel låda när man vill ha lite lättare lunch, skönt att slippa stå i mikrokön.';
+var desc2 = 'Enkel låda när man vill ha en lite lättare lunch. Skönt att slippa stå i mikrokön.';
 
-var steps2 = [
+var steps2 = [                                          
     {id:0, desc: 'Koka couscous och låt svalna.'},
-    {id:1, desc: 'Finhacka salladslöken. Skär tomaterna, rädisorna och paprikan i tärningar.'},
-    {id:2, desc: 'Blanda ner grönsakerna, babyspenaten och sojabönorna i couscousen.'},
-    {id:3, desc: 'Rör ihop en dressing på majonäs och chilisås, salta och peppra efter smak.'},
+    {id:1, desc: 'Finhacka salladslöken och skär tomaterna, rädisorna och paprikan i tärningar.'},
+    {id:2, desc: 'Blanda ihop grönsakerna, babyspenaten och sojabönorna med couscousen.'},
+    {id:3, desc: 'Rör ihop majonäs och chilisås till en dressing. Salta och peppra efter smak.'},
     {id:4, desc: 'Servera salladen med avocadoklyftor och dressing.'}
 ];
 
@@ -86,20 +86,20 @@ var ingredients2 = [
 
 /** Nudlar med grönsakswook **/
 
-var desc3 = 'Ös på ännu mer chilipeppar och garam-masala ifall du gillar stark mat.';
+var desc3 = 'För dig som gillar stark mat: tillsätt mer chilipeppar och garam-masala för ett kryddigare resultat.';
 
-var steps3 = [
-    {id:0, desc: 'Finhacka chilipeppar, vitlök, garam-masala och ingefär. Blanda ihop alltiing.'},
-    {id:1, desc: 'Skiva champinjoner och morötter. Hacka salladslökar och dela vitkålen i små bitar.'},
-    {id:2, desc: 'Putsa kycklingfilén, salta och krydda med hälften av kryddblandingen.'},
-    {id:3, desc: 'Banka in kryddorna i kycklingfilérna och stek dem sedan i smör. Lägg dem efteråt på vila.'},
-    {id:4, desc: 'Värm lite olja i stekpannan och fräs resten av kryddblandingen. Börja koka nudlar.'},
-    {id:5, desc: 'Tillsätt vitkål, champinjoner och morot. Fräs en stund, lägg sedan i oystersås.'},
-    {id:6, desc: 'Vänd nudlarna i grönsakerna och fräs ytterligare en kort stund. Klart!'},
+var steps3 = [ 
+    {id:0, desc: 'Finhacka chilipeppar, vitlök, garam-masala och ingefära. Blanda ingredienserna till en kryddmix.'},
+    {id:1, desc: 'Skiva champinjoner och morötter. Finhacka salladslöken och skär vitkålen i små bitar.'},
+    {id:2, desc: 'Putsa kycklingfiléerna. Salta och krydda sedan med hälften av kryddblandingen.'},
+    {id:3, desc: 'Banka in kryddorna ordentligt i kycklingen och stek sedan i smör. Låt sedan kycklingen vila.'},
+    {id:4, desc: 'Värm lite olja i stekpannan och fräs resten av kryddblandingen. '},
+    {id:5, desc: 'Tillsätt vitkål, champinjoner och morot. Fräs en stund och häll sedan i oystersåsen.'},
+    {id:6, desc: 'Koka nudlar och tillsätt dem i grönsaksblandningen. Fräs ytterligare några minuter. Klart för servering!'},
 ];
 
 var ingredients3 = [
-    {id:0, quantity:'700 g', desc: 'fryst kyckingfilé'},
+    {id:0, quantity:'700 g', desc: 'frysta kyckingfiléer'},
     {id:1, quantity:'3', desc: 'champinjoner'},
     {id:2, quantity:'2', desc: 'morötter'},
     {id:2, quantity:'1/4', desc: 'vitkålshuvud'},
@@ -113,18 +113,18 @@ var ingredients3 = [
 
 /** Chili con carne **/
 
-var desc4 = 'En classic chili con carne. Vill man vara riktigt Svensson så kan man köra ris till istället för bröd.';
+var desc4 = 'En classic chili con carne. För en riktig Svenssonmiddag så kan man servera med ris istället för bröd.';
 
 var steps4 = [
-    {id:0, desc: 'Hacka lök, vitlök och chilipeppar (Behåll kärnorna om du vill ha styrka).'},
-    {id:1, desc: 'Stek köttfärsen på hög värme. När köttfärsen börjar få färg, tillsätt kryddorna och fortsätt steka. Rör om.'},
-    {id:2, desc: 'Tillsätt tomater, salta och koka i ungefär en kvart.'},
-    {id:3, desc: 'Skölj bönorna i vatten, tillsätt till grytan och koka ytterligare några minuter.'},
+    {id:0, desc: 'Hacka lök, vitlök och chilipeppar (behåll kärnorna om du vill ha mer styrka).'},
+    {id:1, desc: 'Stek köttfärsen på hög värme. När den börjar få färg, tillsätt kryddorna och fortsätt steka. Rör om under tiden.'},
+    {id:2, desc: 'Tillsätt tomatkross och salta efter tycke. Låt puttra i ungefär en kvart.'},
+    {id:3, desc: 'Skölj bönorna i vatten och blanda ner i grytan. Låt puttra ytterligare några minuter.'},
     {id:4, desc: 'Servera med en en klick gräddfil, färskt bröd och sallad.'}
 ];
 
 var ingredients4 = [
-    {id:0, quantity:'700 g', desc: 'nötfärs eller blandfärs'},
+    {id:0, quantity:'700 g', desc: 'nöt- eller blandfärs'},
     {id:1, quantity:'1', desc: 'gul lök'},
     {id:2, quantity:'2', desc: 'klyftor vitlök'},
     {id:2, quantity:'1 hel', desc: 'chilipeppar'},
@@ -138,14 +138,15 @@ var ingredients4 = [
 
 /** Lax i ugn **/
 
-var desc5 = 'Laxen och potatisen lagar sig själv medan man kan koncentrera sig på göttiga tillbehör.';
+var desc5 = 'Snabb och enkel middag som i stort sett lagar sig själv.';
 
 var steps5 = [
-    {id:0, desc: 'Dela laxen i två bitar, salta och peppra. Börja koka potatisen med skal på.'},
-    {id:1, desc: 'Lägg laxen i en ugnssäker form och tillaga i 20 min (225 grader).'},
-    {id:2, desc: 'Finhacka spenaten och scharlottenlöken. Fräs dem edan i smör, tillsätt grädde och krydda med salt och peppar.'},
-    {id:3, desc: 'Koka broccolin i lättsaltat vatten.'},
-    {id:4, desc: 'Servera laxen och tillbehören med potatisen.'}
+    {id:0, desc: 'Dela laxen i två bitar, salta och peppra. '},
+    {id:1, desc: 'Koka upp potatisen i en kastrull med lättsaltat vatten.'},
+    {id:2, desc: 'Lägg laxen i en ugnssäker form, tillaga i ugnen cirka 20 min på 225 grader.'},
+    {id:3, desc: 'Finhacka spenaten och scharlottenlöken. Fräs i smör och tillsätt sedan grädde och krydda med salt och peppar.'},
+    {id:4, desc: 'Koka upp broccolin i lättsaltat vatten.'},
+    {id:5, desc: 'Servera lax och tillbehör tillsammans med potatisen.'}
 ];
 
 var ingredients5 = [
@@ -154,7 +155,7 @@ var ingredients5 = [
     {id:2, quantity:'1', desc: 'broccolibukett'},
     {id:2, quantity:'1', desc: 'scharlottenlök'},
     {id:3, quantity:'2 dl', desc: 'grädde'},
-    {id:3, quantity:'ca 8 st', desc: 'potatisar'},
+    {id:3, quantity:'ca 8', desc: 'potatisar'},
     {id:4, quantity:'', desc: 'salt'},
     {id:5, quantity:'', desc:'peppar'}
 ];
@@ -162,14 +163,14 @@ var ingredients5 = [
 
 /** Stekt ris **/
 
-var desc6 = 'Riset måste förkokas här. Ett tips är att koka extra mycket nästa gång du gör ris, det blir nästan godare om det stått ett tag i kylen. Stekpanna funkar ifall det inte finns tillgång till en wookpanna.';
+var desc6 = 'Riset måste förkokas. Ett tips är att koka extra mycket nästa gång du gör ris, det blir nästan godare om det stått ett tag i kylen. Stekpanna funkar också istället för en wookpanna.';
 
 var steps6 = [
-    {id:0, desc: 'Finhacka chilipeppar, vitlök och ingefära. Blanda ihop allting i en stor bunke.'},
-    {id:1, desc: 'Hacka morötterna, paprikan och sockerärtorna. Skär salladslöken och biffen.'},
+    {id:0, desc: 'Finhacka chilipeppar, vitlök och ingefära. Blanda ihop allting i en liten bunke.'},
+    {id:1, desc: 'Hacka upp morötter, paprika, sockerärtor och salladslök. Skär sedan upp biffen i mindre bitar.'},
     {id:2, desc: 'Värm en wookpanna och fräs ungefär hälften av kryddblandningen i olja. Tillsätt gurkmeja, lite salladslök och det färdigkokta riset. Låt fräsa i några minuter.'},
-    {id:3, desc: 'Lägg i resten av kryddblandningen. Tillsätt grönsakerna och lite oystersås. Wooka i ytterligare några minuter'},
-    {id:4, desc: 'När grönsakerna är färdiga, tillsätt tillsist biffen och rör om.'},
+    {id:3, desc: 'Tillsätt resten av kryddblandningen, grönsakerna och lite oystersås. Wooka i ytterligare några minuter'},
+    {id:4, desc: 'Tillsätt biffen när grönsakerna är färdiga. Om du vill ha biffen välstekt så bör den liggga i wooken lite längre, men om du gillar den rare eller medium så bör den bara ligga i ett par minuter under omrörning för att få lite färg.'},
 ];
 
 var ingredients6 = [
@@ -189,19 +190,19 @@ var ingredients6 = [
 
 /** Persiljestuvad potatis med isterband **/
 
-var desc7 = 'När man tröttnat på stuvade makaroner.. Godare än vad det låter.';
+var desc7 = 'Perfekt när man tröttnat på stuvade makaroner och vill lyxa till en enkel rätt! Funkar bra med rödbetor till.';
 
 var steps7 = [
-    {id:0, desc: 'Koka potatisen med skal. Skala den efter den har kallnat och tärna i ca 1 cm stora kuber.'},
+    {id:0, desc: 'Koka potatisen med skal. Skala efter att de har kallnat och tärna i ca 1 cm stora kuber.'},
     {id:2, desc: 'Finhacka persiljan.'},
-    {id:3, desc: 'Skär av sidorna på isterbanden och lägg i en ugnssäker form, kör sedan i 225 grader i ca 20-25 min tills dem fått färg'},
-    {id:4, desc: 'Börja med stuvningen. Smält smör i en stor kastrull och tillsätt en msk vetemjöl. Rör ihop med en visp.'},
-    {id:5, desc: 'Sänk värmen, tillsätt mjölk och rör om tills stuvningen är krämig. Lägg sedan i persiljan.'},
-    {id:7, desc: 'Lägg till sist i potatisen och rör om så att den inte bränner fast, salta och peppra. Funkar bra med rödbetor till'},
+    {id:3, desc: 'Skär en skåra på längden i isterbanden och lägg sedan i en ugnssäker form. Kör i ugnen på 225 grader i ca 20-25 min tills de fått färg.'},
+    {id:4, desc: 'Smält smör i en stor kastrull och tillsätt en msk vetemjöl. Rör ihop med en visp.'},
+    {id:5, desc: 'Sänk värmen, tillsätt mjölk och rör om tills stuvningen är krämig. Tillsätt persiljan.'},
+    {id:7, desc: 'Lägg sedan i potatistärningarna och rör om så att stuvningen inte bränner fast. Salta och peppra efter smak. Klart för servering!'},
 ];
 
 var ingredients7 = [
-    {id:0, quantity:'5-6', desc: 'medelstora potatisar (fast sort)'},
+    {id:0, quantity:'6', desc: 'medelstora potatisar (fast sort)'},
     {id:1, quantity:'5', desc: 'kvistar bladpersilja'},
     {id:2, quantity:'1 msk', desc: 'smör'},
     {id:2, quantity:'4', desc: 'isterband'},
@@ -213,16 +214,16 @@ var ingredients7 = [
 
 /** Paj med rökt sidfläsk **/
 
-var desc8 = 'Nästan inget passar väl bättre att ha i matlåda än en enkel paj. Funkar dessutom grymt att frysa.';
+var desc8 = 'Nästan inget passar väl bättre att ha i matlåda än en enkel paj, funkar dessutom bra att frysa. Blir allra godast med en fräsch sallad till';
 
 var steps8 = [
-    {id:0, desc: 'Blanda smör, mjöl och vatten i en bunke till pajdegen. Lägg sedan in i kylen för att vila i ca 1 timma.'},
-    {id:2, desc: 'Tryck ut degen i en hög pajform 25 cm diameter. Nagga bottnen med en gaffel.'},
-    {id:4, desc: 'Förgrädda degen i 200 grader i ugnen, ca 10 min.'},
+    {id:0, desc: 'Blanda smör, mjöl och vatten till en deg i en stor bunke. Ställ in i kylen för att vila i cirka 1 timma.'},
+    {id:2, desc: 'Tryck ut degen i en hög pajform med cirka 25 cm diameter. Nagga botten med en gaffel.'},
+    {id:4, desc: 'Förgrädda degen i ugnen, cirka 10 minuter på 200 grader.'},
     {id:5, desc: 'Stek purjolöken i lite smör, utan att den får färg.'},
     {id:6, desc: 'Lägg purjolöken, sidfläsket och osten i det förgräddade pajskalet.'},
-    {id:7, desc: 'Vispa ägg, mjölk, grädde i en bunke. Salta, peppra och häll smeten i pajskalet'},
-    {id:6, desc: 'Grädda pajen i mitten av ugnen i ca 30 min i 225 grader tills fyllningen har stannat och fått färg. Gött med sallad till.'}
+    {id:7, desc: 'Vispa ägg, mjölk och grädde i en bunke. Salta, peppra och häll smeten över innehållet i pajskalet.'},
+    {id:6, desc: 'Grädda pajen i mitten av ugnen i ca 30 min på 225 grader tills fyllningen har fått färg.'}
 ];
 
 var ingredients8 = [
@@ -243,45 +244,45 @@ var ingredients8 = [
 
 /** 9. Monsterburgare **/
 
-var desc9 = 'Monsterburgare som går bra att värma på locket, medan tillbehören lämnas kvar i lådan';
+var desc9 = 'Goda burgare som går bra att värma på locket medan tillbehören lämnas kvar i lådan.';
 
 var steps9 = [
-    {id:0, desc: 'Sätt ugnen på 175 grader'},
-    {id:1, desc: 'Blanda nötfärs, kalvfond och vatten i en skål. Salta och peppra'},
-    {id:2, desc: 'Värm en stekpanna och stek ett litet smakprov, smaka av med salt och peppar'},
-    {id:3, desc: 'Dela upp smeten i 5-6 delar och forma till bullar som du sedan plattar till och lägger på en bricka eller skärbräda'},
-    {id:4, desc: 'Bryn burgarna 2-3 minuter på varje sida i en stekpanna. Du kan steka i lite olivolja eller smör'},
-    {id:5, desc: 'Lägg över i en ugnsform efterhand och ställ sedan in den 10-15 minuter i ugnen för att steka klart'},
-    {id:6, desc: 'Servera med hamburgerbröd, dressing och valfria tillbehör'}
+    {id:0, desc: 'Sätt ugnen på 175 grader.'},
+    {id:1, desc: 'Blanda nötfärs, kalvfond och vatten i en skål. Salta och peppra.'},
+    {id:2, desc: 'Värm en stekpanna och stek ett litet smakprov, smaka av med mer salt och peppar vid behov.'},
+    {id:3, desc: 'Dela upp smeten i 5-6 delar och forma till bullar som du sedan plattar till och lägger på en bricka eller skärbräda.'},
+    {id:4, desc: 'Bryn burgarna 2-3 minuter på varje sida i en stekpanna. Du kan steka i lite olivolja eller smör.'},
+    {id:5, desc: 'Lägg över i en ugnsform och ställ sedan in i ugnen 10-15 minuter för att steka klart.'},
+    {id:6, desc: 'Rör ihop en dressing på majonäs, bostongurka, ketchup och grillkrydda.'},
+    {id:7, desc: 'Serveras med hamburgerbröd, dressing och valfria tillbehör.'}
    
 ];
 
 var ingredients9 = [
-    {id:0, quantity:'1 kg', desc: 'nötfärs'},
+    {id:0, quantity:'800 g', desc: 'nötfärs'},
     {id:1, quantity:'2 msk', desc: 'kalvfond'},
     {id:2, quantity:'', desc: 'salt'},
     {id:3, quantity:'', desc: 'peppar'},
-    {id:5, quantity:'Dressing', desc: ''},
-    {id:6, quantity:'2 dl', desc: 'majonäs'},
-    {id:7, quantity:'1 dl ', desc: 'bostongurka'},
-    {id:8, quantity:'1-2 msk', desc:'ketchup'}
+    {id:4, quantity:'Dressing', desc: ''},
+    {id:5, quantity:'2 dl', desc: 'majonäs'},
+    {id:6, quantity:'1 dl ', desc: 'bostongurka'},
+    {id:7, quantity:'1-2 msk', desc:'ketchup'},
+    {id:8, quantity:'', desc:'grillkrydda'}
 ];
 
 
 /** 10. Grillad fläskkotlett  **/
 
-var desc10 = 'Grillad fläskkotlett med tzatziki och grekisk sallad. Går bra att värma köttet på locket i micron medan salladen stannar kvar i lådan.';
+var desc10 = 'Grillad fläskkotlett med tzatziki och grekisk sallad. Går bra att värma köttet på locket i micron medan salladen och tzatzikin stannar kvar i lådan.';
 
 var steps10 = [
-    {id:0, desc: 'Börja med tzatzikin, riv 1/3 av gurkan på rivjärm (den grövsta sidan)'},
-    {id:1, desc: 'Salta och låt stå en stund tills vätskan har försvunnit'},
-    {id:2, desc: 'Häll av vätskan och blanda med yoghurten'},
-    {id:3, desc: 'Pressa i en vitlöksklyfta och häll i en tesked olivolja'},
-    {id:4, desc: 'Salta, peppra rör om. Ställ sedan in i kylskåpet medan du tillagar resten'},
-    {id:5, desc: 'Skär tomaterna, gurkan och rödlöken. Lägg sedan i dem i en skål.'},
-    {id:6, desc: 'Lägg på oliverna och toppa med en bit fetaost, krydda med oregano och ringla över lite olivolja'},
-    {id:7, desc: 'Börja med köttet, gnid in kotletterna på varje sida med lite olivolja. Salta, peppra och krydda med rosmarin'},
-    {id:8, desc: 'Grilla kotletterna högt upp i ugnen på högsta värmen i ca 5 min på varje sida'}
+    {id:0, desc: 'Riv 1/3 av gurkan på grövsta sidan av ett rivjärn.'},
+    {id:1, desc: 'Salta och låt stå en stund tills vätskan har runnit av.'},
+    {id:2, desc: 'Häll bort vätskan och blanda ner gurkan i yoghurten.'},
+    {id:3, desc: 'Pressa ner en vitlöksklyfta och tillsätt en tesked olivolja. Salta, peppra och rör om. Ställ sedan in den färdiga tzatzikin i kylskåpet.'},
+    {id:4, desc: 'Skär upp tomaterna, gurkan och rödlöken och lägg i en skål. Lägg på oliverna, toppa med en bit fetaost och ringla över lite olivolja. Krydda med oregano.'},
+    {id:5, desc: 'Gnid in kotletterna med lite olivolja. Salta, peppra och krydda med rosmarin.'},
+    {id:6, desc: 'Grilla kotletterna högt upp i ugnen på högsta värmen, cirka 5 min på varje sida. Servera med den grekiska salladen och kall tzatziki.'}
    
 ];
 
@@ -306,14 +307,14 @@ var ingredients10 = [
 
 /**Recept här **/
 
-var desc11 = 'Tonfisksallad med blandade grönsaker, ägg och något bröd till. Mycket protein och bra för dieten.';
+var desc11 = 'En god och enkel sallad med mycket protein.';
 
 var steps11 = [
-    {id:0, desc: 'Öppna burkarna med tonfisk, häll ut oljan och smula sönder tonfisken i en stor bunke.'},
-    {id:1, desc: 'Dela cocktailtomaterna i 4 bitar. Finhacka, gurkan, dillen och oliverna.'},
-    {id:2, desc: 'Blanda alla hackade grönsaker med de frysta ärtorna. Tillsätt majonäs och gräddfil och rör runt. Salta och peppra.'},
-    {id:3, desc: 'Låt stå i kylen i ca en halvtimma. Koka ägg under tiden.'},
-    {id:4, desc: 'Servera med ägg och valfritt bröd, t.ex finn crisp.'}
+    {id:0, desc: 'Öppna burkarna med tonfisk, häll ut oljan och smula sönder tonfisken i en stor skål.'},
+    {id:1, desc: 'Skär cocktailtomaterna i 4 bitar. Finhacka gurkan, dillen, löken och oliverna.'},
+    {id:2, desc: 'Blanda ner grönsakerna och de frysta ärtorna i skålen tillsammans med tonfisken. Tillsätt majonäs och gräddfil och rör om. Salta och peppra tills du är nöjd med smaken.'},
+    {id:3, desc: 'Låt stå i kylen i ca en halvtimma.'},
+    {id:4, desc: 'Servera med kokta ägg och valfritt bröd.'}
    
 ];
 
@@ -322,33 +323,32 @@ var ingredients11 = [
     {id:1, quantity:'3 dl', desc: 'frysta gröna ärtor'},
     {id:2, quantity:'1', desc: 'knippe färsk dill (fryst funkar)'},
     {id:3, quantity:'1', desc: 'ask cocktailtomater'},
-    {id:5, quantity:'1', desc: 'vitlöksklyfta'},
-    {id:6, quantity:'1/2', desc:'gurka'},
-    {id:7, quantity:'1', desc: 'liten gullök'},
-    {id:8, quantity:'4', desc:'gröna oliver'},
-    {id:9, quantity:'2 msk', desc:'majonäs'},
-    {id:10, quantity:'1 msk', desc:'gräddfil'},
-    {id:11, quantity:'4', desc:'ägg'},
-    {id:10, quantity:'', desc:'(knäcke)bröd'},
-    {id:12, quantity:'', desc:'salt'},
-    {id:13, quantity:'', desc:'peppar'}
+    {id:4, quantity:'1/2', desc:'gurka'},
+    {id:5, quantity:'1', desc: 'liten gullök'},
+    {id:6, quantity:'4', desc:'gröna oliver'},
+    {id:7, quantity:'2 msk', desc:'majonäs'},
+    {id:8, quantity:'1 msk', desc:'gräddfil'},
+    {id:9, quantity:'4', desc:'ägg'},
+    {id:10, quantity:'', desc:'bröd'},
+    {id:11, quantity:'', desc:'salt'},
+    {id:12, quantity:'', desc:'peppar'}
 ];
 
 /**12. Pasta ametricana **/
 
 /** Recept här **/
 
-var desc12 = 'Budget versionen går att köra med krossade tomater istället för färska och bacon istället för sidfläsk.';
+var desc12 = 'Om du vill göra en budgetversion så går det bra att använda krossade tomater istället för färska och bacon istället för sidfläsk.';
 
 var steps12 = [
-    {id:0, desc: 'Tärna fläsket och ta bort svålen.'},
+    {id:0, desc: 'Ta bort svålen och tärna fläsket i ca 1x1 cm stora kuber.'},
     {id:1, desc: 'Värm stekpannan och fräs fläsket på hög värme tills det blir knaprigt, lägg sedan åt sidan.'},
-    {id:2, desc: 'Sätt ett kryss i tomaterna med en vass kniv och skiva vitlöken.'},
-    {id:3, desc: 'Lägg i tomaterna och tillsätt vitvinsvinägern.'},
-    {id:4, desc: 'Låt koka i ca 15 min. Börja koka spaghettin under tiden.'},
-    {id:5, desc: 'Ta upp rosmarinkvisten och piri pirin, lägg i den kokta pastan. Salta och peppra.'},
-    {id:6, desc: 'Toppa med de stekta fläsktärningarna och strö över osten. Klart.'}
+    {id:2, desc: 'Sätt ett kryss i tomaterna med en vass kniv och finhacka vitlöken.'},
+    {id:3, desc: 'Lägg tomaterna i stekpannan och tillsätt vitvinsvinäger, vitlök, rosmarin och piri piri. Låt koka i ca 15 min. Koka spaghetti under tiden.'},
+    {id:4, desc: 'Ta upp rosmarinkvisten och piri pirin ur såsen. Salta och peppra efter smak.'},
+    {id:5, desc: 'Vänd ner den kokta pastan i tomatsåsen och toppa med de stekta fläsktärningarna och riven ost.'}
 ];
+
 
 var ingredients12 = [
     {id:0, quantity:'300 g', desc: 'spaghetti'},
@@ -366,18 +366,16 @@ var ingredients12 = [
 
 /** Grekisk souvlaki **/
 
-var desc13 = 'Består av kött, grekisk sallad och tzatziki. Vill man ha äkta greklandskänsla kan man sätta kött och paprika på ett grillspett, samt ha pitabröd och såklart pommes till.';
+var desc13 = 'Består av kött, grekisk sallad och tzatziki. Vill man ha en riktig greklandskänsla kan man sätta köttet och paprikan på ett grillspett och servera rätten med pitabröd och pommes.';
 
 var steps13 = [
-    {id:0, desc: 'Börja med tzatzikin, riv 1/3 av gurkan på rivjärm (den grövsta sidan).'},
-    {id:1, desc: 'Salta och låt stå en stund tills vätskan har försvunnit.'},
-    {id:2, desc: 'Häll av vätskan och blanda med yoghurten.'},
-    {id:3, desc: 'Pressa i en vitlöksklyfta och häll i en tesked olivolja.'},
-    {id:4, desc: 'Salta, peppra rör om. Ställ sedan in i kylskåpet medan du tillagar resten.'},
-    {id:5, desc: 'Skär tomaterna, gurkan och rödlöken. Lägg sedan i dem i en skål.'},
-    {id:6, desc: 'Lägg på oliverna och toppa med en bit fetaost, krydda med oregano och ringla över lite olivolja.'},
-    {id:7, desc: 'Börja med köttet, gnid in kotletterna på varje sida med lite olivolja. Salta, peppra och krydda med rosmarin.'},
-    {id:8, desc: 'Grilla kotletterna högt upp i ugnen på högsta värmen i ca 5 min på varje sida.'}
+    {id:0, desc: 'Påbörja tzatzikin genom att riva 1/3 av gurkan på den grövsta sidan av ett rivjärn. Salta och låt stå en stund tills vätskan runnit av.'},
+    {id:1, desc: 'Häll bort vätskan och blanda gurkan med yoghurten.'},
+    {id:2, desc: 'Pressa i en vitlöksklyfta och häll i en tesked olivolja. Salta, peppra och rör om. Ställ sedan in i kylskåpet.'},
+    {id:3, desc: 'Skär upp tomaterna, gurkan och rödlöken och lägg i en skål.'},
+    {id:4, desc: 'Lägg i oliverna och toppa med en bit fetaost, krydda med oregano och ringla över lite olivolja.'},
+    {id:5, desc: 'Gnid in fläskkotletterna med lite olivolja. Salta, peppra och krydda med rosmarin.'},
+    {id:6, desc: 'Grilla kotletterna högt upp i ugnen på högsta värmen, ca 5 min på varje sida. Servera sedan tillsammans med den grekiska salladen och tzatzikin.'}
    
 ];
 
@@ -401,15 +399,14 @@ var ingredients13 = [
 
 /** Ceasarsallad **/
 
-var desc14 = 'Klassisk ceasarsallad fast med tomater. Man kan köpa färdiga krutonger om man inte orkar göra egna.';
+var desc14 = 'En god och enkel ceasarsallad som går fort att göra. Går bra att köpa färdiga krutonger om man inte orkar eller har lust att göra egna.';
 
 var steps14 = [
-    {id:0, desc: 'Börja med krutongerna. Sätt ugnen på 200 grader, skär brödet i bitar och rosta i ugnen i 5-10 minuter tills de blivit lite knaprigt och fått färg.'},
+    {id:0, desc: 'Sätt ugnen på 200 grader. Skär brödet i tärningar på cirka 2x2 cm och lägg på en plåt med bakplåtspapper. Ringla över lite olivolja och salta lätt. Rosta i ugnen cirka 5-10 minuter tills det blivit lite knaprigt och fått färg.'},
     {id:1, desc: 'Stek baconet knaprigt, låt rinna av på hushållspapper.'},
-    {id:2, desc: 'Stek kycklingen och krydda med salt och peppar.'},
-    {id:3, desc: 'Skölj salladen och tomaterna och skär dem i mindre bitar.'},
-    {id:4, desc: 'Montera ihop salladen med kycklingen och baconen. Ringa över dressing och riv på osten.'}
-   
+    {id:2, desc: 'Stek kycklingfiléerna och krydda med salt och peppar. Låt svalna och skär sedan upp i önskad storlek (förslagsvis i tjocka skivor).'},
+    {id:3, desc: 'Skölj salladen och tomaterna och skär dem i mindre bitar. Blanda med dressing.'},
+    {id:4, desc: 'Strö över kyckling, bacon och toppa med riven parmesan.'}
 ];
 
 var ingredients14 = [
@@ -424,17 +421,17 @@ var ingredients14 = [
     {id:9, quantity:'', desc:'peppar'}
 ];
 
-/**Falukorv med potatismos**/
+/**Ugnsbakad falukorv med potatismos**/
 
-var desc15 = 'Äkta svensk husmanskost.';
+var desc15 = 'Enkel klassiker!';
 
 var steps15 = [
-    {id:0, desc: 'Skala och koka potatisen i lättsaltat vatten.'},
-    {id:1, desc: 'Dra av skinnet på korven och skär skåror i den utan att skära genom den. Smeta på senap.'},
-    {id:2, desc: 'Dela tomaten och löken i halvor och skär dem i skivor. Skär även osten i tunna skivor.'},
-    {id:3, desc: 'Varva halverade tomater, lökar och ostksivor i skårorna i korven.'},
-    {id:4, desc: 'Lägg korven i en ugnsfast form och stek i 225 grader i ca 20 min tills osten smält.'},
-    {id:5, desc: 'När potatisen är färdig, häll av vattnet och ånga någon minut. Blanda i mjölken och smöret, mosa eller kör visp. Krydda med salt och vitpeppar.'},
+    {id:0, desc: 'Skala potatisen och koka i lättsaltat vatten.'},
+    {id:1, desc: 'Dra av skinnet på korven och skär skåror i den med cirka 2-3 cm mellanrum, utan att skära genom den. Lägg sedan i en ugnsfast form'},
+    {id:2, desc: 'Skär tomat, lök och ost i tunna skivor.'},
+    {id:3, desc: 'Spritsa senap i skårorna på korven och lägg sedan i tomat, lök och ostskivor.'},
+    {id:4, desc: 'Stek i ugnen på 225 grader i ca 20 min tills osten smält och fått färg.'},
+    {id:5, desc: 'När potatisen är färdig, häll av vattnet och ånga någon minut. Blanda ner smöret och mjölken och mosa eller kör med en elvisp tills moset är fluffigt. Krydda med salt och vitpeppar.'},
 ];
 
 var ingredients15 = [
@@ -452,16 +449,17 @@ var ingredients15 = [
 
 /**Italiensk pasta med gorgonzolasås**/
 
-var desc16 = 'Ostigt värre, man blir garanterat sprängmätt.';
+var desc16 = 'Ostigt värre och väldigt mättande.';
 
 var steps16 = [
-    {id:0, desc: 'Tärna skinkan i små kuber, finhacka löken och vitlöken.'},
-    {id:1, desc: 'Fräs lök och vitlök i smör tills de mjuknat (utan att få för mycket färg).'},
-    {id:2, desc: 'Lägg i champinjonerna och fräs i ytterligare några minuter.'},
-    {id:3, desc: 'Tillsätt grädden och krydda med salt och peppar.'},
-    {id:4, desc: 'Sänk till lägsta värmen, lägg i gorgonzolan under omrörning till den har smält helt.'},
-    {id:5, desc: 'Lägg till sist i den tärnade skinkan och stäng av värmen. Koka pastan och broccilin.'},
-    {id:6, desc: 'Häll i den kokta pastan i såsen och blanda runt. Servera med parmesan.'}
+    {id:0, desc: 'Koka upp pasta och broccoli i en varsinn kastrull'},
+    {id:1, desc: 'Tärna skinkan i små kuber och finhacka löken och vitlöken.'},
+    {id:2, desc: 'Fräs löken och vitlöken lätt i lite smör'},
+    {id:3, desc: 'Lägg i champinjonerna och fräs i ytterligare några minuter.'},
+    {id:4, desc: 'Tillsätt grädden och låt koka upp. Krydda med salt och peppar.'},
+    {id:5, desc: 'Sänk till lägsta värmen och tillsätt gorgonzolan under omrörning. Fortsätt röra tills den har smält helt.'},
+    {id:6, desc: 'Lägg till sist i broccolin och den tärnade skinkan och stäng av värmen.'},
+    {id:7, desc: 'Vänd ner den kokta pastan i såsen och blanda runt. Toppa med lite parmesan.'}
 ];
 
 var ingredients16 = [
@@ -479,15 +477,15 @@ var ingredients16 = [
     {id:12, quantity:'', desc:'peppar'}
 ];
 
-/**Renskavsgryta**/
+/**Renskavsgryta**/ 
+//Här slutade vi.
 
 var desc17 = 'Mustig gryta som passar bra när man vill ha något varmt på kalla vinterdagar.';
 
 var steps17 = [
-    {id:0, desc: 'Börja med att koka riset.'},
-    {id:1, desc: 'Finhacka lök och vitlök. Grovhacka kantarellerna.'},
-    {id:2, desc: 'Fräs löken, vitlöken och kantarellerna i smör.'},
-    {id:3, desc: 'Salta, peppra och lägg åt sidan i en gryta.'},
+    {id:0, desc: 'Koka upp riset i en kastrull.'},
+    {id:1, desc: 'Grovhacka kantarellerna och finhacka löken och vitlöken. '},
+    {id:2, desc: 'Fräs löken, vitlöken och kantarellerna i smör. Salta, peppra och lägg åt sidan i en gryta.'},
     {id:4, desc: 'Börja fräs renskavet i smör, krydda och lägg sedan över i grytan.'},
     {id:5, desc: 'Ha i grädde, créme fraiche och köttbuljongstärning. Red av med maizena.'},
     {id:6, desc: 'Låg puttra på svag värme i ca 10 minuter (eller tills riset är klart).'},
