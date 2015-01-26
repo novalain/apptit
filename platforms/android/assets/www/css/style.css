@@ -1,0 +1,238 @@
+p.noResults{margin-top:50%; font-family: Verdana; text-align:center;}
+
+div.toggleFavoritesText{float:left;margin-left:12px; width:155px;}
+div.toggleFavoritesText p{margin-top:14px; font-family:Verdana; font-size:0.9em;}
+div.toggleFavorites{margin-left:80%;margin-top:10px;}
+
+/*
+div.picTextContainer{z-index:30; display:none; position:absolute; width:320px; margin-left:auto; margin-right:auto; margin-top:30px; height:50px; float:left;}
+div.picTextContainer p{text-shadow: 1px 1px black;text-align:center; color:white; font-family:Verdana; font-size:0.8em;}
+*/
+div.picTextContainer{display:none;position:absolute; width:131px; margin-left:10px; margin-top:10px; height:50px; float:left;}
+div.picTextContainer p{z-index:10;text-shadow: 1px 1px black;text-align:center; color:white; font-family:Verdana; font-size:0.8em;}
+
+
+.loadingIconMainContainer{
+
+	width:15px; 
+	height:20px;
+	margin-top:45px;
+	background-color: white;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+
+.loadingIconMain{
+
+	color:black;
+
+}
+
+.loadingIconRecipe{
+
+	color:black;
+}
+
+.spinner-hide .loading{
+    visibility: visible;
+}
+.spinner-show .loading{
+	visibility: hidden;
+}
+
+
+div.loadIconRecipeContainer{
+	width:14px; margin-top:72px;margin-left:auto; margin-right:auto;
+}
+
+
+div.paper{width:90%; padding:3px; height:480px; 
+			 bottom:-445px;
+			 margin-left:5%;
+
+			-ms-transform: rotate(0deg);  
+		    -webkit-transform: rotate(0deg); 
+		    transform: rotate(0deg);
+		    border-radius: 4px; 
+
+		    cursor:pointer;
+		    z-index:20;
+			position: absolute;
+			background: white;
+			background: -webkit-linear-gradient(top, white 0%, #fff390 6%) 0 57px;
+			background: -moz-linear-gradient(top, white 0%, #fff390 6%) 0 57px;
+			background: linear-gradient(top, white 0%, #fff390 6%) 0 57px; /* #DFE8EC*/
+			-webkit-background-size: 100% 30px;
+			-moz-background-size: 100% 30px;
+			-ms-background-size: 100% 30px;
+			background-size: 100% 30px;}
+
+.crooked::before {content:""; z-index:-1; margin:0 1px; width:706px; height:10px; position:absolute; bottom:-3px; left:0; background:white; border:1px solid #B5B5B5;}
+.crooked::after {content:''; position:absolute; width:0px; top:0; left:39px; bottom:0; border-left:1px solid #F8D3D3;}
+
+div.paper p{margin-left:10px;color:black;}
+
+div.cookTime1{margin-top:7px; margin-left:8px;float:left; height:40px; width:30px;}
+div.cookTime2{float:left; height:40px; width:70px; }
+div.cookTime2 p{font-family: Verdana; margin-top:14px; margin-left:10px;}
+div.portionsText{ float:left; height:40px; width:120px; }
+div.portionsText p{font-family: Verdana; margin-top:14px; }
+
+div#fork{margin-top:7px;float:left; height:40px; width:10px;}
+div#knife{margin-top:7px;float:left; height:40px; width:20px;}
+
+div#recipeDesc{background-color:#f8f8f8;margin-top:46px; }
+div#recipeDesc p{font-family:Verdana; color:black;}
+
+div.recPicContainer{width:100%; height:180px;}
+
+div.recipeContainer{cursor:pointer;
+
+					margin-left:3px;
+					margin-top:9px;
+					margin-right:0px;
+					float:left; 
+					width:151px; 
+					height:151px;
+					
+					
+ }
+
+ 
+.recipeContainer2{margin-left:9px;}
+
+.contentContainer{padding:0px;}
+
+
+/*width: 158px;*/
+img.recipePicInMainMenu{border-radius:0px;
+						height:159px;
+
+	/*
+						position:absolute;
+						clip: rect(20px,320px,161px,0px);*/
+						}
+				  
+
+li{background-color:white !important;}
+
+/*Ingridienslistan*/
+
+li.ingredientListItem{margin-bottom:10px; background-color:transparent!important; }
+div#rec1{width:62px; float:left; text-align:right;}
+div#rec2{width:218px; float:left; }
+
+p.igrText{font-family:Verdana;font-size:0.7em; }
+
+/****************/
+
+/*Favorithjärtat*/
+
+p#favText{margin-top:20px;text-align:center;font-family:Verdana;}
+
+div#favContainer{opacity:0.6;width:50px; margin-left:auto; margin-right:auto;}
+
+#favHeartImg{cursor:pointer; width:50px;}
+
+.favHeartInMainMenu{
+
+	margin-right:10px;
+	opacity:0.6;
+}
+
+.textInput{
+	height:45px;
+}
+
+.green{
+	color:red;
+}
+
+
+/**ABOUT **/
+
+p#creatorText{margin-top:20px;text-align:center;font-family:Verdana;margin-bottom:1px;}
+p#creatorText2{font-size:0.7em;text-align:center;font-family:Verdana;}
+div#creatorContainer{opacity:0.8;width:100px; margin-left:auto; margin-right:auto;}
+
+#creatorImg{width:100px;}
+
+
+/********För sökfältet, ska försvinne onScrollDown*******/
+/*
+.bar-balanced{
+	z-index:2;
+}
+
+.bar-subheader {
+    z-index:1;
+    padding:0px;
+    transition: top 0.25s ease;
+}
+
+.bar-subheader-slide-away .bar-subheader{
+	top: 0;
+}
+
+.bar-subheader-slide-away .has-subheader{
+	top: 44px;
+}
+
+.has-subheader {
+    top: 44px;
+}
+.has-subheader .scroll {
+    padding-top: 44px;
+}
+*/
+
+/*
+input {
+  text-shadow: rgba(0,0,0,0) 0px 0px 0px;
+}
+input.force-redraw {
+  text-shadow: none;
+}
+*/
+.fake-statusbar {
+  height: 20px;
+  max-height: 20px;
+  font-size: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  color: #fff;
+  padding: 2px 3px 3px 3px;
+}
+.fake-statusbar .time {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.fake-statusbar .pull-left { float: left; }
+.fake-statusbar .pull-right { float: right; }
+
+.tabs{display:none;}
+
+.bar-header {
+  height: 64px !important;
+}
+.bar-header > *{
+  margin-top: 20px !important;
+}
+.bar-subheader {
+  top: 64px !important;
+  padding:0;
+}
+
+.scroll-content{
+  top: 0 !important;
+  bottom: 0 !important;
+  padding-top: 44px !important;
+}
+

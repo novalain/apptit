@@ -355,43 +355,41 @@ var ingredients12 = [
     {id:1, quantity:'1', desc: 'ask cocktailtomater'},
     {id:2, quantity:'1', desc: 'vitlöksklyfta'},
     {id:3, quantity:'2', desc: 'piri piri'},
-    {id:5, quantity:'1', desc: 'kvist rosmarin'},
-    {id:6, quantity:'2 msk', desc:'olivolja'},
-    {id:7, quantity:'1/2 dl', desc: 'vitvinsvinäger'},
-    {id:8, quantity:'500 g', desc:'rimmat sidfläsk'},
-    {id:9, quantity:'', desc:'riven ost'},
-    {id:10, quantity:'', desc:'salt'},
-    {id:11, quantity:'', desc:'peppar'}
+    {id:4, quantity:'1', desc: 'kvist rosmarin'},
+    {id:5, quantity:'2 msk', desc:'olivolja'},
+    {id:6, quantity:'1/2 dl', desc: 'vitvinsvinäger'},
+    {id:7, quantity:'500 g', desc:'rimmat sidfläsk'},
+    {id:8, quantity:'', desc:'riven ost'},
+    {id:9, quantity:'', desc:'salt'},
+    {id:10, quantity:'', desc:'peppar'}
 ];
 
-/** Grekisk souvlaki **/
+/** Grekisk souvlaki**/
 
-var desc13 = 'Består av kött, grekisk sallad och tzatziki. Vill man ha en riktig greklandskänsla kan man sätta köttet och paprikan på ett grillspett och servera rätten med pitabröd och pommes.';
+var desc13 = 'Kycklingspett med det grekiska köket som inspiration.';
 
 var steps13 = [
     {id:0, desc: 'Påbörja tzatzikin genom att riva 1/3 av gurkan på den grövsta sidan av ett rivjärn. Salta och låt stå en stund tills vätskan runnit av.'},
-    {id:1, desc: 'Häll bort vätskan och blanda gurkan med yoghurten.'},
-    {id:2, desc: 'Pressa i en vitlöksklyfta och häll i en tesked olivolja. Salta, peppra och rör om. Ställ sedan in i kylskåpet.'},
-    {id:3, desc: 'Skär upp tomaterna, gurkan och rödlöken och lägg i en skål.'},
-    {id:4, desc: 'Lägg i oliverna och toppa med en bit fetaost, krydda med oregano och ringla över lite olivolja.'},
-    {id:5, desc: 'Gnid in fläskkotletterna med lite olivolja. Salta, peppra och krydda med rosmarin.'},
-    {id:6, desc: 'Grilla kotletterna högt upp i ugnen på högsta värmen, ca 5 min på varje sida. Servera sedan tillsammans med den grekiska salladen och tzatzikin.'}
+    {id:1, desc: 'Häll bort vätskan och blanda gurkan med yoghurten. Pressa i en vitlöksklyfta och häll i en tesked olivolja. Salta, peppra och rör om. Ställ sedan in i kylskåpet.'},
+    {id:2, desc: 'Skär potatisen i klyftor och lägg i en ugnssäker form med bakplåtspapper. Ringla över rikligt med olivolja. Salta, peppra och toppa med lite timjan. Ställ in i ugnen ca 20-25 minuter på 200 grader.'},
+    {id:3, desc: 'dela kycklingfiléerna .'},
+    {id:4, desc: ''},
+    {id:5, desc: ''},
+    {id:6, desc: ''}
    
 ];
 
 var ingredients13 = [
-    {id:0, quantity:'4', desc: 'fläskkotletter'},
-    {id:1, quantity:'2', desc: 'tomater'},
-    {id:2, quantity:'1', desc: 'gurka'},
-    {id:3, quantity:'1', desc: 'rödlök'},
-    {id:5, quantity:'1', desc: 'vitlöksklyfta'},
-    {id:6, quantity:'1', desc: 'paket fetaost'},
-    {id:7, quantity:'2 dl ', desc: 'turkisk yoghurt'},
-    {id:8, quantity:'5-10', desc:'gröna oliver'},
-    {id:9, quantity:'', desc:'oregano'},
-    {id:10, quantity:'', desc:'rosmarin'},
+    {id:0, quantity:'4', desc: 'kycklingfiléer'},
+    {id:1, quantity:'2', desc: 'gröna eller röda paprikor'},
+    {id:2, quantity:'1', desc: 'rödlök'},
+    {id:3, quantity:'1', desc: 'psotatisar'},
+    {id:3, quantity:'1', desc: 'gurka'},
+    {id:5, quantity:'2', desc: 'vitlöksklyftor'},
+    {id:6, quantity:'1', desc: 'pitabröd'},
+    {id:7, quantity:'2 dl', desc: 'turkisk yoghurt'},
     {id:11, quantity:'', desc:'salt'},
-    {id:12, quantity:'', desc:'vitpeppar'},
+    {id:12, quantity:'', desc:'timjan'},
     {id:13, quantity:'', desc:'svartpeppar'},
     {id:14, quantity:'', desc:'olivolja'}
 ];
@@ -403,7 +401,7 @@ var desc14 = 'En god och enkel ceasarsallad som går fort att göra. Går bra at
 
 var steps14 = [
     {id:0, desc: 'Sätt ugnen på 200 grader. Skär brödet i tärningar på cirka 2x2 cm och lägg på en plåt med bakplåtspapper. Ringla över lite olivolja och salta lätt. Rosta i ugnen cirka 5-10 minuter tills det blivit lite knaprigt och fått färg.'},
-    {id:1, desc: 'Stek baconet knaprigt, låt rinna av på hushållspapper.'},
+    {id:1, desc: 'Stek baconet knaprigt, häll över på lite hushållspapper och låt fettet rinna av'},
     {id:2, desc: 'Stek kycklingfiléerna och krydda med salt och peppar. Låt svalna och skär sedan upp i önskad storlek (förslagsvis i tjocka skivor).'},
     {id:3, desc: 'Skölj salladen och tomaterna och skär dem i mindre bitar. Blanda med dressing.'},
     {id:4, desc: 'Strö över kyckling, bacon och toppa med riven parmesan.'}
@@ -414,11 +412,11 @@ var ingredients14 = [
     {id:1, quantity:'350 g', desc: 'kycklingfilé'},
     {id:2, quantity:'1', desc: 'romansallad'},
     {id:3, quantity:'', desc: 'lantbröd till krutonger'},
-    {id:5, quantity:'1 ask', desc: 'cocktailtomater'},
-    {id:6, quantity:'', desc: 'färdig ceasardressing'},
-    {id:7, quantity:'', desc:'parmesan'},
-    {id:8, quantity:'', desc:'salt'},
-    {id:9, quantity:'', desc:'peppar'}
+    {id:4, quantity:'1 ask', desc: 'cocktailtomater'},
+    {id:5, quantity:'', desc: 'färdig ceasardressing'},
+    {id:6, quantity:'', desc:'parmesan'},
+    {id:7, quantity:'', desc:'salt'},
+    {id:8, quantity:'', desc:'peppar'}
 ];
 
 /**Ugnsbakad falukorv med potatismos**/
@@ -439,12 +437,12 @@ var ingredients15 = [
     {id:1, quantity:'ca 12', desc: 'potatisar'},
     {id:2, quantity:'1', desc: 'tomat'},
     {id:3, quantity:'1', desc: 'gul lök'},
-    {id:5, quantity:'50 g', desc: 'ost'},
-    {id:6, quantity:'2 msk', desc: 'dijonsenap'},
-    {id:7, quantity:'100 g', desc: 'smör'},
-    {id:8, quantity:'1 dl', desc: 'mjölk'},
-    {id:9, quantity:'', desc:'salt'},
-    {id:10, quantity:'', desc:'vitpeppar'}
+    {id:4, quantity:'50 g', desc: 'ost'},
+    {id:5, quantity:'2 msk', desc: 'dijonsenap'},
+    {id:6, quantity:'100 g', desc: 'smör'},
+    {id:7, quantity:'1 dl', desc: 'mjölk'},
+    {id:8, quantity:'', desc:'salt'},
+    {id:9, quantity:'', desc:'vitpeppar'}
 ];
 
 /**Italiensk pasta med gorgonzolasås**/
@@ -467,14 +465,14 @@ var ingredients16 = [
     {id:1, quantity:'1', desc: 'scharlottenlök'},
     {id:2, quantity:'1', desc: 'vitlöksklyfta'},
     {id:3, quantity:'180 g', desc: 'rökt skinka'},
-    {id:5, quantity:'1 burk', desc: 'hela champinjoner'},
-    {id:6, quantity:'5 dl', desc: 'grädde'},
-    {id:7, quantity:'1 bukett ', desc: 'broccoli'},
-    {id:8, quantity:'100 g', desc:'gorgonzola'},
-    {id:9, quantity:'1 msk', desc:'smör'},
-    {id:10, quantity:'', desc:'riven parmesan'},
-    {id:11, quantity:'', desc:'salt'},
-    {id:12, quantity:'', desc:'peppar'}
+    {id:4, quantity:'1 burk', desc: 'hela champinjoner'},
+    {id:5, quantity:'5 dl', desc: 'grädde'},
+    {id:6, quantity:'1 bukett ', desc: 'broccoli'},
+    {id:7, quantity:'100 g', desc:'gorgonzola'},
+    {id:8, quantity:'1 msk', desc:'smör'},
+    {id:9, quantity:'', desc:'riven parmesan'},
+    {id:10, quantity:'', desc:'salt'},
+    {id:11, quantity:'', desc:'peppar'}
 ];
 
 /**Renskavsgryta**/ 
@@ -486,9 +484,9 @@ var steps17 = [
     {id:0, desc: 'Koka upp riset i en kastrull.'},
     {id:1, desc: 'Grovhacka kantarellerna och finhacka löken och vitlöken. '},
     {id:2, desc: 'Fräs löken, vitlöken och kantarellerna i smör. Salta, peppra och lägg åt sidan i en gryta.'},
-    {id:4, desc: 'Börja fräs renskavet i smör, krydda och lägg sedan över i grytan.'},
-    {id:5, desc: 'Ha i grädde, créme fraiche och köttbuljongstärning. Red av med maizena.'},
-    {id:6, desc: 'Låg puttra på svag värme i ca 10 minuter (eller tills riset är klart).'},
+    {id:3, desc: 'Fräs renskavet i smör, krydda och lägg sedan över i grytan.'},
+    {id:4, desc: 'Ställ grytan på den varma plattan och tillsätt grädde, créme fraiche och köttbuljongtärning. Red av med maizena.'},
+    {id:5, desc: 'Låg puttra på svag värme i ca 10 minuter (eller tills riset är klart).'},
     {id:6, desc: 'Servera med rårörda lingon eller lingonsylt.'}
 
 ];
@@ -512,19 +510,19 @@ var ingredients17 = [
 
 /**Lax med curry och couscous**/
 
-var desc18 = 'Smakrik och kryddig lax som är lätt att laga när man kanske inte käkat fisk på länge. Här har vi dragit ner på kolhydraterna lite grann.';
+var desc18 = 'Smakrik och kryddig lax som är lätt att laga.';
 
 var steps18 = [
     {id:0, desc: 'Börja med att koka couscousen enligt förpackningen.'},
-    {id:1, desc: 'Krydda laxen med salt, peppar och torkad chili. Pressa över citron.'},
-    {id:2, desc: 'Lägg i laxen i en ugnssäker form och låt den ligga i ca 20 min.'},
-    {id:3, desc: 'Värm olja i en kastrull. Tillsätt sedan röd curry pasta och couscousen.'},
-    {id:4, desc: 'Servera med en klick gräddfil.'}
+    {id:1, desc: 'Krydda laxen med salt, peppar och torkad chili. Pressa över lite citron.'},
+    {id:2, desc: 'Lägg i laxen i en ugnssäker form och ställ in i ugn ca 20 min på 175 grader.'},
+    {id:3, desc: 'Värm olja i en kastrull. Tillsätt sedan röd currypasta och den färdiga couscousen och blanda väl.'},
+    {id:4, desc: 'Servera laxen och couscousen med en klick gräddfil.'}
 ];
 
 var ingredients18 = [
     {id:0, quantity:'4 dl', desc: 'couscous'},
-    {id:1, quantity:'3 msk', desc: 'röd curry pasta'},
+    {id:1, quantity:'3 msk', desc: 'röd currypasta'},
     {id:2, quantity:'4', desc: 'frysta laxbitar'},
     {id:3, quantity:'1', desc: 'citron'},
     {id:5, quantity:'1', desc: 'torkad chili'},
@@ -536,28 +534,27 @@ var ingredients18 = [
 
 /**Gnocchi i tomatsås**/
 
-var desc19 = 'Italiensk favoriträtt som är svår att uttala. Ha i mer ost om du vill ha mer protein i maten. Ett tips är att kolla upp hur man gör egen gnocchi, blir sjukt gott.';
+var desc19 = 'Ett tips är att kolla upp hur man gör egen gnocchi, tar mer tid men blir sjukt gott.';
 
 var steps19 = [
-    {id:0, desc: 'Förbered gnocchin enligt anvisning.'},
-    {id:1, desc: 'Skala och hacka vitlöken, fräs den sedan i olivolja.'},
-    {id:2, desc: 'Tillsätt tomaterna och rosmarin.'},
-    {id:3, desc: 'Tillsätt sedan vitvinsvinäger och låt koka i några minuter.'},
+    {id:0, desc: 'Förbered gnocchin enligt anvisning på paketet.'},
+    {id:1, desc: 'Skala och hacka vitlöken, fräs sedan i olivolja.'},
+    {id:2, desc: 'Tillsätt tomat, rosmarin och vitvinsvinäger och låt koka i några minuter..'},
     {id:4, desc: 'Skär mozzarellan i små tärningar och lägg sedan i dem i den puttrande såsen.'},
-    {id:5, desc: 'Salta, peppra och krydda med basilikan.'},
-    {id:6, desc: 'Lägg i den kokta gnoccin i tomatsåsen och låt puttra ihop sig.'},
-    {id:7, desc: 'Servera med bresaola. Funkar bra med ruccola till.'}
+    {id:5, desc: 'Finhacka basilikan och tillsätt i såsen. Salta och peppra.'},
+    {id:6, desc: 'Lägg i den kokta gnoccin i tomatsåsen och låt puttra några minuter på svag värme.'},
+    {id:7, desc: 'Servera med bresaolaost. Funkar även bra med ruccola till.'}
 
 ];
 
 var ingredients19 = [
-    {id:0, quantity:'500 g', desc: 'potatis gnocchi'},
-    {id:1, quantity:'150 g', desc: 'bresaola ost (tunna skivor)'},
-    {id:2, quantity:'125 g', desc: 'mozzarella'},
+    {id:0, quantity:'500 g', desc: 'färdig potatis gnocchi'},
+    {id:1, quantity:'150 g', desc: 'bresaolaost (tunna skivor)'},
+    {id:2, quantity:'125 g', desc: 'mozzarellaost'},
     {id:3, quantity:'1', desc: 'ask cocktailtomater'},
-    {id:5, quantity:'2 msk', desc: 'basilika'},
-    {id:6, quantity:'2', desc: 'vitlöksklyftor'},
-    {id:5, quantity:'2 msk', desc: 'vitvinsvinäger'},
+    {id:4, quantity:'2 msk', desc: 'basilika'},
+    {id:5, quantity:'2', desc: 'vitlöksklyftor'},
+    {id:6, quantity:'2 msk', desc: 'vitvinsvinäger'},
     {id:7, quantity:'2 msk', desc: 'olivolja'},
     {id:8, quantity:'1 kvist', desc:'färsk rosmarin'},
     {id:9, quantity:'', desc:'salt'},
@@ -571,10 +568,10 @@ var desc20 = 'Man kan göra mycket på falukorv, dessutom är det billigt.';
 var steps20 = [
     {id:0, desc: 'Dela blomkålen i buketter och koka i lättsaltat vatten ca 5 minuter.'},
     {id:1, desc: 'Fräs smöret i en liten kastrull, pudra sedan över mjölet och vispa ihop det.'},
-    {id:2, desc: 'Tillsätt lite mjölk i taget och vispa runt hela tiden.'},
-    {id:3, desc: 'Låt såsen koka ihop i några minuter, börja skär upp och stek falukorven sålänge.'},
-    {id:4, desc: 'Smaka av med salt, peppar och en nypa socker. Lägg tillsist i blomkålen.'},
-    {id:5, desc: 'Servera såsen med blomkålen ihop med falukorven.'}
+    {id:2, desc: 'Tillsätt lite mjölk i taget och vispa hela tiden medan såsen tjocknar. Låt såsen koka ihop i några minuter.'},
+    {id:3, desc: 'Smaka av med salt, peppar och en nypa socker. Tillsätt blomkålen.'},
+    {id:4, desc: 'Skiva upp falukorven och stek i smör. Servera sedan tillsammans med blomkålssåsen.'},
+    
 
 ];
 
@@ -591,16 +588,16 @@ var ingredients20 = [
 
 /**21. Thailändsk gryta med kyckling **/
 
-var desc21 = 'Även om resultatet aldrig blir som på thaistället i stan så går denna gryta att variera väldigt mycket. Gott med extra grönsaker som t.ex purjolök, broccoli och bambuskott.';
+var desc21 = 'Denna gryta att variera väldigt mycket. Gott att tillsätta extra grönsaker som till exempel purjolök, broccoli och bambuskott.';
 
 var steps21 = [
-    {id:0, desc: 'Börja koka riset.'},
+    {id:0, desc: 'Koka upp riset.'},
     {id:1, desc: 'Skölj, rensa och skär grönsaker samt kyckling i små bitar. Lägg åt sidan.'},
-    {id:2, desc: 'Stek currypasta med olja i en gryta i nån minut.'},
-    {id:3, desc: 'Tillsätt kokosmjölk, vatten och buljongtärning. Låt puttra i några minuter.'},
-    {id:4, desc: 'Tillsätt kycklingen och grönsakerna. Låg koka i ca 5-10 min tills allting känns klart.'},
-    {id:5, desc: 'Smaka av med pressad lime och ev lite socker.'},
-    {id:5, desc: 'Servera grytan ihop med riset.'}
+    {id:2, desc: 'Stek currypasta med olja i en gryta i någon minut.'},
+    {id:3, desc: 'Tillsätt kokosmjölk, vatten och buljongtärning och låt koka upp.'},
+    {id:4, desc: 'Tillsätt kycklingen och grönsakerna. Låt puttra på låg värme i ca 5-10 minuter.'},
+    {id:5, desc: 'Smaka av med limejuice och lite socker.'},
+    {id:6, desc: 'Servera grytan tillsammans med riset och toppa med cashewnötter.'}
 
 ];
 
@@ -610,13 +607,13 @@ var ingredients21 = [
     {id:2, quantity:'1 burk', desc: 'ananas'},
     {id:3, quantity:'1', desc: 'lime'},
     {id:4, quantity:'2', desc: 'morötter'},
-    {id:4, quantity:'5 tsk', desc: 'röd currypasta'},
-    {id:5, quantity:'1 burk', desc: 'kokosmjölk'},
-    {id:6, quantity:'4 dl', desc: '(jasmin)ris'},
-    {id:7, quantity:'1', desc: 'tärning hönsbuljong'},
-    {id:8, quantity:'', desc: 'cashewnötter'},
-    {id:9, quantity:'', desc: 'socker'},
-    {id:10, quantity:'', desc: 'salt'}
+    {id:5, quantity:'5 tsk', desc: 'röd currypasta'},
+    {id:6, quantity:'1 burk', desc: 'kokosmjölk'},
+    {id:7, quantity:'4 dl', desc: '(jasmin)ris'},
+    {id:8, quantity:'1', desc: 'tärning hönsbuljong'},
+    {id:9, quantity:'', desc: 'cashewnötter'},
+    {id:10, quantity:'', desc: 'socker'},
+    {id:11, quantity:'', desc: 'salt'}
 ];
 
 /**22. Panerad rödspetta **/
@@ -624,31 +621,31 @@ var ingredients21 = [
 var desc22 = 'Panerad rödspetta med potatismos och hemlaggad remouladsås.';
 
 var steps22 = [
-    {id:0, desc: 'Skala och koka potatisen i lättsaltat vatten.'},
+    {id:0, desc: 'Skala potatisen och koka i lättsaltat vatten.'},
     {id:1, desc: 'Blanda ströbröd, salt och peppar i en djup tallrik.'},
-    {id:2, desc: 'Vispa upp ägget i en bunke med en gaffel. Doppa fisken i ägget och vänd sedan i ströbrödet. Stek sedan fisken i smör.'},
-    {id:3, desc: 'Blanda majonäs, bostongurka och créme fraiche till dressingen sålänge.'},
-    {id:4, desc: 'När potatisen är färdig, häll av vattnet och ånga någon minut. Blanda i mjölken och smöret, mosa eller kör visp. Krydda med salt och vitpeppar.'}
+    {id:2, desc: 'Vispa upp ägget i en djup tallrik. Doppa fisken i ägget och vänd sedan i ströbrödet och kryddorna. Stek sedan fisken i smör så att den får en fin, gyllenbrun stekyta.'},
+    {id:3, desc: 'Blanda majonäs, bostongurka och créme fraiche till dressingen.'},
+    {id:4, desc: 'När potatisen är färdig, häll av vattnet och ånga någon minut. Blanda först i smöret och vispa lätt. Tillsätt sedan mjölken ocb vispa tills moset är fluffigt. Krydda med salt och vitpeppar.'}
 ];
 
 var ingredients22 = [
     {id:0, quantity:'700-800g', desc: 'filéer rödspetta'},
     {id:1, quantity:'1', desc: 'ägg'},
     {id:2, quantity:'3 dl', desc: 'ströbröd'},
-    {id:0, quantity:'ca 12', desc: 'potatisar'},
-    {id:1, quantity:'1 dl', desc: 'mjölk'},
-    {id:2, quantity:'100 g', desc: 'smör'},
-    {id:3, quantity:'Dressing', desc: ''},
-    {id:4, quantity:'2 dl', desc: 'créme fraiche'},
-    {id:4, quantity:'3 msk', desc: 'majonäs'},
-    {id:5, quantity:'4 msk', desc: 'bostongurka'},
-    {id:6, quantity:'', desc: 'salt'},
-    {id:7, quantity:'', desc: 'vitpeppar'}
+    {id:3, quantity:'ca 12', desc: 'potatisar'},
+    {id:4, quantity:'1 dl', desc: 'mjölk'},
+    {id:5, quantity:'100 g', desc: 'smör'},
+    {id:6, quantity:'Dressing', desc: ''},
+    {id:7, quantity:'2 dl', desc: 'créme fraiche'},
+    {id:8, quantity:'3 msk', desc: 'majonäs'},
+    {id:9, quantity:'4 msk', desc: 'bostongurka'},
+    {id:10, quantity:'', desc: 'salt'},
+    {id:11, quantity:'', desc: 'vitpeppar'}
 ];
 
 /**23. Köttgryta med kokt potatis **/
 
-var desc23 = 'Köttgrytan behöver rätt lång tid på sig, köttet blir annars väldigt segt. Går bra att ha i sina favoritgrönsaker eller annat skoj.';
+var desc23 = 'Köttgrytan behöver rätt lång tid på sig då köttet annars blir väldigt segt. Går bra att tillsätta sina egna favoritgrönsaker.';
 
 var steps23 = [
     {id:0, desc: 'Hacka upp löken och bryn lätt tillsammans med köttet.'},
@@ -656,7 +653,7 @@ var steps23 = [
     {id:2, desc: 'Lägg i köttet och löken i kastrullen. Koka på svag värme i ca 2 timmar.'},
     {id:3, desc: 'Koka potatis i lättsaltat vatten.'},
     {id:4, desc: 'Hacka champinjoner och paprika, tillsätt i grytan de sista 10 minuterna.'},
-    {id:75, desc: 'Red med grädde och mjöl, smaka av med salt och peppar.'}
+    {id:5, desc: 'Red av grytan med grädde och mjöl för att få en tjockare sås, smaka av med salt och peppar.'}
 ];
 
 var ingredients23 = [
@@ -665,34 +662,32 @@ var ingredients23 = [
     {id:2, quantity:'2', desc: 'tärningar köttbuljong'},
     {id:3, quantity:'1', desc: 'paprika'},
     {id:4, quantity:'100 g', desc: 'champinjoner (färska)'},
-    {id:4, quantity:'1 liter', desc: 'vatten'},
-    {id:4, quantity:'1 dl', desc: 'grädde'},
-    {id:5, quantity:'2 msk', desc: 'vetemjöl'},
-    {id:5, quantity:'ca 10', desc: 'potatisar'},
-    {id:6, quantity:'', desc: 'salt'},
-    {id:7, quantity:'', desc: 'peppar'}
+    {id:5, quantity:'1 liter', desc: 'vatten'},
+    {id:6, quantity:'1 dl', desc: 'grädde'},
+    {id:7, quantity:'2 msk', desc: 'vetemjöl'},
+    {id:8, quantity:'ca 10', desc: 'potatisar'},
+    {id:9, quantity:'', desc: 'salt'},
+    {id:10, quantity:'', desc: 'peppar'}
 ];
 
 /**24. Kyckling med klyftpotatis och bea **/
 
-var desc24 = 'Enkel och bulkig måltid när man kanske inte har så mycket tid för så mycket annat.';
+var desc24 = 'Enkel måltid när man kanske inte har så mycket tid.';
 
 var steps24 = [
-    {id:0, desc: 'Sätt ugnen på 175 grader.'},
-    {id:0, desc: 'Skär potatisen i klyftor och lägg den på en plåt med bakplåtspapper. Ös på smör eller olja och krydda med salt, peppar och timjan.'},
-    {id:1, desc: 'In med potatisklyftorna i ugnen i ca 20-25 min, stek kycklingen hel på medelhög värme.'},
-    {id:2, desc: 'Börja med såsen och i med lite mer smör än vad som står på instruktionerna på förpackingen.'},
-    {id:3, desc: 'Skär i mitten av kycklingen för att kolla att den är färdigstekt. Klart!'}
+    {id:0, desc: 'Sätt ugnen på 200 grader.'},
+    {id:1, desc: 'Skär potatisen i klyftor och lägg den på en plåt med bakplåtspapper. Ringla över rikligt med olivolja och krydda med salt, peppar, timjan och lite chilipulver.'},
+    {id:2, desc: 'In med potatisklyftorna i ugnen i ca 20-25 min. Stek under tiden kycklingen hel på medelhög värme.'},
+    {id:3, desc: 'Skär i mitten av kycklingen för att kolla att den är färdigstekt. Servera med bearnaisesås'}
 ];
 
 var ingredients24 = [
     {id:0, quantity:'700 g', desc: 'kycklingfilé'},
     {id:1, quantity:'8-10', desc: 'potatisar'},
-    {id:2, quantity:'1', desc: 'paket bea'},
-    {id:3, quantity:'100 g', desc: 'smör'},
-    {id:4, quantity:'', desc: 'timjan'},
-    {id:5, quantity:'', desc: 'salt'},
-    {id:6, quantity:'', desc: 'peppar'},
+    {id:2, quantity:'1', desc: 'paket färdig bearnaisesås'},
+    {id:3, quantity:'', desc: 'timjan'},
+    {id:4, quantity:'', desc: 'salt'},
+    {id:5, quantity:'', desc: 'peppar'},
 ];
 
 
@@ -704,8 +699,8 @@ var steps25 = [
     {id:0, desc: 'Dela smöret i små klickar och blanda med köttfärsen.'},
     {id:1, desc: 'Salta, peppra och blanda väl (använd matberedare ifall det finns).'},
     {id:2, desc: 'Fördela smeten på brödskivorna och stek i smör med köttsidan neråt till de fått färg och är knapriga. Vänd och stek brödsidan tills den blir gyllenbrun.'},
-    {id:3, desc: 'Lägg parisarna på ett ugnssäkert fat och låt de stå i ugnen i ca 150 grader. Stek 4 ägg under tiden.'},
-    {id:4, desc: 'Lägg de stekta äggen ovanpå parisaren och servera med typ saltgurka, kapris eller valfria tillbehör. Funkar även att äta kall.'}
+    {id:3, desc: 'Lägg parisarna på ett ugnssäkert fat och ställ in i ugnen på ca 150 grader för att hålla dem varma. Stek 4 ägg under tiden.'},
+    {id:4, desc: 'Lägg de stekta äggen ovanpå parisarna och servera med saltgurka, kapris eller andra valfria tillbehör. Funkar även att äta kall.'}
 
 ];
 
@@ -726,12 +721,12 @@ var desc26 = 'Går att iprincip ha i vilka grönsaker som helst, svårt att miss
 
 var steps26 = [
     {id:0, desc: 'Skala och finhacka löken.'},
-    {id:1, desc: 'Putsa och skär varje kycklinglår i 2 bitar.'},
-    {id:2, desc: 'Bryn kycklingen runt om i smör i ca 2 min på varje sida, krydda med salt och peppar.'},
+    {id:1, desc: 'Putsa och skär varje kycklinglår i mindre bitar.'},
+    {id:2, desc: 'Bryn kycklingen i smör i ca 2 min på varje sida, krydda med salt och peppar.'},
     {id:3, desc: 'Lägg i löken efter ungefär halva tiden. Tillsätt créme fraiche, buljongtärningar och dragon.'},
-    {id:4, desc: 'Låt hela grytan sjuda under lock i ca 5 min. Skala morötterna under tiden.'},
-    {id:5, desc: 'Lägg i morötterna och sockerärtorna i grytan, låt sjuda i några minuter till. Koka pastan under tiden.'},
-    {id:6, desc: 'Servera grytan ihop med pastan.'}
+    {id:4, desc: 'Låt sjuda under lock i ca 5 min. Skala morötterna under tiden.'},
+    {id:5, desc: 'Tillsätt morötterna och sockerärtorna, låt sjuda i några minuter till. Koka pastan under tiden.'},
+    {id:6, desc: 'Servera grytan tillsammans med pastan.'}
 ];
 
 var ingredients26 = [
@@ -739,26 +734,27 @@ var ingredients26 = [
     {id:1, quantity:'1', desc: 'gullök'},
     {id:2, quantity:'2', desc: 'tärningar hönsbuljong'},
     {id:3, quantity:'2 dl', desc: 'créme fraiche'},
-    {id:5, quantity:'250 g', desc: 'morötter'},
-    {id:6, quantity:'150 g', desc: 'sockerärtor'},
-    {id:7, quantity:'1 msk', desc: 'torkad dragon'},
-    {id:8, quantity:'1 msk', desc: 'smör'},
-    {id:9, quantity:'250 g', desc: 'färskpasta'},
-    {id:10, quantity:'', desc: 'salt'},
-    {id:11, quantity:'', desc: 'peppar'}
+    {id:4, quantity:'250 g', desc: 'morötter'},
+    {id:5, quantity:'150 g', desc: 'sockerärtor'},
+    {id:6, quantity:'1 msk', desc: 'torkad dragon'},
+    {id:7, quantity:'1 msk', desc: 'smör'},
+    {id:8, quantity:'250 g', desc: 'färskpasta'},
+    {id:9, quantity:'', desc: 'salt'},
+    {id:10, quantity:'', desc: 'peppar'}
 ];
 
 /**27. Flygande jakob **/
 
-var desc27 = 'En gammal klassiker. Denna variant är rätt såsig och gillar man inte banan så går den att skippa.';
+var desc27 = 'En gammal klassiker som passar perfekt i matlåda. ';
+
 
 var steps27 = [
-    {id:0, desc: 'Stek kycklingen hel. Skär i bitar och lägg i en ugnsfast form.'},
+    {id:0, desc: 'Stek kycklingfiléerna hela. Salta och peppra medan de ligger i stekpannan. Skär sedan kyckligen i små bitar och lägg i en ugnsfast form.'},
     {id:1, desc: 'Skär baconen i små bitar och stek den knaprig. Lägg sedan över i samma form.'},
     {id:2, desc: 'Vispa chilisås och vispgrädde lite luftigt i en bunke.'},
     {id:3, desc: 'Skär upp bananen och lägg i formen, häll sedan över såsen och strö på jordnötter.'},
     {id:4, desc: 'Börja koka riset och in med formen i ugnen i ca 225 grader i 15 minuter.'},
-    {id:5, desc: 'Servera ihop med riset. Klart.'}
+    {id:5, desc: 'Servera ihop med riset.'}
 ];
 
 var ingredients27 = [
@@ -766,8 +762,8 @@ var ingredients27 = [
     {id:1, quantity:'2', desc: 'paket bacon'},
     {id:2, quantity:'2 dl', desc: 'chilisås'},
     {id:3, quantity:'5 dl', desc: 'vispgrädde'},
-    {id:5, quantity:'1 dl', desc: 'jordnötter'},
-    {id:6, quantity:'1', desc: 'banan'},
+    {id:4, quantity:'1 dl', desc: 'jordnötter'},
+    {id:5, quantity:'1', desc: 'banan'},
     {id:6, quantity:'4 dl', desc: 'ris'},
     {id:7, quantity:'', desc: 'salt'},
     {id:8, quantity:'', desc: 'peppar'}

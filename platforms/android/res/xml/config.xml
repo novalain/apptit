@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ionicframework.apptit" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="Keyboard">
+        <param name="android-package" value="com.ionic.keyboard.IonicKeyboard" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <preference name="webView" value="org.apache.cordova.engine.crosswalk.XWalkCordovaWebView" />
+    <name>apptit</name>
+    <description>
+        En app till för matlådor och storkok
+  </description>
+    <author email="info@apptit.nu" href="info@apptit.nu">
+      Apptit
+  </author>
+    <content original-src="index.html" src="http://192.168.0.15:8100" />
+    <access origin="*" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackupWebStorage" value="none" />
+</widget>

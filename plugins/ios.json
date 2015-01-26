@@ -34,6 +34,9 @@
         },
         "org.apache.cordova.device": {
             "PACKAGE_NAME": "com.ionicframework.apptit303870"
+        },
+        "org.apache.cordova.engine.crosswalk": {
+            "PACKAGE_NAME": "Apptit.Apptit"
         }
     },
     "dependent_plugins": {}
