@@ -165,6 +165,10 @@ div#creatorContainer{opacity:0.8;width:100px; margin-left:auto; margin-right:aut
 
 #creatorImg{width:100px;}
 
+.title{text-align: center !important;}
+
+
+
 
 /********För sökfältet, ska försvinne onScrollDown*******/
 /*

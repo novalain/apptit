@@ -1,5 +1,5 @@
 
-<ion-modal-view>
+<ion-modal-view ng-controller="NewRecipeCtrl">
 
     <ion-header-bar>
       <h1 class="title">Lägg till nytt recept</h1>
@@ -12,17 +12,37 @@
     </ion-header-bar>
 
 
-    <ion-content class="has-header" has-bouncing="false">
+    <ion-content  class="has-header" has-bouncing="false">
 
-      <div style="height:21px; background-color:white;"></div>
-
-      <div class="item item-text-wrap">
-
-        <p style="text-align:center">Funkionen kommer inom en snar framtid</p>
-
+      <div style="height:21px; background-color:white;">
       </div>
 
+      <div class="list">
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Receptets namn</span>
+          <input type="text" placeholder="John">
+        </label>
+
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Last Name</span>
+            <input type="text" placeholder="Suhr">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Email</span>
+            <input type="text" placeholder="john@suhr.com">
+          </label>
+      </div>
+
+
+
     </ion-content>
+
+    <ion-footer-bar ng-click="storeRecipeInfo()" align-title="left" class="bar-assertive">
+
+        <h1 class="title">Next <label class="icon ion-arrow-right-c"></label></h1>
+
+    </ion-footer-bar>
 
 </ion-modal-view>
 

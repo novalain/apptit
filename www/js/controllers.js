@@ -192,6 +192,18 @@ angular.module('starter.controllers', [])
 .controller('AboutCtrl', function($scope) {
 
 
+})
+
+
+
+.controller('NewRecipeCtrl', function($scope) {
+
+	$scope.doSomething = function(){
+
+		var userRecipeName = document.getElementById('userRecipeName').value;
+		var userRecipeDesc = document.getElementById('userRecipeDesc').value;
+	}
+
 });
 
 

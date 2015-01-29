@@ -14,15 +14,34 @@
 
     <ion-content class="has-header" has-bouncing="false">
 
-      <div style="height:21px; background-color:white;"></div>
-
-      <div class="item item-text-wrap">
-
-        <p style="text-align:center">Funkionen kommer inom en snar framtid</p>
-
+      <div style="height:21px; background-color:white;">
       </div>
 
+      <div class="item item-text-wrap">
+        <p>Här kan du lägga till dina egna recept</p>
+      </div> 
+
+      <label class="item item-input">
+        <span class="input-label">Receptets namn</span>
+        <input type="text">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Beskrivning</span>
+        <input type="text">
+      </label>
+
     </ion-content>
+
+    <ion-footer-bar align-title="left" class="bar-assertive">
+      <div class="buttons">
+        <button class="button">Left Button</button>
+      </div>
+      <h1 class="title">Title!</h1>
+      <div class="buttons" ng-click="doSomething()">
+        <button class="button">Right Button</button>
+      </div>
+    </ion-footer-bar>
 
 </ion-modal-view>
 

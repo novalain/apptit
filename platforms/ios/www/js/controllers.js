@@ -192,6 +192,11 @@ angular.module('starter.controllers', [])
 .controller('AboutCtrl', function($scope) {
 
 
+})
+
+.controller('NewRecipeCtrl', function($scope) {
+
+
 });
 
 
