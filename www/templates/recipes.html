@@ -40,6 +40,7 @@
 
 
     <ion-nav-bar id="navBar" class="bar-balanced">
+
       <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back"></ion-nav-back-button>
 
 
@@ -85,9 +86,11 @@
           <!-- Favoriter-->
           <a ng-if = "checked" ng-repeat="recipe in favRecipes | filter:searchText:strict" href="#/recipes/{{recipe.id}}">
 
-        		<div class="recipeContainer">
+        		<div ng-class="recipe.id%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'">
+
         			<div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
-        			<img class="recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
+        			
+              <img class="recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
 
               <span class="loading">
 
@@ -112,7 +115,7 @@
         <!-- Bugg container end
         </div>-->
 
-        <div style="height:45px; width:100%; float:left; background-color:white;">
+        <div style="height:45px; width:100%; float:left; background-color:white;"></div>
         <!--Ännu en bugg container -->
         
 

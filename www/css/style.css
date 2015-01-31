@@ -167,45 +167,11 @@ div#creatorContainer{opacity:0.8;width:100px; margin-left:auto; margin-right:aut
 
 .title{text-align: center !important;}
 
+input.stepItem{margin-left:3px; }
+label.no-border{border:0;}
+label.plusButton{margin-top:0px; color:#33cd5f; margin-left:2px;}
 
 
-
-/********För sökfältet, ska försvinne onScrollDown*******/
-/*
-.bar-balanced{
-	z-index:2;
-}
-
-.bar-subheader {
-    z-index:1;
-    padding:0px;
-    transition: top 0.25s ease;
-}
-
-.bar-subheader-slide-away .bar-subheader{
-	top: 0;
-}
-
-.bar-subheader-slide-away .has-subheader{
-	top: 44px;
-}
-
-.has-subheader {
-    top: 44px;
-}
-.has-subheader .scroll {
-    padding-top: 44px;
-}
-*/
-
-/*
-input {
-  text-shadow: rgba(0,0,0,0) 0px 0px 0px;
-}
-input.force-redraw {
-  text-shadow: none;
-}
-*/
 .fake-statusbar {
   height: 20px;
   max-height: 20px;

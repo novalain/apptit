@@ -28,6 +28,10 @@
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
+    <preference name="CameraUsesGeolocation" value="false" />
     <name>apptit</name>
     <description>
         En app till för matlådor och storkok
@@ -35,7 +39,7 @@
     <author email="info@apptit.nu" href="info@apptit.nu">
       Apptit
   </author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.0.15:8100" />
     <access origin="*" />
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />

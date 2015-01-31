@@ -2,17 +2,20 @@
 <ion-modal-view ng-controller="NewRecipeCtrl">
 
     <ion-header-bar>
-      <h1 class="title">Lägg till nytt recept</h1>
+
+      <h1 class="title">Nytt recept</h1>
+
+      <button style="color:#ef473a" ng-click="clearFields()" class="button button-icon ion-trash-b assertive"></button>
 
       <!--fulhack tills vidare-->
       	<div style="margin-left:auto; margin-right:10px; ">
-    		  <button ng-click="closeModal2()" class="button button-clear button-balanced">Klar</button>
+    		  <button ng-click="closeModal2()" class="button button-clear button-balanced">Tillbaka</button>
     	  </div>
 
     </ion-header-bar>
 
 
-    <ion-content  class="has-header" has-bouncing="false">
+    <ion-content class="has-header" has-bouncing="true">
 
       <div style="height:21px; background-color:white;">
       </div>
@@ -20,27 +23,69 @@
       <div class="list">
 
         <label class="item item-input item-stacked-label">
-          <span class="input-label">Receptets namn</span>
-          <input type="text" placeholder="John">
+          <span style="margin-left:2px;" class="input-label">Receptets namn</span>
+          <input id="recipeName" type="text" placeholder="T.ex lasagne">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span style="margin-left:2px;"class="input-label">Receptbeskrivning</span>
+          <input id="recipeDesc" type="text" placeholder="En kort beskrvning av maträtten">
+        </label>
+        
+        <label style="border-bottom:0;"class="item item-input">
+          <span style="width:0px; padding-right:0;"class="input-label">Recept steg</span>
+        
+        <!--plus-knapp-->
+          <label ng-click="addNewRecipeStep()" class="button-icon ion-plus-round plusButton"></label>
+
         </label>
 
-        <label class="item item-input item-stacked-label">
-            <span class="input-label">Last Name</span>
-            <input type="text" placeholder="Suhr">
+        <div id="stepslist">
+
+          <label class="item item-input no-border">
+            <input class="stepItem" id="step1" type="text" placeholder="Steg 1">
           </label>
-          <label class="item item-input item-stacked-label">
-            <span class="input-label">Email</span>
-            <input type="text" placeholder="john@suhr.com">
+          <label class="item item-input no-border">
+            <input class="stepItem" id="step2" type="text" placeholder="Steg 2">
           </label>
+
+          <label class="item item-input no-border">
+            <input style="width:60px;"type="text" class="stepItem" id="step3" placeholder="Steg 3">
+          </label>
+
+        </div>
+
+        <label class="item item-input">
+          <span style="width:0px; padding-right:0;"class="input-label">Ingredienser</span>
+
+          <label ng-click="addNewIngredientStep()" class="button-icon ion-plus-round plusButton">
+          </label>
+        </label>
+
+        <div id="ingredienslist">
+
+          <label class="item item-input no-border">
+            <input id = "ing1" class = "stepItem" type="text" placeholder="Ingrediens 1">
+          </label>
+          <label class="item item-input no-border">
+            <input id="ing2" class="stepItem" type="text" placeholder="Ingrediens 2">
+          </label>
+          <label class="item item-input no-border">
+            <input class="stepItem" id="ing3" type="text" placeholder="Ingrediens 3">
+          </label>
+
+        </div>        
       </div>
 
+      <div style="height:80px; width:100%; float:left; background-color:white;"></div>
 
 
     </ion-content>
 
-    <ion-footer-bar ng-click="storeRecipeInfo()" align-title="left" class="bar-assertive">
+    
 
-        <h1 class="title">Next <label class="icon ion-arrow-right-c"></label></h1>
+    <ion-footer-bar ng-click="storeRecipeInfo()" align-title="left" class="bar-balanced">
+
+        <h1 class="title">Nästa<label class="icon ion-arrow-right-c"></label></h1>
 
     </ion-footer-bar>
 

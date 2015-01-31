@@ -118,16 +118,21 @@ angular.module('starter.controllers', [])
 	/** About modal box **/
 	$ionicModal.fromTemplateUrl('templates/about.html', {
 	    scope: $scope,
-		animation: 'slide-in-up'
+		animation: 'slide-in-up',
 	}).then(function(modal) {
 		$scope.modal = modal;
 	});
+
 	$scope.openModal = function() {
-		//window.addEventListener('shake', shakeEventDidOccur, false);
+		
 	 	$scope.modal.show();
+
   	};
+
   	$scope.closeModal = function() {
+
 	    $scope.modal.hide();
+
   	};
 	//Cleanup the modal when we're done with it!
 	$scope.$on('$destroy', function() {
@@ -135,6 +140,7 @@ angular.module('starter.controllers', [])
 	});
 	// Execute action on hide modal
 	$scope.$on('modal.hidden', function() {
+
 	    // Execute action
 	   //window.addEventListener('shake', shakeEventDidOccur, true);
 	});
@@ -153,7 +159,9 @@ angular.module('starter.controllers', [])
   	};
   	$scope.closeModal2 = function() {
 	    $scope.modal2.hide();
+
   	};
+
 	//Cleanup the modal when we're done with it!
 	$scope.$on('$destroy', function() {
 	    $scope.modal2.remove();
@@ -198,11 +206,138 @@ angular.module('starter.controllers', [])
 
 .controller('NewRecipeCtrl', function($scope) {
 
-	$scope.doSomething = function(){
+	console.log("newrecipe");
+	//Börjar på 4
+	var stepsCount = 3;
+	var ingCount = 3;
 
-		var userRecipeName = document.getElementById('userRecipeName').value;
-		var userRecipeDesc = document.getElementById('userRecipeDesc').value;
+	$scope.clearFields = function(){
+
+		// Clear name and desc
+		document.getElementById("recipeName").value = "";
+		document.getElementById("recipeDesc").value = "";
+
+		// Clear lists
+		document.getElementById("stepslist").innerHTML = '<label class="item item-input no-border">' +
+					           '<input class="stepItem" id="step1" type="text" placeholder="Steg 1">' +
+					           '</label> ' +
+					           '<label class="item item-input no-border">' +
+					           '<input class="stepItem" id="step2" type="text" placeholder="Steg 2">' +
+					           '</label>' +
+
+					           '<label class="item item-input no-border">' +
+					           '<input style="width:60px;"type="text" class="stepItem" id="step3" placeholder="Steg 3">' +
+					           '</label>';
+
+		document.getElementById("ingredienslist").innerHTML = '<label class="item item-input no-border">' +
+					           '<input class="stepItem" id="ing1" type="text" placeholder="Ingrediens 1">' +
+					           '</label> ' +
+					           '<label class="item item-input no-border">' +
+					           '<input class="stepItem" id="ing2" type="text" placeholder="Ingrediens 2">' +
+					           '</label>' +
+
+					           '<label class="item item-input no-border">' +
+					           '<input style="width:60px;"type="text" class="stepItem" id="ing3" placeholder="Ingrediens 3">' +
+					           '</label>';
+
+		stepsCount = 3;
+		ingCount = 3;
+
+
 	}
+
+	$scope.addNewRecipeStep = function(){
+
+		stepsCount++;
+
+		var input = document.createElement('input');
+		input.className = "stepItem"
+		input.id = "step" + stepsCount;
+		input.setAttribute("type", "text");
+		input.setAttribute("placeholder", "Steg " + stepsCount);
+
+		var label = document.createElement('label');
+		label.className = "item item-input no-border";
+		label.appendChild(input);
+
+		document.getElementById("stepslist").appendChild(label);
+
+	}
+
+	$scope.addNewIngredientStep = function(){
+
+		ingCount++;
+
+		var input = document.createElement('input');
+		input.className = "stepItem"
+		input.id = "ing" + ingCount;
+		input.setAttribute("type", "text");
+		input.setAttribute("placeholder", "Ingrediens " + ingCount);
+
+		var label = document.createElement('label');
+		label.className = "item item-input no-border";
+		label.appendChild(input);
+
+		document.getElementById("ingredienslist").appendChild(label);
+
+	}
+
+	var validate = function(){
+
+		if(document.getElementById('recipeName').value == "" || document.getElementById('recipeDesc') == "")
+			return false;
+
+		for(var i = 1; i <= stepsCount; i++)
+			if(document.getElementById('step' + i).value == "")
+				return false;
+
+		for(var i = 1; i <= ingCount; i++)
+			if(document.getElementById('ing' + i).value == "")
+				return false;
+
+		return true;
+		
+	}
+
+	$scope.storeRecipeInfo = function(){
+
+
+		if(!validate()){
+			alert("Du måste fylla i alla fält!");
+			return;
+		}
+
+		var userRecipeName = document.getElementById('recipeName').value;
+		var userRecipeDesc = document.getElementById('recipeDesc').value;
+		var steps = [];
+		var ing = [];
+
+		for(var i = 1; i <= stepsCount; i++)
+			steps.push(document.getElementById('step' + i).value);
+		
+		
+		for(var i = 1; i <= ingCount; i++)
+			ing.push(document.getElementById('ing' + i).value);
+
+		takePicture();
+
+
+	}
+
+	function takePicture() {
+	  navigator.camera.getPicture(function(imageURI) {
+
+	    // imageURI is the URL of the image that we can use for
+	    // an <img> element or backgroundImage.
+
+	  }, function(err) {
+
+	    // Ruh-roh, something bad happened
+
+	  }, cameraOptions);
+	}
+
+	
 
 });
 
