@@ -83,6 +83,25 @@
             </div>
           </a>
 
+          <!--Ej favoriter användar recpet -->
+          <a ng-if = "!checked" ng-repeat="recipe in user_recipes | filter:searchText:strict" ng-href="#/recipes/{{recipe.id}}">
+
+            <div ng-class="recipe.id%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'">
+
+              <div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
+
+              <img class = "recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
+
+              <span class="loading">
+
+                <div class = "loadingIconMainContainer">
+                  <i class="icon ion-loading-c loadingIconMain"></i>
+                </div>
+
+              </span>
+            </div>
+          </a>
+
           <!-- Favoriter-->
           <a ng-if = "checked" ng-repeat="recipe in favRecipes | filter:searchText:strict" href="#/recipes/{{recipe.id}}">
 

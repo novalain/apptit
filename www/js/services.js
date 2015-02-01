@@ -2,6 +2,11 @@ angular.module('starter.services', [])
 
 .factory('Recipes', function(){
 
+  localStorage.clear();
+  var user_recipes = [];
+
+  console.log("hellorecipes");
+
   var recipes = [
     {id: 0, name:'Fläskfilé med sås på soltorkade tomater', fav:false, desc: desc0, steps: steps0, ingridients: ingredients0, cookTime: '20', servings:'4-5', picUrl:'img/mat/0.png', picUrlWide:'img/mat/wide/0wide.png'},
     {id: 1, name:'Krämig pasta med skinka och paprika', fav:false, desc: desc1, steps: steps1, ingridients: ingredients1, cookTime: '30', servings:'4', picUrl:'img/mat/1.png', picUrlWide:'img/mat/wide/1wide.png'}, 
@@ -50,6 +55,15 @@ angular.module('starter.services', [])
             favRecipes.push(recipes[i]);
       
       return favRecipes;
+
+    },
+
+    getAllUserRecipes: function(){
+
+        for(var i = 0; i < localStorage.newRecipeCount+1; i++)
+            user_recipes.push(JSON.parse(localStorage.getItem(i)));
+
+        return user_recipes;
 
     },
 

@@ -30,10 +30,11 @@ angular.module('starter.controllers', [])
 		}); 
 	}
 
+
 	//Animationen ska nog göras i ett direktiv..
 	$scope.addToFavorites = function(){
 
-		console.log(window.localStorage.getItem($scope.recipe.id))
+		//console.log(window.localStorage.getItem($scope.recipe.id))
 
 		if(window.localStorage.getItem($scope.recipe.id) == null){
 			//Gör lite animation
@@ -58,55 +59,12 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('RecipesCtrl', function($scope, preload, Recipes, $ionicModal) {
 
-/*
-	preload(url).then(function(loadedImageUrl) {
-		//Bild laddad!
-	 	$scope.imageServingUrl = loadedImageUrl;
-	  
-	}, function(error) {
-	 	$scope.imageServingUrl = 'undefined';
-	    
-	});*/
+/** RECIPES CTRL **/
 
-	//document.getElementById("navBar").className = "";
-	//document.getElementById("navBar").className = "bar-balanced bar bar-header nav-bar nav-title-slide-ios7 disable-user-behavior  no-animation"
-
-	$scope.outerContainerHeight = (Recipes.all().length*156)/2 + 70;
-
-	console.log($scope.outerContainerHeight)
-	//$scope.src ="http://www.hdwallpaperscool.com/wp-content/uploads/2013/11/beautiful-cat-hd-wallpapers-fullscreen-top-images.jpg";
-
+.controller('RecipesCtrl', function($scope, Recipes, $ionicModal) {
 
 	var button = document.getElementById("heartButton");
-	/*$rootScope.slideHeader = false;
-	$rootScope.slideHeaderPrevious = 0;*/
-
-	// $scope.items = [];
-	// for (var i = 0; i < 1000; i++) {
-	//     $scope.items.push('Item ' + i);
-	// }
-
-	// $scope.getItemHeight = function(item, index) {
-	//     //Make evenly indexed items be 10px taller, for the sake of example
-	//     return (index % 2) === 0 ? 50 : 60;
-	// };
-/*
-	$scope.checkIfRecipeIsFavorite = function(id){
-
-		if(window.localStorage.getItem(id) === 'true')
-			return true;
-
-		return false;
-	}*/
-/*
-	window.addEventListener('shake', shakeEventDidOccur, false);
-	//function to call when shake occurs
-
-	function shakeEventDidOccur () {
-		alert('hej')
-	}*/
 
 	if(window.sessionStorage.getItem('f') === 'true'){
 
@@ -171,10 +129,19 @@ angular.module('starter.controllers', [])
 	    // Execute action
 	   //window.addEventListener('shake', shakeEventDidOccur, true);
 	});
-
-
-	$scope.recipes = Recipes.all();
+	
 	$scope.favRecipes = Recipes.getAllFavoriteRecipes();
+	$scope.recipes = Recipes.all();
+	$scope.user_recipes = Recipes.getAllUserRecipes();
+
+	console.log("USR ", $scope.user_recipes);
+
+
+	//localforage.getItem('1', function(err, value) { console.log(value) });
+
+
+	console.log(localStorage.newRecipeCount)
+	
 	//$scope.showFavRecipes = { checked: false };
 
 	$scope.showFavRecipesChange = function(){
@@ -204,12 +171,44 @@ angular.module('starter.controllers', [])
 
 
 
-.controller('NewRecipeCtrl', function($scope) {
+.controller('NewRecipeCtrl', function($scope, $cordovaCamera, Recipes) {
 
-	console.log("newrecipe");
+
+	console.log("newrecipectrl");
 	//Börjar på 4
 	var stepsCount = 3;
 	var ingCount = 3;
+
+
+	/** STEG 2 **/
+
+	/*
+	$ionicModal.fromTemplateUrl('templates/about.html', {
+	    scope: $scope,
+		animation: 'slide-left-right'
+	}).then(function(modal) {
+		$scope.modal3 = modal;
+	});
+
+	$scope.openModal3 = function() {
+		//window.addEventListener('shake', shakeEventDidOccur, false);
+	 	$scope.modal3.show();
+  	};
+  	$scope.closeModal3 = function() {
+	    $scope.modal3.hide();
+
+  	};
+
+	//Cleanup the modal when we're done with it!
+	$scope.$on('$destroy', function() {
+	    $scope.modal3.remove();
+	});
+	// Execute action on hide modal
+	$scope.$on('modal.hidden', function() {
+	    // Execute action
+	   //window.addEventListener('shake', shakeEventDidOccur, true);
+	});
+	*/
 
 	$scope.clearFields = function(){
 
@@ -285,7 +284,7 @@ angular.module('starter.controllers', [])
 	var validate = function(){
 
 		if(document.getElementById('recipeName').value == "" || document.getElementById('recipeDesc') == "")
-			return false;
+			document.getElementById('recipeName').style.color= "red";
 
 		for(var i = 1; i <= stepsCount; i++)
 			if(document.getElementById('step' + i).value == "")
@@ -309,35 +308,58 @@ angular.module('starter.controllers', [])
 
 		var userRecipeName = document.getElementById('recipeName').value;
 		var userRecipeDesc = document.getElementById('recipeDesc').value;
-		var steps = [];
-		var ing = [];
+		var newsteps = [];
+		var newing = [];
 
 		for(var i = 1; i <= stepsCount; i++)
-			steps.push(document.getElementById('step' + i).value);
+			newsteps.push(document.getElementById('step' + i).value);
 		
 		
 		for(var i = 1; i <= ingCount; i++)
-			ing.push(document.getElementById('ing' + i).value);
+			newing.push(document.getElementById('ing' + i).value);
 
-		takePicture();
+		//takePicture();
 
+		//check if we have any new recipes
+		if (localStorage.newRecipeCount) {
+		    localStorage.newRecipeCount++;
+		} else {
+		    localStorage.newRecipeCount = 0;
+		}
 
+		newRecipe = {id: localStorage.newRecipeCount+Recipes.all().length, name: userRecipeName, fav: false, desc: userRecipeDesc, steps: newsteps, ingridients: newing, cookTime: '20', servings:'4-5', picUrl:'http://placehold.it/160x160', picUrlWide:'http://placehold.it/400x300' };
+
+		console.log(localStorage.newRecipeCount);
+
+		localStorage.setItem(localStorage.newRecipeCount, JSON.stringify(newRecipe));
+
+		$scope.user_recipes = Recipes.getAllUserRecipes();
+		
 	}
 
-	function takePicture() {
-	  navigator.camera.getPicture(function(imageURI) {
+	var takePicture = function() {
 
-	    // imageURI is the URL of the image that we can use for
-	    // an <img> element or backgroundImage.
+        var options = { 
+            quality : 75, 
+            destinationType : Camera.DestinationType.DATA_URL, 
+            sourceType : Camera.PictureSourceType.PHOTOLIBRARY, 
+            allowEdit : true,
+            encodingType: Camera.EncodingType.JPEG,
+            targetWidth: 160,
+            targetHeight: 160,
+            popoverOptions: CameraPopoverOptions,
+            saveToPhotoAlbum: false
+        };
+ 
+        $cordovaCamera.getPicture(options).then(function(imageData) {
 
-	  }, function(err) {
+        	$scope.imgURI = "data:image/jpeg;base64," + imageData;
+        	console.log($scope.imgURI);
 
-	    // Ruh-roh, something bad happened
-
-	  }, cameraOptions);
-	}
-
-	
+        }, function(err) {
+            // An error occured. Show a message to the user
+        });
+    }
 
 });
 

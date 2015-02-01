@@ -204,12 +204,44 @@ angular.module('starter.controllers', [])
 
 
 
-.controller('NewRecipeCtrl', function($scope) {
+.controller('NewRecipeCtrl', function($scope, $cordovaCamera) {
+
 
 	console.log("newrecipe");
 	//Börjar på 4
 	var stepsCount = 3;
 	var ingCount = 3;
+
+
+	/** STEG 2 **/
+
+	/*
+	$ionicModal.fromTemplateUrl('templates/about.html', {
+	    scope: $scope,
+		animation: 'slide-left-right'
+	}).then(function(modal) {
+		$scope.modal3 = modal;
+	});
+
+	$scope.openModal3 = function() {
+		//window.addEventListener('shake', shakeEventDidOccur, false);
+	 	$scope.modal3.show();
+  	};
+  	$scope.closeModal3 = function() {
+	    $scope.modal3.hide();
+
+  	};
+
+	//Cleanup the modal when we're done with it!
+	$scope.$on('$destroy', function() {
+	    $scope.modal3.remove();
+	});
+	// Execute action on hide modal
+	$scope.$on('modal.hidden', function() {
+	    // Execute action
+	   //window.addEventListener('shake', shakeEventDidOccur, true);
+	});
+	*/
 
 	$scope.clearFields = function(){
 
@@ -285,7 +317,7 @@ angular.module('starter.controllers', [])
 	var validate = function(){
 
 		if(document.getElementById('recipeName').value == "" || document.getElementById('recipeDesc') == "")
-			return false;
+			document.getElementById('recipeName').style.color= "red";
 
 		for(var i = 1; i <= stepsCount; i++)
 			if(document.getElementById('step' + i).value == "")
@@ -320,24 +352,33 @@ angular.module('starter.controllers', [])
 			ing.push(document.getElementById('ing' + i).value);
 
 		takePicture();
-
-
 	}
 
-	function takePicture() {
-	  navigator.camera.getPicture(function(imageURI) {
+	var takePicture = function() {
 
-	    // imageURI is the URL of the image that we can use for
-	    // an <img> element or backgroundImage.
+        var options = { 
+            quality : 75, 
+            destinationType : Camera.DestinationType.DATA_URI, 
+            sourceType : Camera.PictureSourceType.PHOTOLIBRARY, 
+            allowEdit : true,
+            encodingType: Camera.EncodingType.JPEG,
+            targetWidth: 160,
+            targetHeight: 160,
+            popoverOptions: CameraPopoverOptions,
+            saveToPhotoAlbum: false
+        };
+ 
+        $cordovaCamera.getPicture(options).then(function(imageData) {
 
-	  }, function(err) {
+            $scope.imgURI = "data:image/jpeg;base64," + imageData;
+            console.log($scope.imgURI);
 
-	    // Ruh-roh, something bad happened
+            document.getElementById("stepslist").innerHTML = '<img ng-src=' + $scope.imgURI + '/>';
 
-	  }, cameraOptions);
-	}
-
-	
+        }, function(err) {
+            // An error occured. Show a message to the user
+        });
+    }
 
 });
 
