@@ -2,6 +2,12 @@ angular.module('starter.services', [])
 
 .factory('Recipes', function(){
 
+  console.log("hellorecipes");
+  localStorage.clear();
+
+  //init
+  var user_recipes = [];
+
   var recipes = [
     {id: 0, name:'Fläskfilé med sås på soltorkade tomater', fav:false, desc: desc0, steps: steps0, ingridients: ingredients0, cookTime: '20', servings:'4-5', picUrl:'img/mat/0.png', picUrlWide:'img/mat/wide/0wide.png'},
     {id: 1, name:'Krämig pasta med skinka och paprika', fav:false, desc: desc1, steps: steps1, ingridients: ingredients1, cookTime: '30', servings:'4', picUrl:'img/mat/1.png', picUrlWide:'img/mat/wide/1wide.png'}, 
@@ -33,12 +39,20 @@ angular.module('starter.services', [])
     {id: 27, name:'Flygande jakob', fav:false, desc: desc27, steps: steps27, ingridients: ingredients27, cookTime: '45', servings:'5', picUrl:'img/mat/27.png', picUrlWide:'img/mat/wide/27wide.png'}
   ];
 
+  for(var i = recipes.length; i <= localStorage.newRecipeCount + recipes.length; i++)
+            user_recipes.push(JSON.parse(localStorage.getItem(i)));
+
   return{
     all: function(){
       return recipes;
     },
     get: function(recipeId){
       return recipes[recipeId];
+    },
+
+    get_user: function(recipeId){
+      console.log(user_recipes);
+      return user_recipes[recipeId];
     },
 
     getAllFavoriteRecipes: function(){
@@ -50,6 +64,19 @@ angular.module('starter.services', [])
             favRecipes.push(recipes[i]);
       
       return favRecipes;
+
+    },
+
+    addNewUserRecipe: function(newRecipe){
+
+      localStorage.setItem(localStorage.newRecipeCount, JSON.stringify(newRecipe));
+      user_recipes.push(newRecipe)
+
+    },
+
+    getAllUserRecipes: function(){
+
+        return user_recipes;
 
     },
 

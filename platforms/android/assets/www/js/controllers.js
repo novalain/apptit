@@ -7,6 +7,11 @@ angular.module('starter.controllers', [])
 
 	$scope.recipe = Recipes.get($stateParams.recipeId)
 
+	console.log($stateParams.recipeId - Recipes.all().length)
+
+	if($scope.recipe === undefined)
+		$scope.recipe = Recipes.get_user($stateParams.recipeId - Recipes.all().length);
+
 	var nrOfIngredients = $scope.recipe.ingridients.length
 
 	$('.paper').click(function(){
@@ -30,10 +35,11 @@ angular.module('starter.controllers', [])
 		}); 
 	}
 
+
 	//Animationen ska nog göras i ett direktiv..
 	$scope.addToFavorites = function(){
 
-		console.log(window.localStorage.getItem($scope.recipe.id))
+		//console.log(window.localStorage.getItem($scope.recipe.id))
 
 		if(window.localStorage.getItem($scope.recipe.id) == null){
 			//Gör lite animation
@@ -58,55 +64,12 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('RecipesCtrl', function($scope, preload, Recipes, $ionicModal) {
 
-/*
-	preload(url).then(function(loadedImageUrl) {
-		//Bild laddad!
-	 	$scope.imageServingUrl = loadedImageUrl;
-	  
-	}, function(error) {
-	 	$scope.imageServingUrl = 'undefined';
-	    
-	});*/
+/** RECIPES CTRL **/
 
-	//document.getElementById("navBar").className = "";
-	//document.getElementById("navBar").className = "bar-balanced bar bar-header nav-bar nav-title-slide-ios7 disable-user-behavior  no-animation"
-
-	$scope.outerContainerHeight = (Recipes.all().length*156)/2 + 70;
-
-	console.log($scope.outerContainerHeight)
-	//$scope.src ="http://www.hdwallpaperscool.com/wp-content/uploads/2013/11/beautiful-cat-hd-wallpapers-fullscreen-top-images.jpg";
-
+.controller('RecipesCtrl', function($scope, Recipes, $ionicModal) {
 
 	var button = document.getElementById("heartButton");
-	/*$rootScope.slideHeader = false;
-	$rootScope.slideHeaderPrevious = 0;*/
-
-	// $scope.items = [];
-	// for (var i = 0; i < 1000; i++) {
-	//     $scope.items.push('Item ' + i);
-	// }
-
-	// $scope.getItemHeight = function(item, index) {
-	//     //Make evenly indexed items be 10px taller, for the sake of example
-	//     return (index % 2) === 0 ? 50 : 60;
-	// };
-/*
-	$scope.checkIfRecipeIsFavorite = function(id){
-
-		if(window.localStorage.getItem(id) === 'true')
-			return true;
-
-		return false;
-	}*/
-/*
-	window.addEventListener('shake', shakeEventDidOccur, false);
-	//function to call when shake occurs
-
-	function shakeEventDidOccur () {
-		alert('hej')
-	}*/
 
 	if(window.sessionStorage.getItem('f') === 'true'){
 
@@ -118,16 +81,21 @@ angular.module('starter.controllers', [])
 	/** About modal box **/
 	$ionicModal.fromTemplateUrl('templates/about.html', {
 	    scope: $scope,
-		animation: 'slide-in-up'
+		animation: 'slide-in-up',
 	}).then(function(modal) {
 		$scope.modal = modal;
 	});
+
 	$scope.openModal = function() {
-		//window.addEventListener('shake', shakeEventDidOccur, false);
+		
 	 	$scope.modal.show();
+
   	};
+
   	$scope.closeModal = function() {
+
 	    $scope.modal.hide();
+
   	};
 	//Cleanup the modal when we're done with it!
 	$scope.$on('$destroy', function() {
@@ -135,6 +103,7 @@ angular.module('starter.controllers', [])
 	});
 	// Execute action on hide modal
 	$scope.$on('modal.hidden', function() {
+
 	    // Execute action
 	   //window.addEventListener('shake', shakeEventDidOccur, true);
 	});
@@ -153,7 +122,9 @@ angular.module('starter.controllers', [])
   	};
   	$scope.closeModal2 = function() {
 	    $scope.modal2.hide();
+
   	};
+
 	//Cleanup the modal when we're done with it!
 	$scope.$on('$destroy', function() {
 	    $scope.modal2.remove();
@@ -163,10 +134,16 @@ angular.module('starter.controllers', [])
 	    // Execute action
 	   //window.addEventListener('shake', shakeEventDidOccur, true);
 	});
-
-
-	$scope.recipes = Recipes.all();
+	
 	$scope.favRecipes = Recipes.getAllFavoriteRecipes();
+	$scope.recipes = Recipes.all();
+	$scope.user_recipes = Recipes.getAllUserRecipes();
+
+	//localforage.getItem('1', function(err, value) { console.log(value) });
+
+
+	console.log(localStorage.newRecipeCount)
+	
 	//$scope.showFavRecipes = { checked: false };
 
 	$scope.showFavRecipesChange = function(){
@@ -194,8 +171,164 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('NewRecipeCtrl', function($scope) {
 
+
+.controller('NewRecipeCtrl', function($scope, $cordovaCamera, Recipes) {
+
+
+	console.log("newrecipectrl");
+	//Börjar på 3
+	var stepsCount = 3;
+	var ingCount = 3;
+
+	$scope.clearFields = function(){
+
+		// Clear name and desc
+		document.getElementById("recipeName").value = "";
+		document.getElementById("recipeDesc").value = "";
+
+		// Clear lists
+		document.getElementById("stepslist").innerHTML = '<label class="item item-input no-border">' +
+					           '<input class="stepItem" id="step1" type="text" placeholder="Steg 1">' +
+					           '</label> ' +
+					           '<label class="item item-input no-border">' +
+					           '<input class="stepItem" id="step2" type="text" placeholder="Steg 2">' +
+					           '</label>' +
+
+					           '<label class="item item-input no-border">' +
+					           '<input style="width:60px;"type="text" class="stepItem" id="step3" placeholder="Steg 3">' +
+					           '</label>';
+
+		document.getElementById("ingredienslist").innerHTML = '<label class="item item-input no-border">' +
+					           '<input class="stepItem" id="ing1" type="text" placeholder="Ingrediens 1">' +
+					           '</label> ' +
+					           '<label class="item item-input no-border">' +
+					           '<input class="stepItem" id="ing2" type="text" placeholder="Ingrediens 2">' +
+					           '</label>' +
+
+					           '<label class="item item-input no-border">' +
+					           '<input style="width:60px;"type="text" class="stepItem" id="ing3" placeholder="Ingrediens 3">' +
+					           '</label>';
+
+		stepsCount = 3;
+		ingCount = 3;
+
+
+	}
+
+	$scope.addNewRecipeStep = function(){
+
+		stepsCount++;
+
+		var input = document.createElement('input');
+		input.className = "stepItem"
+		input.id = "step" + stepsCount;
+		input.setAttribute("type", "text");
+		input.setAttribute("placeholder", "Steg " + stepsCount);
+
+		var label = document.createElement('label');
+		label.className = "item item-input no-border";
+		label.appendChild(input);
+
+		document.getElementById("stepslist").appendChild(label);
+
+	}
+
+	$scope.addNewIngredientStep = function(){
+
+		ingCount++;
+
+		var input = document.createElement('input');
+		input.className = "stepItem"
+		input.id = "ing" + ingCount;
+		input.setAttribute("type", "text");
+		input.setAttribute("placeholder", "Ingrediens " + ingCount);
+
+		var label = document.createElement('label');
+		label.className = "item item-input no-border";
+		label.appendChild(input);
+
+		document.getElementById("ingredienslist").appendChild(label);
+
+	}
+
+	var validate = function(){
+
+		if(document.getElementById('recipeName').value == "" || document.getElementById('recipeDesc') == "")
+			document.getElementById('recipeName').style.color= "red";
+
+		for(var i = 1; i <= stepsCount; i++)
+			if(document.getElementById('step' + i).value == "")
+				return false;
+
+		for(var i = 1; i <= ingCount; i++)
+			if(document.getElementById('ing' + i).value == "")
+				return false;
+
+		return true;
+		
+	}
+
+	$scope.storeRecipeInfo = function(){
+
+
+		if(!validate()){
+			alert("Du måste fylla i alla fält!");
+			return;
+		}
+
+		var userRecipeName = document.getElementById('recipeName').value;
+		var userRecipeDesc = document.getElementById('recipeDesc').value;
+		var newsteps = [];
+		var newing = [];
+
+		for(var i = 1; i <= stepsCount; i++)
+			newsteps.push(document.getElementById('step' + i).value);
+		
+		
+		for(var i = 1; i <= ingCount; i++)
+			newing.push(document.getElementById('ing' + i).value);
+
+		//takePicture();
+
+		//check if we have any new recipes
+		if (localStorage.newRecipeCount) {
+		    localStorage.newRecipeCount++;
+		} else {
+		    localStorage.newRecipeCount = 1;
+		}
+
+
+		var newid = parseInt(localStorage.newRecipeCount) + Recipes.all().length - 1;
+		newRecipe = {id: newid, name: userRecipeName, fav: false, desc: userRecipeDesc, steps: newsteps, ingridients: newing, cookTime: '20', servings:'4-5', picUrl:'http://placehold.it/160x160', picUrlWide:'http://placehold.it/400x300' };
+
+		Recipes.addNewUserRecipe(newRecipe);
+		
+	}
+
+	var takePicture = function() {
+
+        var options = { 
+            quality : 75, 
+            destinationType : Camera.DestinationType.DATA_URL, 
+            sourceType : Camera.PictureSourceType.PHOTOLIBRARY, 
+            allowEdit : true,
+            encodingType: Camera.EncodingType.JPEG,
+            targetWidth: 160,
+            targetHeight: 160,
+            popoverOptions: CameraPopoverOptions,
+            saveToPhotoAlbum: false
+        };
+ 
+        $cordovaCamera.getPicture(options).then(function(imageData) {
+
+        	$scope.imgURI = "data:image/jpeg;base64," + imageData;
+        	console.log($scope.imgURI);
+
+        }, function(err) {
+            // An error occured. Show a message to the user
+        });
+    }
 
 });
 

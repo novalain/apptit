@@ -68,15 +68,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     })
 
+    .state('new-recipe', {
+      url: '/recipes/new-recipe',
+      views: {
+          'mainView': {
+          templateUrl: 'templates/new-recipe.html',
+          controller: 'NewRecipeCtrl'
+        }
+      }
+    })
+
     .state('recipe-detail', {
       url: "/recipes/:recipeId",
       views: {
           'mainView': {
           templateUrl: "templates/recipe-detail.html",
           controller:'RecipeDetailCtrl'
-        }
+        },
       }
     })
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/recipes');
 

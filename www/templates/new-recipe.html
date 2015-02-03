@@ -1,19 +1,18 @@
 
-<ion-modal-view ng-controller="NewRecipeCtrl">
+<ion-view title="Nytt Recept">
 
-    <ion-header-bar>
 
-      <h1 class="title">Nytt recept</h1>
+    <ion-nav-bar class="bar-stable">
+    
+      <ion-nav-back-button class="button icon-left button-clear button-balanced">
+      </ion-nav-back-button>
 
-      <button style="color:#ef473a" ng-click="clearFields()" class="button button-icon ion-trash-b assertive"></button>
+      <ion-nav-buttons side="right">
+         <button style="color:#ef473a" ng-click="clearFields()" class="button button-icon ion-trash-b assertive"></button>
+      </ion-nav-buttons>
 
-      <!--fulhack tills vidare-->
-      	<div style="margin-left:auto; margin-right:10px; ">
-    		  <button ng-click="closeModal2()" class="button button-clear button-balanced">Tillbaka</button>
-    	  </div>
 
-    </ion-header-bar>
-
+    </ion-nav-bar>
 
     <ion-content class="has-header" has-bouncing="true">
 

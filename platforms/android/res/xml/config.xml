@@ -9,6 +9,9 @@
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
     <preference name="webView" value="org.apache.cordova.engine.crosswalk.XWalkCordovaWebView" />
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
     <name>apptit</name>
     <description>
         En app till för matlådor och storkok
@@ -22,7 +25,4 @@
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="BackupWebStorage" value="none" />
-    <feature name="Camera">
-        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
-    </feature>
 </widget>
