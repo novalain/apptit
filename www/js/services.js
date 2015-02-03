@@ -1,3 +1,8 @@
+// TODO: Lägg till så användaren kan välja sina egna recept som favoriter.
+// Fixa kamerabilder, behövs iphone för detta.
+// Gör startsidan responsiv
+// Fixa souvlakireceptet (Jessica)
+
 angular.module('starter.services', [])
 
 .factory('Recipes', function(){
