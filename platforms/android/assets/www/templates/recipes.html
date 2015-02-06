@@ -42,10 +42,8 @@
 
       <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back"></ion-nav-back-button>
 
-
       <a ng-href="#/recipes/new-recipe" class="button button-icon icon ion-compose"></a>
       
-
       <!--fixat-->
       <ion-nav-buttons side="right">
          <button ng-click="openModal()" class="button button-icon icon ion-ios7-information-outline"></button>
@@ -66,11 +64,11 @@
           <!--Ej favoriter-->
       	  <a ng-if = "!checked" ng-repeat="recipe in recipes | filter:searchText:strict" ng-href="#/recipes/{{recipe.id}}">
 
-        		<div ng-class="recipe.id%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'">
+        		<div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="$index%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'">
 
         			<div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
 
-        			<img class = "recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
+        			<img ng-style="{'height': '{{pic_height}}'}" class = "recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
 
               <span class="loading">
 
@@ -82,14 +80,15 @@
             </div>
           </a>
 
-          <!--Ej favoriter användar recpet -->
-          <a ng-if = "!checked" ng-repeat="recipe in user_recipes | filter:searchText:strict" ng-href="#/recipes/{{recipe.id}}">
+          <!--Ej favoriter användarrecept -->
+          <!-- Denna buggar med ng class-->
+          <a ng-if = "!checked && recipe.exists" ng-repeat="recipe in user_recipes | filter:searchText:strict" ng-href="#/recipes-user/{{recipe.id}}">
 
-            <div ng-class="recipe.id%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'">
+            <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="$index%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'">
 
               <div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
 
-              <img class = "recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
+              <img ng-style="{'height': '{{pic_height}}'}" class = "recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
 
               <span class="loading">
 
@@ -104,11 +103,12 @@
           <!-- Favoriter-->
           <a ng-if = "checked" ng-repeat="recipe in favRecipes | filter:searchText:strict" href="#/recipes/{{recipe.id}}">
 
-        		<div ng-class="recipe.id%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'">
+            
+        		<div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="$index%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'">
 
         			<div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
         			
-              <img class="recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
+              <img ng-style="{'height': '{{pic_height}}'}" class="recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
 
               <span class="loading">
 
@@ -119,6 +119,7 @@
               </span>
       	    </div>
           </a>
+
         
         	<p class ="noResults">
 

@@ -84,7 +84,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
           'mainView': {
           templateUrl: "templates/recipe-detail.html",
           controller:'RecipeDetailCtrl'
-        },
+        }
+      }
+    })
+
+    .state('recipe-detail-user', {
+      url: "/recipes-user/:recipeId",
+      views: {
+          'mainView': {
+          templateUrl: "templates/recipe-detail-user.html",
+          controller:'RecipeUserDetailCtrl'
+        }
       }
     })
 

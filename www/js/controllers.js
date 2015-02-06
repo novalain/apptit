@@ -125,6 +125,7 @@ angular.module('starter.controllers', [])
 	   confirmPopup.then(function(res) {
 	     if(res) {
 	       Recipes.removeUserRecipe($scope.recipe.id);
+
 	     } else {
 	       
 	     }
@@ -136,6 +137,22 @@ angular.module('starter.controllers', [])
 
 .controller('RecipesCtrl', function($scope, Recipes, $ionicModal) {
 
+	console.log("RECIPE CTRL");
+
+	$scope.container_size = (window.innerWidth/2 - 9) + 'px';
+	$scope.pic_height = window.innerWidth/2 + 'px';
+
+	console.log("width", $scope.container_size);
+
+	//Set right format (Responsive"
+		/*
+	var recipeContainers1 = document.getElementsByClassName("recipeContainer1");
+	var recipeContainers2 = document.getElementsByClassName('recipeContainer2');
+
+	console.log("legnth", document.getElementsByClassName("recipeContainer1").length)
+	console.log(recipeContainers2.length)
+	console.log(images.length)*/
+	
 	var button = document.getElementById("heartButton");
 
 	if(window.sessionStorage.getItem('f') === 'true'){
@@ -144,6 +161,8 @@ angular.module('starter.controllers', [])
 		button.className = "button-icon icon ion-ios7-heart favHeartInMainMenu green"
 
 	}
+
+
 
 	/** About modal box **/
 	$ionicModal.fromTemplateUrl('templates/about.html', {
@@ -198,6 +217,8 @@ angular.module('starter.controllers', [])
 		}
 
 	}
+
+
 
 })
 
@@ -368,6 +389,8 @@ angular.module('starter.controllers', [])
             // An error occured. Show a message to the user
         });
     }
+
+
 
 });
 

@@ -1,6 +1,16 @@
+// TODO: Lägg till så användaren kan välja sina egna recept som favoriter.
+// Fixa kamerabilder, behövs iphone för detta.
+// Gör startsidan responsiv
+// Fixa souvlakireceptet (Jessica)
+
 angular.module('starter.services', [])
 
 .factory('Recipes', function(){
+
+  console.log("hellorecipes");
+  //localStorage.clear();
+
+  //init
 
   var recipes = [
     {id: 0, name:'Fläskfilé med sås på soltorkade tomater', fav:false, desc: desc0, steps: steps0, ingridients: ingredients0, cookTime: '20', servings:'4-5', picUrl:'img/mat/0.png', picUrlWide:'img/mat/wide/0wide.png'},
@@ -33,12 +43,36 @@ angular.module('starter.services', [])
     {id: 27, name:'Flygande jakob', fav:false, desc: desc27, steps: steps27, ingridients: ingredients27, cookTime: '45', servings:'5', picUrl:'img/mat/27.png', picUrlWide:'img/mat/wide/27wide.png'}
   ];
 
+  var user_recipes = [];
+
+  for(var i = 0; i < localStorage.newRecipeCount; i++){
+
+        var obj = JSON.parse(localStorage.getItem(i));
+        if(obj)
+          user_recipes.push(obj);
+      
+  }
+
+
+  console.log(user_recipes);
+  console.log("new recipe count", localStorage.newRecipeCount)
+
   return{
     all: function(){
       return recipes;
     },
     get: function(recipeId){
       return recipes[recipeId];
+    },
+
+    get_user: function(recipeId){
+
+        for(var i = 0; i < user_recipes.length; i++){
+
+          if (user_recipes[i].id === parseInt(recipeId))
+            return user_recipes[i];
+        }
+      
     },
 
     getAllFavoriteRecipes: function(){
@@ -50,6 +84,38 @@ angular.module('starter.services', [])
             favRecipes.push(recipes[i]);
       
       return favRecipes;
+
+    },
+
+    addNewUserRecipe: function(newRecipe){
+
+        localStorage.setItem(newRecipe.id, JSON.stringify(newRecipe));
+        user_recipes.push(newRecipe)
+
+    },
+
+    removeUserRecipe: function(recipeId){
+        
+        var recipeToRemove
+
+        for(var i = 0; i < user_recipes.length; i++){
+
+          if (user_recipes[i].id === parseInt(recipeId))
+              user_recipes[i].exists = false;
+            
+        }
+
+       // user_recipes[recipeId].exists = false;
+
+        // Remove from local storage
+        localStorage.removeItem(recipeId);
+        //localStorage.newRecipeCount--;
+
+    },
+
+    getAllUserRecipes: function(){
+
+        return user_recipes;
 
     },
 

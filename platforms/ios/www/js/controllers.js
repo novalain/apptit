@@ -2,8 +2,9 @@ var clicked = false;
 
 angular.module('starter.controllers', [])
 
-
 .controller('RecipeDetailCtrl', function($scope, $stateParams, $ionicNavBarDelegate, Recipes){
+
+	console.log("stateparams", $stateParams);
 
 	$scope.recipe = Recipes.get($stateParams.recipeId)
 
@@ -30,10 +31,11 @@ angular.module('starter.controllers', [])
 		}); 
 	}
 
+
 	//Animationen ska nog göras i ett direktiv..
 	$scope.addToFavorites = function(){
 
-		console.log(window.localStorage.getItem($scope.recipe.id))
+		//console.log(window.localStorage.getItem($scope.recipe.id))
 
 		if(window.localStorage.getItem($scope.recipe.id) == null){
 			//Gör lite animation
@@ -58,55 +60,97 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('RecipesCtrl', function($scope, preload, Recipes, $ionicModal) {
 
-/*
-	preload(url).then(function(loadedImageUrl) {
-		//Bild laddad!
-	 	$scope.imageServingUrl = loadedImageUrl;
-	  
-	}, function(error) {
-	 	$scope.imageServingUrl = 'undefined';
-	    
-	});*/
+.controller('RecipeUserDetailCtrl', function($scope, $ionicPopup, $stateParams, $ionicNavBarDelegate, Recipes){
 
-	//document.getElementById("navBar").className = "";
-	//document.getElementById("navBar").className = "bar-balanced bar bar-header nav-bar nav-title-slide-ios7 disable-user-behavior  no-animation"
+	console.log("stateparams", $stateParams);
 
-	$scope.outerContainerHeight = (Recipes.all().length*156)/2 + 70;
+	$scope.recipe = Recipes.get_user($stateParams.recipeId)
 
-	console.log($scope.outerContainerHeight)
-	//$scope.src ="http://www.hdwallpaperscool.com/wp-content/uploads/2013/11/beautiful-cat-hd-wallpapers-fullscreen-top-images.jpg";
+	var nrOfIngredients = $scope.recipe.ingridients.length
+
+	$('.paper').click(function(){
+
+		if(!clicked){
+			$(this).animate({height:480 + nrOfIngredients*30 + 30}, 300, function(){});
+			clicked = true;
+		}
+		else{
+			$(this).animate({height:480}, 300, function(){});
+			clicked = false;
+		}
+	});
+
+	//console.log(window.localStorage.getItem($scope.recipe.id))
+	//visar alt bild om vi har lagt till favoriter redan
+	if(window.localStorage.getItem($scope.recipe.id) === 'true'){
+		$("#favHeartImg").hide(function() { 
+			  $(this).load(function() { $(this).show(); }); 
+			  $(this).attr("src", "img/hjarta2.png"); 
+		}); 
+	}
 
 
+	//Animationen ska nog göras i ett direktiv..
+	$scope.addToFavorites = function(){
+
+		//console.log(window.localStorage.getItem($scope.recipe.id))
+
+		if(window.localStorage.getItem($scope.recipe.id) == null){
+			//Gör lite animation
+			$("#favHeartImg").fadeOut(function() { 
+			  $(this).load(function() { $(this).fadeIn(); }); 
+			  $(this).attr("src", "img/hjarta2.png"); 
+			}); 
+
+			window.localStorage.setItem($scope.recipe.id, 'true');
+		}
+
+		else{
+
+			$("#favHeartImg").fadeOut(function() { 
+			  $(this).load(function() { $(this).fadeIn(); }); 
+			  $(this).attr("src", "img/konturer1.png"); 
+			}); 
+
+			window.localStorage.removeItem($scope.recipe.id);
+		}
+	}
+
+	$scope.showConfirm = function() {
+	   var confirmPopup = $ionicPopup.confirm({
+	     title: 'Radera recept',
+	     template: 'Är du säker på att du vill ta bort detta receptet?'
+	   });
+	   confirmPopup.then(function(res) {
+	     if(res) {
+	       Recipes.removeUserRecipe($scope.recipe.id);
+	     } else {
+	       
+	     }
+	   });
+	 };
+
+})
+
+
+.controller('RecipesCtrl', function($scope, Recipes, $ionicModal) {
+
+	$scope.container_size = (window.innerWidth/2 - 9) + 'px';
+	$scope.pic_height = window.innerWidth/2 + 'px';
+
+	console.log("width", $scope.container_size);
+
+	//Set right format (Responsive"
+		/*
+	var recipeContainers1 = document.getElementsByClassName("recipeContainer1");
+	var recipeContainers2 = document.getElementsByClassName('recipeContainer2');
+
+	console.log("legnth", document.getElementsByClassName("recipeContainer1").length)
+	console.log(recipeContainers2.length)
+	console.log(images.length)*/
+	
 	var button = document.getElementById("heartButton");
-	/*$rootScope.slideHeader = false;
-	$rootScope.slideHeaderPrevious = 0;*/
-
-	// $scope.items = [];
-	// for (var i = 0; i < 1000; i++) {
-	//     $scope.items.push('Item ' + i);
-	// }
-
-	// $scope.getItemHeight = function(item, index) {
-	//     //Make evenly indexed items be 10px taller, for the sake of example
-	//     return (index % 2) === 0 ? 50 : 60;
-	// };
-/*
-	$scope.checkIfRecipeIsFavorite = function(id){
-
-		if(window.localStorage.getItem(id) === 'true')
-			return true;
-
-		return false;
-	}*/
-/*
-	window.addEventListener('shake', shakeEventDidOccur, false);
-	//function to call when shake occurs
-
-	function shakeEventDidOccur () {
-		alert('hej')
-	}*/
 
 	if(window.sessionStorage.getItem('f') === 'true'){
 
@@ -145,37 +189,12 @@ angular.module('starter.controllers', [])
 	   //window.addEventListener('shake', shakeEventDidOccur, true);
 	});
 
-	/** Lägg till recept modal box **/
-	$ionicModal.fromTemplateUrl('templates/new-recipe.html', {
-	    scope: $scope,
-		animation: 'slide-in-up'
-	}).then(function(modal) {
-		$scope.modal2 = modal;
-	});
 
-	$scope.openModal2 = function() {
-		//window.addEventListener('shake', shakeEventDidOccur, false);
-	 	$scope.modal2.show();
-  	};
-  	$scope.closeModal2 = function() {
-	    $scope.modal2.hide();
-
-  	};
-
-	//Cleanup the modal when we're done with it!
-	$scope.$on('$destroy', function() {
-	    $scope.modal2.remove();
-	});
-	// Execute action on hide modal
-	$scope.$on('modal.hidden', function() {
-	    // Execute action
-	   //window.addEventListener('shake', shakeEventDidOccur, true);
-	});
-
-
-	$scope.recipes = Recipes.all();
 	$scope.favRecipes = Recipes.getAllFavoriteRecipes();
-	//$scope.showFavRecipes = { checked: false };
+	$scope.recipes = Recipes.all();
+	$scope.user_recipes = Recipes.getAllUserRecipes();
+
+	console.log(localStorage.newRecipeCount)
 
 	$scope.showFavRecipesChange = function(){
 
@@ -194,6 +213,8 @@ angular.module('starter.controllers', [])
 
 	}
 
+
+
 })
 
 
@@ -204,44 +225,13 @@ angular.module('starter.controllers', [])
 
 
 
-.controller('NewRecipeCtrl', function($scope, $cordovaCamera) {
+.controller('NewRecipeCtrl', function($scope, $cordovaCamera, Recipes) {
 
 
-	console.log("newrecipe");
-	//Börjar på 4
+	console.log("newrecipectrl");
+	//Börjar på 3
 	var stepsCount = 3;
 	var ingCount = 3;
-
-
-	/** STEG 2 **/
-
-	/*
-	$ionicModal.fromTemplateUrl('templates/about.html', {
-	    scope: $scope,
-		animation: 'slide-left-right'
-	}).then(function(modal) {
-		$scope.modal3 = modal;
-	});
-
-	$scope.openModal3 = function() {
-		//window.addEventListener('shake', shakeEventDidOccur, false);
-	 	$scope.modal3.show();
-  	};
-  	$scope.closeModal3 = function() {
-	    $scope.modal3.hide();
-
-  	};
-
-	//Cleanup the modal when we're done with it!
-	$scope.$on('$destroy', function() {
-	    $scope.modal3.remove();
-	});
-	// Execute action on hide modal
-	$scope.$on('modal.hidden', function() {
-	    // Execute action
-	   //window.addEventListener('shake', shakeEventDidOccur, true);
-	});
-	*/
 
 	$scope.clearFields = function(){
 
@@ -316,15 +306,15 @@ angular.module('starter.controllers', [])
 
 	var validate = function(){
 
-		if(document.getElementById('recipeName').value == "" || document.getElementById('recipeDesc') == "")
-			document.getElementById('recipeName').style.color= "red";
+		if(document.getElementById('recipeName').value == "" || document.getElementById('recipeDesc') == "" || document.getElementById('recipeName').value.length > 30 || document.getElementById('recipeDesc').value.length > 500)
+			return false;
 
 		for(var i = 1; i <= stepsCount; i++)
-			if(document.getElementById('step' + i).value == "")
+			if(document.getElementById('step' + i).value == "" || document.getElementById('step' + i).value.length > 100 )
 				return false;
 
 		for(var i = 1; i <= ingCount; i++)
-			if(document.getElementById('ing' + i).value == "")
+			if(document.getElementById('ing' + i).value == "" || document.getElementById('ing' + i).value.length > 30 )
 				return false;
 
 		return true;
@@ -335,30 +325,47 @@ angular.module('starter.controllers', [])
 
 
 		if(!validate()){
-			alert("Du måste fylla i alla fält!");
+			alert("Fel! För långt namn eller fält tomma.");
 			return;
 		}
 
 		var userRecipeName = document.getElementById('recipeName').value;
 		var userRecipeDesc = document.getElementById('recipeDesc').value;
-		var steps = [];
-		var ing = [];
+		var newsteps = [];
+		var newing = [];
 
-		for(var i = 1; i <= stepsCount; i++)
-			steps.push(document.getElementById('step' + i).value);
+		for(var i = 1; i <= stepsCount; i++){
+			var obj = {id:i-1, desc:document.getElementById('step' + i).value};
+			newsteps.push(obj);
+		}
 		
-		
-		for(var i = 1; i <= ingCount; i++)
-			ing.push(document.getElementById('ing' + i).value);
+		for(var i = 1; i <= ingCount; i++){
+			var obj = {id:i-1, desc:document.getElementById('ing' + i).value};
+			newing.push(obj);
+		}
 
-		takePicture();
+		//takePicture();
+
+		// Check if we have any new recipes
+		if (localStorage.newRecipeCount) {
+		    localStorage.newRecipeCount++;
+		} else {
+		    localStorage.newRecipeCount = 1;
+		}
+		
+		//var newid = parseInt(localStorage.newRecipeCount) + Recipes.all().length - 1;
+		var newid = localStorage.newRecipeCount - 1;
+		newRecipe = {id: newid, name: userRecipeName, fav: false, desc: userRecipeDesc, steps: newsteps, ingridients: newing, cookTime: '20', servings:'4-5', picUrl:'http://placehold.it/160x160', picUrlWide:'http://placehold.it/400x300', exists: true };
+
+		Recipes.addNewUserRecipe(newRecipe);
+		
 	}
 
 	var takePicture = function() {
 
         var options = { 
             quality : 75, 
-            destinationType : Camera.DestinationType.DATA_URI, 
+            destinationType : Camera.DestinationType.DATA_URL, 
             sourceType : Camera.PictureSourceType.PHOTOLIBRARY, 
             allowEdit : true,
             encodingType: Camera.EncodingType.JPEG,
@@ -370,15 +377,15 @@ angular.module('starter.controllers', [])
  
         $cordovaCamera.getPicture(options).then(function(imageData) {
 
-            $scope.imgURI = "data:image/jpeg;base64," + imageData;
-            console.log($scope.imgURI);
-
-            document.getElementById("stepslist").innerHTML = '<img ng-src=' + $scope.imgURI + '/>';
+        	$scope.imgURI = "data:image/jpeg;base64," + imageData;
+        	console.log($scope.imgURI);
 
         }, function(err) {
             // An error occured. Show a message to the user
         });
     }
+
+
 
 });
 

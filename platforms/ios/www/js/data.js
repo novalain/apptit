@@ -34,10 +34,10 @@ var desc1 = 'Krämig pastasås med skinka och paprika.';
 
 var steps1 = [
     {id:0, desc: 'Rensa paprikan från frön och skär i bitar. Skär skinkan i centimeterstora kuber.'},
-    {id:0, desc: 'Finhacka scharlottenlök och vitlök och dela champinjonerna i mindre bitar.'},
-    {id:1, desc: 'Bryn smöret i en stekpanna. Fräs scharlottenlöken och vitlöken tills de fått färg och lägg sedan i champinjoner och paprika. Fräs ytterligare i några minuter.'},
-    {id:2, desc: 'Tillsätt skinka, grädde, basilika, och hönsbuljong och låt koka upp. Sänk värmen och låt sjuda på svag värme i ca 5 minuter. Smaka av med salt och peppar. '},
-    {id:3, desc: 'Servera med pasta, broccoli och riven parmesan.'}
+    {id:1, desc: 'Finhacka scharlottenlök och vitlök och dela champinjonerna i mindre bitar.'},
+    {id:2, desc: 'Bryn smöret i en stekpanna. Fräs scharlottenlöken och vitlöken tills de fått färg och lägg sedan i champinjoner och paprika. Fräs ytterligare i några minuter.'},
+    {id:3, desc: 'Tillsätt skinka, grädde, basilika, och hönsbuljong och låt koka upp. Sänk värmen och låt sjuda på svag värme i ca 5 minuter. Smaka av med salt och peppar. '},
+    {id:4, desc: 'Servera med pasta, broccoli och riven parmesan.'}
 ];
 
 var ingredients1 = [

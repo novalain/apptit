@@ -1,6 +1,5 @@
-// TODO: Lägg till så användaren kan välja sina egna recept som favoriter.
+// TODO: Lägg till så användaren kan välja sina egna recept som favoriter (Eller tänk till hur du ska ha det med användarens recept..).
 // Fixa kamerabilder, behövs iphone för detta.
-// Gör startsidan responsiv
 // Fixa souvlakireceptet (Jessica)
 
 angular.module('starter.services', [])
@@ -96,12 +95,11 @@ angular.module('starter.services', [])
 
     removeUserRecipe: function(recipeId){
         
-        var recipeToRemove
-
         for(var i = 0; i < user_recipes.length; i++){
 
           if (user_recipes[i].id === parseInt(recipeId))
-              user_recipes[i].exists = false;
+              user_recipes.splice(i, 1);
+
             
         }
 

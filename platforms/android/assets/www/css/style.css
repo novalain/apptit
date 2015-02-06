@@ -92,9 +92,6 @@ div.recipeContainer1{cursor:pointer;
 					margin-left:0px;
 					margin-top:10px;
 					float:left; 
-					width:151px; 
-					height:151px;
-					
 					
  }
 
@@ -103,17 +100,18 @@ div.recipeContainer2{cursor:pointer;
 
 					margin-left:10px;
 					margin-top:10px;
-
 					float:left; 
-					width:151px; 
-					height:151px;}
+}
+
 
 .contentContainer{padding:0px;}
+
+.hej{width:300 !important;}
 
 
 /*width: 158px;*/
 img.recipePicInMainMenu{border-radius:0px;
-						height:160px;
+						/*height:160px;*/
 						
 
 	/*
