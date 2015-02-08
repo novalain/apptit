@@ -8,8 +8,8 @@ div.toggleFavorites{margin-left:80%;margin-top:10px;}
 div.picTextContainer{z-index:30; display:none; position:absolute; width:320px; margin-left:auto; margin-right:auto; margin-top:30px; height:50px; float:left;}
 div.picTextContainer p{text-shadow: 1px 1px black;text-align:center; color:white; font-family:Verdana; font-size:0.8em;}
 */
-div.picTextContainer{display:none;position:absolute; width:131px; margin-left:10px; margin-top:10px; height:50px; float:left;}
-div.picTextContainer p{z-index:10;text-shadow: 1px 1px black;text-align:center; color:white; font-family:Verdana; font-size:0.8em;}
+div.picTextContainer{display:none; position:absolute;  width:50%; margin-top:10px; height:50px; float:left;}
+div.picTextContainer p{z-index:10;text-shadow: 1px 1px black; text-align:center; color:white; font-family:Verdana; font-size:0.8em;}
 
 
 .loadingIconMainContainer{

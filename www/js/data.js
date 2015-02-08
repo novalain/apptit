@@ -104,7 +104,7 @@ var ingredients3 = [
     {id:2, quantity:'2', desc: 'morötter'},
     {id:2, quantity:'1/4', desc: 'vitkålshuvud'},
     {id:3, quantity:'2', desc: 'salladslökar'},
-    {id:4, quantity:'1', desc:'Vitlöksklyfta'},
+    {id:4, quantity:'1', desc:'vitlöksklyfta'},
     {id:5, quantity:'1', desc:'bit färsk ingefära'},
     {id:6, quantity:'1 hel', desc:'chilipeppar'},
     {id:7, quantity:'1 tsk', desc:'garam-masala'},

@@ -82,11 +82,10 @@
 
           <!--Ej favoriter användarrecept -->
           <!-- Denna buggar med ng class-->
-          <a ng-if = "!checked && recipe.exists" ng-repeat="recipe in user_recipes | filter:searchText:strict" ng-href="#/recipes-user/{{recipe.id}}">
-
+          <a ng-if = "!checked" ng-repeat="recipe in user_recipes | filter:searchText:strict" ng-href="#/recipes-user/{{recipe.id}}">
             <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="$index%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'">
 
-              <div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
+              <div id="picTextContainer_user{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
 
               <img ng-style="{'height': '{{pic_height}}'}" class = "recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
 
@@ -103,7 +102,6 @@
           <!-- Favoriter-->
           <a ng-if = "checked" ng-repeat="recipe in favRecipes | filter:searchText:strict" href="#/recipes/{{recipe.id}}">
 
-            
         		<div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="$index%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'">
 
         			<div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>

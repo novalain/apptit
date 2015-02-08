@@ -137,14 +137,14 @@ p.igrText{font-family:Verdana;font-size:0.7em; }
 p#favText{margin-top:20px;text-align:center;font-family:Verdana;}
 
 div#favContainer{opacity:0.6;width:50px; margin-left:auto; margin-right:auto;}
-
 #favHeartImg{cursor:pointer; width:50px;}
 
 .favHeartInMainMenu{
 
-	margin-right:10px;
+	margin-right:3%;
 	opacity:0.6;
 }
+
 
 .textInput{
 	height:45px;

@@ -125,6 +125,7 @@ angular.module('starter.controllers', [])
 	   confirmPopup.then(function(res) {
 	     if(res) {
 	       Recipes.removeUserRecipe($scope.recipe.id);
+
 	     } else {
 	       
 	     }
@@ -135,6 +136,8 @@ angular.module('starter.controllers', [])
 
 
 .controller('RecipesCtrl', function($scope, Recipes, $ionicModal) {
+
+	console.log("RECIPE CTRL");
 
 	$scope.container_size = (window.innerWidth/2 - 9) + 'px';
 	$scope.pic_height = window.innerWidth/2 + 'px';
@@ -158,6 +161,8 @@ angular.module('starter.controllers', [])
 		button.className = "button-icon icon ion-ios7-heart favHeartInMainMenu green"
 
 	}
+
+
 
 	/** About modal box **/
 	$ionicModal.fromTemplateUrl('templates/about.html', {

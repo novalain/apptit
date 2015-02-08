@@ -137,6 +137,11 @@ angular.module('starter.controllers', [])
 
 .controller('RecipesCtrl', function($scope, Recipes, $ionicModal) {
 
+	setInterval(function() {
+        //console.log($scope.testValue++);
+        $scope.$apply() 
+    }, 500);
+
 	console.log("RECIPE CTRL");
 
 	$scope.container_size = (window.innerWidth/2 - 9) + 'px';
