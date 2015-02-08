@@ -10,13 +10,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
 .run(function($ionicPlatform, $cordovaSplashscreen) {
 
+  /*SENASTE*/
   setTimeout(function() {
     $cordovaSplashscreen.hide();
   }, 5000)
 
   $ionicPlatform.ready(function() {
 
-    ionic.Platform.fullscreen();
+    /*SENASTE*/
+    //ionic.Platform.fullscreen();
 
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -42,56 +44,57 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 .config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
+  // Learn more here: https:
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
 
 
     // setup an abstract state for the tabs directive
-    /*
+    
     .state('tab', {
       url: "/tab",
       abstract: true,
-    })*/
+      templateUrl: "templates/tabs.html"
+    })
 
     /** NÄR URL ÄR PÅ DET SOM STÅR I URL, ÄNDRAR VI STATE I APPEN*/
 
     // Each tab has its own nav history stack:
-    .state('recipes', {
+    .state('tab.recipes', {
       url: '/recipes',
       views: {
-          'mainView': {
+          'tab-recipes': {
           templateUrl: 'templates/recipes.html',
           controller: 'RecipesCtrl'
         }
       }
     })
 
-    .state('new-recipe', {
+    .state('tab.new-recipe', {
       url: '/recipes/new-recipe',
       views: {
-          'mainView': {
+          'tab-new-recipe': {
           templateUrl: 'templates/new-recipe.html',
           controller: 'NewRecipeCtrl'
         }
       }
     })
 
-    .state('recipe-detail', {
+    .state('tab.recipe-detail', {
       url: "/recipes/:recipeId",
       views: {
-          'mainView': {
+          'tab-recipes': {
           templateUrl: "templates/recipe-detail.html",
           controller:'RecipeDetailCtrl'
         }
       }
     })
 
-    .state('recipe-detail-user', {
+    .state('tab.recipe-detail-user', {
       url: "/recipes-user/:recipeId",
       views: {
-          'mainView': {
+          'tab-recipes': {
           templateUrl: "templates/recipe-detail-user.html",
           controller:'RecipeUserDetailCtrl'
         }
@@ -99,7 +102,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/recipes');
+  $urlRouterProvider.otherwise('/tab/recipes');
 
 })
 
