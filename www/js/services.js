@@ -7,7 +7,7 @@ angular.module('starter.services', [])
 .factory('Recipes', function(){
 
   console.log("hellorecipes");
-  //localStorage.clear();
+  localStorage.clear();
 
   //init
 
@@ -47,7 +47,7 @@ angular.module('starter.services', [])
   for(var i = 0; i < localStorage.newRecipeCount; i++){
 
         var obj = JSON.parse(localStorage.getItem(i));
-        if(obj)
+        if(obj && obj.id > 0)
           user_recipes.push(obj);
       
   }
@@ -83,6 +83,19 @@ angular.module('starter.services', [])
             favRecipes.push(recipes[i]);
       
       return favRecipes;
+
+    },
+
+    getAllFavoriteUserRecipes: function(){
+
+      var favRecipes_user = [];
+
+      for(var i = 0; i < user_recipes.length; i++)
+          if(window.localStorage.getItem(user_recipes[i].id + 'u') === 'true')
+            favRecipes_user.push(user_recipes[i]);
+      
+      //console.log(favRecipes_user);
+      return favRecipes_user;
 
     },
 

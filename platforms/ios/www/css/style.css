@@ -8,8 +8,8 @@ div.toggleFavorites{margin-left:80%;margin-top:10px;}
 div.picTextContainer{z-index:30; display:none; position:absolute; width:320px; margin-left:auto; margin-right:auto; margin-top:30px; height:50px; float:left;}
 div.picTextContainer p{text-shadow: 1px 1px black;text-align:center; color:white; font-family:Verdana; font-size:0.8em;}
 */
-div.picTextContainer{display:none;position:absolute; width:131px; margin-left:10px; margin-top:10px; height:50px; float:left;}
-div.picTextContainer p{z-index:10;text-shadow: 1px 1px black;text-align:center; color:white; font-family:Verdana; font-size:0.8em;}
+div.picTextContainer{display:none; position:absolute;  width:50%; margin-top:10px; height:50px; float:left;}
+div.picTextContainer p{z-index:10;text-shadow: 1px 1px black; text-align:center; color:white; font-family:Verdana; font-size:0.8em;}
 
 
 .loadingIconMainContainer{
@@ -122,6 +122,13 @@ img.recipePicInMainMenu{border-radius:0px;
 
 li{background-color:white !important;}
 
+.popup{border-radius:10px;}
+
+.button:last-child{
+  background:#ef473a ;
+  border-color:#ef473a ;
+}
+
 /*Ingridienslistan*/
 
 li.ingredientListItem{margin-bottom:10px; background-color:transparent!important; }
@@ -137,14 +144,14 @@ p.igrText{font-family:Verdana;font-size:0.7em; }
 p#favText{margin-top:20px;text-align:center;font-family:Verdana;}
 
 div#favContainer{opacity:0.6;width:50px; margin-left:auto; margin-right:auto;}
-
 #favHeartImg{cursor:pointer; width:50px;}
 
 .favHeartInMainMenu{
 
-	margin-right:10px;
+	margin-right:9px;
 	opacity:0.6;
 }
+
 
 .textInput{
 	height:45px;

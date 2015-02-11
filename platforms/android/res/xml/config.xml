@@ -25,4 +25,5 @@
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="BackupWebStorage" value="none" />
+    <uses-permission android:name="android.permission.CAMERA" />
 </widget>

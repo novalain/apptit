@@ -148,6 +148,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
               element.parent().find('span').remove();
 
               document.getElementById("picTextContainer" + scope.recipe.id).style.display = "block";
+              if(document.getElementById("picTextContainer_user" + scope.recipe.id))
+                document.getElementById("picTextContainer_user" + scope.recipe.id).style.display = "block";
           });
           scope.$watch('ngSrc', function() {
             // Set visibility: false + inject temporary spinner overlay

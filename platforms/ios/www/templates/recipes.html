@@ -1,29 +1,4 @@
 <ion-view title="Apptit">
-<!--
-  	<ion-nav-bar class="bar-balanced">
-    	<ion-nav-back-button class="button-icon icon ion-ios7-arrow-back"></ion-nav-back-button>
-
-      <button class="button button-icon icon ion-gear-a"></button>
-
-      <!--fixat
-      <ion-nav-buttons side="right">
-         <button ng-click="openModal()" class="button button-icon icon ion-ios7-information-outline"></button>
-      </button>
-
-  	</ion-nav-bar>
-
-    <ion-header-bar class="bar-subheader bar-dark">
-
-        <div class="item item-input textInput">
-
-            <i class="icon ion-search placeholder-icon"></i>
-            <input ng-model="searchText.name" type="text" placeholder="Recept eller ingrediens">
-
-            <button id="heartButton" ng-click="showFavRecipesChange()" class="button-icon icon ion-ios7-heart-outline favHeartInMainMenu"></button>
-      
-        </div>
-
-    </ion-header-bar>-->
 
     <div class="bar bar-subheader bar-dark">
 
@@ -32,8 +7,10 @@
             <i class="icon ion-search placeholder-icon"></i>
             <input id="input" ng-model="searchText.name" type="text" placeholder="Recept eller ingrediens">
 
+  
             <button id="heartButton" ng-click="showFavRecipesChange()" class="button-icon icon ion-ios7-heart-outline favHeartInMainMenu"></button>
-      
+     
+    
         </div>
     </div>
 
@@ -56,7 +33,7 @@
     <ion-content class="has-header contentContainer" header-shrink scroll-event-interval="5" has-bouncing="true">
 
       <!-- Ännu en tokbugg container, blir ultramycket padding utan denna..-->
-      <div style="height:55px; background-color:white;"></div>
+      <div style="height:55px;"></div>
     
           <!-- För att den ska reagera på scroll event.. sen exempel-->
           <div class="tabs"></div>
@@ -81,12 +58,10 @@
           </a>
 
           <!--Ej favoriter användarrecept -->
-          <!-- Denna buggar med ng class-->
-          <a ng-if = "!checked && recipe.exists" ng-repeat="recipe in user_recipes | filter:searchText:strict" ng-href="#/recipes-user/{{recipe.id}}">
-
+          <a ng-if = "!checked" ng-repeat="recipe in user_recipes | filter:searchText:strict" ng-href="#/recipes-user/{{recipe.id}}">
             <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="$index%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'">
 
-              <div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
+              <div id="picTextContainer_user{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
 
               <img ng-style="{'height': '{{pic_height}}'}" class = "recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
 
@@ -103,7 +78,6 @@
           <!-- Favoriter-->
           <a ng-if = "checked" ng-repeat="recipe in favRecipes | filter:searchText:strict" href="#/recipes/{{recipe.id}}">
 
-            
         		<div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="$index%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'">
 
         			<div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
@@ -118,6 +92,28 @@
 
               </span>
       	    </div>
+          </a>
+
+          <!-- Favoriter USER recipes-->
+          <a ng-if = "checked" ng-repeat="recipe in favUserRecipes | filter:searchText:strict" href="#/recipes-user/{{recipe.id}}">
+
+           <!--  <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="$index%2 == 0 && favRecipes.length % 2 == 0 ? 'recipeContainer1' : 'recipeContainer2'"> -->
+
+            <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="favRecipes.length % 2 == 0 ? ($index % 2 == 0 ? 'recipeContainer1' : 'recipeContainer2') : 
+            ($index % 2 == 0 ? 'recipeContainer2' : 'recipeContainer1')">  
+
+              <div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
+              
+              <img ng-style="{'height': '{{pic_height}}', 'width':'{{pic_height}}'}" class="recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
+
+              <span class="loading">
+
+                <div class = "loadingIconMainContainer">
+                  <i class="icon ion-loading-c loadingIconMain"></i>
+                </div>
+
+              </span>
+            </div>
           </a>
 
         
@@ -136,10 +132,10 @@
 
         <div style="height:45px; width:100%; float:left; background-color:white;"></div>
         <!--Ännu en bugg container -->
-        
-
-
   
     </ion-content>
 
+
+
 </ion-view>
+

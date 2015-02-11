@@ -1,6 +1,5 @@
-// TODO: Lägg till så användaren kan välja sina egna recept som favoriter.
+// TODO: Lägg till så användaren kan välja sina egna recept som favoriter (Eller tänk till hur du ska ha det med användarens recept..).
 // Fixa kamerabilder, behövs iphone för detta.
-// Gör startsidan responsiv
 // Fixa souvlakireceptet (Jessica)
 
 angular.module('starter.services', [])
@@ -8,7 +7,7 @@ angular.module('starter.services', [])
 .factory('Recipes', function(){
 
   console.log("hellorecipes");
-  //localStorage.clear();
+  localStorage.clear();
 
   //init
 
@@ -48,7 +47,7 @@ angular.module('starter.services', [])
   for(var i = 0; i < localStorage.newRecipeCount; i++){
 
         var obj = JSON.parse(localStorage.getItem(i));
-        if(obj)
+        if(obj && obj.id > 0)
           user_recipes.push(obj);
       
   }
@@ -87,6 +86,19 @@ angular.module('starter.services', [])
 
     },
 
+    getAllFavoriteUserRecipes: function(){
+
+      var favRecipes_user = [];
+
+      for(var i = 0; i < user_recipes.length; i++)
+          if(window.localStorage.getItem(user_recipes[i].id + 'u') === 'true')
+            favRecipes_user.push(user_recipes[i]);
+      
+      //console.log(favRecipes_user);
+      return favRecipes_user;
+
+    },
+
     addNewUserRecipe: function(newRecipe){
 
         localStorage.setItem(newRecipe.id, JSON.stringify(newRecipe));
@@ -96,12 +108,11 @@ angular.module('starter.services', [])
 
     removeUserRecipe: function(recipeId){
         
-        var recipeToRemove
-
         for(var i = 0; i < user_recipes.length; i++){
 
           if (user_recipes[i].id === parseInt(recipeId))
-              user_recipes[i].exists = false;
+              user_recipes.splice(i, 1);
+
             
         }
 
