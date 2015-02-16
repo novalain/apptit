@@ -304,7 +304,7 @@ angular.module('starter.controllers', [])
 			label.appendChild(input);
 
 			document.getElementById("ingredienslist").appendChild(label);
-			
+
 			if(ingCount > 3){
 				sessionStorage.setItem("autosaveIngCount", ingCount - 3);
 
@@ -384,6 +384,27 @@ angular.module('starter.controllers', [])
 		}
 	}
 	 
+	// Add image
+
+	if(sessionStorage.getItem("autosaveImg")){
+
+		console.log("bildfanns")
+		document.getElementById("userImage").style.display = 'block';
+		document.getElementById("addImage").style.display = 'none';
+		document.getElementById("userImage").src = sessionStorage.getItem("autosaveImg");
+		
+
+		//Format image
+		if(document.getElementById("userImage").clientHeight < pic_squared || document.getElementById("userImage").clientWidth < pic_squared){
+        		document.getElementById("userImage").height = pic_squared;
+        		document.getElementById("userImage").width = pic_squared;
+    	}
+
+	}
+
+	if($scope.imgURI)
+		sessionStorage.setItem("autosaveImg", $scope.imgURI);
+
 	input1.addEventListener("change", function() {
 	    sessionStorage.setItem("autosave1", input1.value);
     });
@@ -459,6 +480,8 @@ angular.module('starter.controllers', [])
 			sessionStorage.removeItem("autosaveIng" + j);
 
 		}
+
+		sessionStorage.removeItem("autosaveImg");
 
 		stepsCount = 3;
 		ingCount = 3;
@@ -541,10 +564,17 @@ angular.module('starter.controllers', [])
 		else
 			newRecipe.picUrl = 'http://placehold.it/' + $scope.pic_height + 'x' + $scope.pic_height;
 
+
 		Recipes.addNewUserRecipe(newRecipe);
 
 		window.location.href = "#/recipes";
 		$ionicLoading.show({template: 'Receptet tillagt!', noBackdrop: true, duration: 2000 });
+
+		setTimeout(function() {
+			$scope.clearFields();
+		}, 500);
+
+		
 		//window.location.replace("#/recipes");*/
 		
 	}
@@ -569,7 +599,10 @@ angular.module('starter.controllers', [])
         	document.getElementById("addImage").style.display = 'none';
         	$scope.imgURI = "data:image/jpeg;base64," + imageData;
         	document.getElementById("userImage").src = $scope.imgURI;
+
+        	sessionStorage.setItem("autosaveImg", $scope.imgURI);
         	
+        	//Format picture
 
         	if(document.getElementById("userImage").clientHeight < pic_squared || document.getElementById("userImage").clientWidth < pic_squared){
         		document.getElementById("userImage").height = pic_squared;

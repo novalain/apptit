@@ -10,7 +10,7 @@ angular.module('starter.services', [])
 .factory('Recipes', function(){
 
   console.log("hellorecipes");
-  //localStorage.clear();
+  localStorage.clear();
   sessionStorage.clear();
 
   //init
