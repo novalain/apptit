@@ -8,7 +8,7 @@
             <input id="input" ng-model="searchText.name" type="text" placeholder="Recept eller ingrediens">
 
   
-            <button id="heartButton" ng-click="showFavRecipesChange()" class="button-icon icon ion-ios7-heart-outline favHeartInMainMenu"></button>
+            <button ng-click="showFavRecipesChange()"id="heartButton" class="button-icon icon ion-ios7-heart-outline favHeartInMainMenu"></button>
      
     
         </div>
@@ -63,7 +63,7 @@
 
               <div id="picTextContainer_user{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
 
-              <img ng-style="{'height': '{{pic_height}}'}" class = "recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
+              <img ng-style="{'height': '{{pic_height}}', 'width':'{{pic_height}}'}"  class = "recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
 
               <span class="loading">
 
@@ -119,11 +119,11 @@
         
         	<p class ="noResults">
 
-            <span ng-if="!checked && (recipes | filter:searchText).length == 0">Inga recept hittade</span>
+            <span ng-if="!checked && (recipes | filter:searchText).length == 0 && (user_recipes | filter:searchText).length == 0  ">Inga recept hittade</span>
 
-            <span ng-if="checked && (favRecipes | filter:searchText).length == 0 && searchText.name.length">Inga recept hittade</span>
+            <span ng-if="checked && (favRecipes | filter:searchText).length == 0 && (favUserRecipes | filter:searchText).length == 0 && searchText.name.length">Inga recept hittade</span>
 
-          	<span ng-if="checked && favRecipes.length === 0 && !searchText.name.length">Inga favoriter</span>
+          	<span ng-if="checked && favRecipes.length === 0 && favUserRecipes.length === 0 && !searchText.name.length">Inga favoriter</span>
 
           </p>
 

@@ -145,7 +145,9 @@ angular.module('starter.controllers', [])
 	console.log("RECIPE CTRL");
 
 	$scope.container_size = (window.innerWidth/2 - 9) + 'px';
+
 	$scope.pic_height = window.innerWidth/2 + 'px';
+
 
 	console.log("width", $scope.container_size);
 
@@ -241,12 +243,44 @@ angular.module('starter.controllers', [])
 
 .controller('NewRecipeCtrl', function($scope, $cordovaCamera, Recipes, $ionicLoading) {
 
-
-	console.log("newrecipectrl");
+	var pic_squared = window.innerWidth/2;
+	$scope.pic_height = window.innerWidth/2 + 'px';
+	$scope.half_window_width = window.innerWidth/2 + 'px';
+	$scope.window_width = window.innerWidth + 'px';
+	$scope.quarter_window_width = window.innerWidth/4 + 2 + 'px';
+	$scope.textbox_width = window.innerWidth/2 - 8 + 'px';
+	$scope.margin_top_text = window.innerWidth/70 + 'px';
+	//console.log("newrecipectrl");
 	//Börjar på 3
 	var stepsCount = 3;
 	var ingCount = 3;
 	var newRecipe;
+
+	//Save in cache
+	
+	var input1 = document.getElementById("recipeName");
+	var input2 = document.getElementById("recipeDesc");
+
+	if (sessionStorage.getItem("autosave1")) {
+	    input1.value = sessionStorage.getItem("autosave1");
+	}
+	if (sessionStorage.getItem("autosave2")) {
+	    input1.value = sessionStorage.getItem("autosave2");
+	}
+
+	for(var i = 1; i <= stepsCount; i++){
+
+			if(document.getElementById('step' + i).value == "" || document.getElementById('step' + i).value.length > 100 )
+				return false;
+			
+	}
+	 
+	// Listen for changes in the text field
+	input1.addEventListener("change", function() {
+	    // And save the results into the session storage object
+	    sessionStorage.setItem("autosave1", input1.value);
+    });
+
 
 	$scope.clearFields = function(){
 
@@ -277,8 +311,14 @@ angular.module('starter.controllers', [])
 					           '<input style="width:60px;"type="text" class="stepItem" id="ing3" placeholder="Ingrediens 3">' +
 					           '</label>';
 
+
+		document.getElementById("userImage").style.display = "none";
+		document.getElementById("addImage").style.display = 'block';
+
 		stepsCount = 3;
 		ingCount = 3;
+
+
 
 
 	}
@@ -374,30 +414,35 @@ angular.module('starter.controllers', [])
 		
 		//var newid = parseInt(localStorage.newRecipeCount) + Recipes.all().length - 1;
 		var newid = localStorage.newRecipeCount - 1;
-		var image_path = takePicture();
+		//var image_path = takePicture();
 
 		//console.log("IMG PATH ", image_path);
 		
-		newRecipe = {id: newid, name: userRecipeName, fav: false, desc: userRecipeDesc, steps: newsteps, ingridients: newing, cookTime: '20', servings:'4-5', picUrl:'http://placehold.it/160x160', picUrlWide:'http://placehold.it/400x300', exists: true};
+		newRecipe = {id: newid, name: userRecipeName, fav: false, desc: userRecipeDesc, steps: newsteps, ingridients: newing, cookTime: document.getElementById("cookTime").options[document.getElementById("cookTime").selectedIndex].value, servings:document.getElementById("servings").options[document.getElementById("servings").selectedIndex].value, picUrl:'http://placehold.it/160x160', picUrlWide:'http://placehold.it/400x300', exists: true};
 
-		takePicture();
-
+		//takePicture();
+		storeFinalRecipe();
 		//Recipes.addNewUserRecipe(newRecipe);
 
 	}
-	var storeFinalRecipe = function(image_path){
+	var storeFinalRecipe = function(){
 
-		newRecipe.picUrl = image_path;
+		
+		if(document.getElementById("userImage").src.length > 0)
+			newRecipe.picUrl = document.getElementById("userImage").src;
+
+		else
+			newRecipe.picUrl = 'http://placehold.it/' + $scope.pic_height + 'x' + $scope.pic_height;
+
 		Recipes.addNewUserRecipe(newRecipe);
 
 		window.location.href = "#/recipes";
 		$ionicLoading.show({template: 'Receptet tillagt!', noBackdrop: true, duration: 2000 });
-		//window.location.replace("#/recipes");
+		//window.location.replace("#/recipes");*/
 		
-
 	}
 
-	var takePicture = function() {
+	$scope.takePicture = function() {
 
         var options = { 
             quality : 100, 
@@ -405,21 +450,30 @@ angular.module('starter.controllers', [])
             sourceType : Camera.PictureSourceType.PHOTOLIBRARY, 
             allowEdit : true,
             encodingType: Camera.EncodingType.JPEG,
-            targetWidth: 151,
-            targetHeight: 151,
+            targetWidth: $scope.pic_height,
+            targetHeight: $scope.pic_height,
             popoverOptions: CameraPopoverOptions,
             saveToPhotoAlbum: false
         };
  
         $cordovaCamera.getPicture(options).then(function(imageData) {
 
-
+        	document.getElementById("userImage").style.display = 'block';
+        	document.getElementById("addImage").style.display = 'none';
         	$scope.imgURI = "data:image/jpeg;base64," + imageData;
+        	document.getElementById("userImage").src = $scope.imgURI;
+        	
 
-        	storeFinalRecipe($scope.imgURI);
+        	if(document.getElementById("userImage").clientHeight < pic_squared || document.getElementById("userImage").clientWidth < pic_squared){
+        		document.getElementById("userImage").height = pic_squared;
+        		document.getElementById("userImage").width = pic_squared;
+        	}
+		
+        	console.log("IMG HEIGHT after: ", document.getElementById("userImage").clientHeight);
 
         }, function(err) {
             // An error occured. Show a message to the user
+            //alert("Fel uppstod vid inläsning av bild!");
         });
     }
 

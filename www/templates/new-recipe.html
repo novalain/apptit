@@ -29,7 +29,7 @@
             <label style="border:0px;"class="item item-input item-stacked-label">
 
               <span ng-style="{'margin-top': '{{margin_top_text}}'}" style="margin-left:2px;" class="input-label">Receptets namn</span>
-              <input ng-style="{'width': '{{textbox_width}}'}"id="recipeName" type="text" placeholder="T.ex lasagne">
+              <input ng-style="{'width': '{{textbox_width}}'}" id="recipeName" type="text" placeholder="T.ex lasagne">
             </label>
 
 
@@ -38,8 +38,8 @@
 
           <div style="border-right: 1px solid #E0E0E0;"ng-style="{'height': '{{quarter_window_width}}'}">
           <label style="border:0;"class="item item-input item-stacked-label">
-            <span ng-style="{'margin-top': '{{margin_top_text}}'}" style="margin-left:2px;"class="input-label">Receptbeskrivning</span>
-            <input ng-style="{'width': '{{textbox_width}}'}"id="recipeDesc" type="text" placeholder="En kort beskrivning">
+            <span  ng-style="{'margin-top': '{{margin_top_text}}'}" style="margin-left:2px;" class="input-label">Receptbeskrivning</span>
+            <input ng-style="{'width': '{{textbox_width}}'}" id="recipeDesc" type="text" placeholder="En kort beskrivning">
           </label>
           </div>
 
@@ -64,7 +64,7 @@
 
       <div id="stepslist">
 
-        <label class="item item-input no-border">
+       <!--  <label class="item item-input no-border">
           <input class="stepItem" id="step1" type="text" placeholder="Steg 1">
         </label>
         <label class="item item-input no-border">
@@ -72,8 +72,8 @@
         </label>
 
         <label class="item item-input no-border">
-          <input style="width:60px;"type="text" class="stepItem" id="step3" placeholder="Steg 3">
-        </label>
+          <input type="text" class="stepItem" id="step3" placeholder="Steg 3">
+        </label> -->
 
         </div>
 
@@ -86,7 +86,7 @@
 
         <div id="ingredienslist">
 
-          <label class="item item-input no-border">
+      <!--     <label class="item item-input no-border">
             <input id = "ing1" class = "stepItem" type="text" placeholder="Ingrediens 1">
           </label>
           <label class="item item-input no-border">
@@ -94,14 +94,40 @@
           </label>
           <label class="item item-input no-border">
             <input class="stepItem" id="ing3" type="text" placeholder="Ingrediens 3">
-          </label>
+          </label> -->
 
-        </div>        
+        </div> 
+
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Antal lådor
+          </div>
+          <select id="servings">
+            <option value="1">1 st</option>
+            <option value="2" >2 st</option>
+            <option value="3" selected>3 st</option>
+            <option value="4">4 st</option>
+            <option value="5">5 st</option>
+            <option value="6+">6+ st</option>
+          </select>
+        </label>
+
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Tid
+          </div>
+          <select id="cookTime">
+            <option value="15">15 min</option>
+            <option value="30">30 min</option>
+            <option value="45" selected>45 min</option>
+            <option value="60+">60+ min</option>
+          </select>
+        </label>
 
       <!-- <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
       <img ng-show="imgURI === undefined" ng-src="http://placehold.it/160x160"> -->
 
-      <div style="height:120px; width:100%; float:left;"></div>
+      <div style="height:100px; width:100%; float:left;"></div>
 
     </ion-content>
 

@@ -145,6 +145,7 @@ angular.module('starter.controllers', [])
 	console.log("RECIPE CTRL");
 
 	$scope.container_size = (window.innerWidth/2 - 9) + 'px';
+
 	$scope.pic_height = window.innerWidth/2 + 'px';
 
 
@@ -242,6 +243,89 @@ angular.module('starter.controllers', [])
 
 .controller('NewRecipeCtrl', function($scope, $cordovaCamera, Recipes, $ionicLoading) {
 
+	$scope.addNewRecipeStep = function(increment){
+
+		if(stepsCount < 15){
+
+			stepsCount++;
+
+			//console.log("STEPSCOUNT", stepsCount)
+
+			var input = document.createElement('input');
+			input.className = "stepItem"
+			input.id = "step" + stepsCount;
+			input.setAttribute("type", "text");
+			input.setAttribute("placeholder", "Steg " + stepsCount);
+
+			var label = document.createElement('label');
+			label.className = "item item-input no-border";
+			label.appendChild(input);
+
+			document.getElementById("stepslist").appendChild(label);
+
+			if(stepsCount > 3){
+				sessionStorage.setItem("autosaveStepsCount", stepsCount - 3);
+
+				(function(stepsCount) {
+		 		 
+					document.getElementById('step' + stepsCount).addEventListener("change", function() {
+			    		sessionStorage.setItem("autosaveStep" + stepsCount, document.getElementById('step' + stepsCount).value);
+			    		console.log(document.getElementById('step' + stepsCount).value)
+
+		    		});
+
+		    	}(stepsCount));
+			}
+
+		}
+
+		else{
+			alert("Fel! För många steg")
+		}
+
+	}
+
+	//sessionStorage.clear();
+
+	$scope.addNewIngredientStep = function(){
+
+		if(ingCount < 15){
+
+			ingCount++;
+
+			var input = document.createElement('input');
+			input.className = "stepItem"
+			input.id = "ing" + ingCount;
+			input.setAttribute("type", "text");
+			input.setAttribute("placeholder", "Ingrediens " + ingCount);
+
+			var label = document.createElement('label');
+			label.className = "item item-input no-border";
+			label.appendChild(input);
+
+			document.getElementById("ingredienslist").appendChild(label);
+
+			if(ingCount > 3){
+				sessionStorage.setItem("autosaveIngCount", ingCount - 3);
+
+				(function(ingCount) {
+					document.getElementById('ing' + ingCount).addEventListener("change", function() {
+			    		sessionStorage.setItem("autosaveIng" + ingCount, document.getElementById('ing' + ingCount).value);
+			   		});
+
+		   		}(ingCount));
+			}
+
+		}
+
+		else{
+
+			alert("Fel! För många ingredienser");
+		}
+	}
+
+
+	var pic_squared = window.innerWidth/2;
 	$scope.pic_height = window.innerWidth/2 + 'px';
 	$scope.half_window_width = window.innerWidth/2 + 'px';
 	$scope.window_width = window.innerWidth + 'px';
@@ -250,9 +334,101 @@ angular.module('starter.controllers', [])
 	$scope.margin_top_text = window.innerWidth/70 + 'px';
 	//console.log("newrecipectrl");
 	//Börjar på 3
-	var stepsCount = 3;
-	var ingCount = 3;
+	var stepsCount = 0;
+	var ingCount = 0;
 	var newRecipe;
+	var autosaveStepsCount = 0;
+	var autosaveIngCount = 0;
+
+	//Get from cache
+
+	//sessionStorage.clear();
+	
+	// HELT BROKEN KRASHAR... Försöker implementera att skapa alla recipe och ingredienser from cache och direkt i javascrpt.
+
+	var input1 = document.getElementById("recipeName");
+	var input2 = document.getElementById("recipeDesc");
+
+	if (sessionStorage.getItem("autosave1")) {
+	    input1.value = sessionStorage.getItem("autosave1");
+	}
+	if (sessionStorage.getItem("autosave2")) {
+	    input2.value = sessionStorage.getItem("autosave2");
+	}
+
+	if(sessionStorage.getItem("autosaveStepsCount"))
+		autosaveStepsCount = parseInt(sessionStorage.getItem("autosaveStepsCount"));
+
+	if(sessionStorage.getItem("autosaveIngCount"))
+		autosaveIngCount = parseInt(sessionStorage.getItem("autosaveIngCount"));
+
+
+	for(var i = 0; i < 3 + autosaveStepsCount; i++){
+		$scope.addNewRecipeStep();
+	}
+
+	for(var i = 0; i < 3 + autosaveIngCount; i++){
+		$scope.addNewIngredientStep();
+	}
+
+	for(var i = 1; i <= 3 + autosaveStepsCount; i++){
+		if(sessionStorage.getItem("autosaveStep" + i)){
+			document.getElementById("step" + i).value = sessionStorage.getItem("autosaveStep" + i);
+		}
+	}
+
+	// add text
+	for(var i = 1; i <= 3 + autosaveIngCount; i++){
+		if(sessionStorage.getItem("autosaveIng" + i)){
+			document.getElementById("ing" + i).value = sessionStorage.getItem("autosaveIng" + i);
+		}
+	}
+	 
+	// Add image
+
+	if(sessionStorage.getItem("autosaveImg")){
+
+		console.log("bildfanns")
+		document.getElementById("userImage").style.display = 'block';
+		document.getElementById("addImage").style.display = 'none';
+		document.getElementById("userImage").src = sessionStorage.getItem("autosaveImg");
+		
+
+		//Format image
+		if(document.getElementById("userImage").clientHeight < pic_squared || document.getElementById("userImage").clientWidth < pic_squared){
+        		document.getElementById("userImage").height = pic_squared;
+        		document.getElementById("userImage").width = pic_squared;
+    	}
+
+	}
+
+	if($scope.imgURI)
+		sessionStorage.setItem("autosaveImg", $scope.imgURI);
+
+	input1.addEventListener("change", function() {
+	    sessionStorage.setItem("autosave1", input1.value);
+    });
+
+    input2.addEventListener("change", function() {
+	    sessionStorage.setItem("autosave2", input2.value);
+    });
+
+    // Add eventlisteners to the three first fields (Could probably do this in other function..)
+    for (var i = 1; i <= 3; i++) {
+	 	(function(i) {
+	    	document.getElementById('step' + i).addEventListener("change", function() {
+	    	sessionStorage.setItem("autosaveStep" + i, document.getElementById('step' + i).value);
+    	});
+	  }(i));
+	}
+
+    for (var i = 1; i <= 3; i++) {
+	 	(function(i) {
+	    	document.getElementById('ing' + i).addEventListener("change", function() {
+	    	sessionStorage.setItem("autosaveIng" + i, document.getElementById('ing' + i).value);
+    	});
+	  }(i));
+	}
 
 	$scope.clearFields = function(){
 
@@ -287,50 +463,32 @@ angular.module('starter.controllers', [])
 		document.getElementById("userImage").style.display = "none";
 		document.getElementById("addImage").style.display = 'block';
 
+		//Remove from cache
+		sessionStorage.removeItem("autosave1");
+		sessionStorage.removeItem("autosave2");
+
+		sessionStorage.removeItem("autosaveStepsCount");
+		sessionStorage.removeItem("autosaveIngCount");
+
+		for(var i = 1; i <= stepsCount; i++){
+			
+			sessionStorage.removeItem("autosaveStep" + i);
+		}
+
+		for(var j = 1; j <= ingCount; j++){
+			
+			sessionStorage.removeItem("autosaveIng" + j);
+
+		}
+
+		sessionStorage.removeItem("autosaveImg");
+
 		stepsCount = 3;
 		ingCount = 3;
-
-
-
-
+	
 	}
 
-	$scope.addNewRecipeStep = function(){
-
-		stepsCount++;
-
-		var input = document.createElement('input');
-		input.className = "stepItem"
-		input.id = "step" + stepsCount;
-		input.setAttribute("type", "text");
-		input.setAttribute("placeholder", "Steg " + stepsCount);
-
-		var label = document.createElement('label');
-		label.className = "item item-input no-border";
-		label.appendChild(input);
-
-		document.getElementById("stepslist").appendChild(label);
-
-	}
-
-	$scope.addNewIngredientStep = function(){
-
-		ingCount++;
-
-		var input = document.createElement('input');
-		input.className = "stepItem"
-		input.id = "ing" + ingCount;
-		input.setAttribute("type", "text");
-		input.setAttribute("placeholder", "Ingrediens " + ingCount);
-
-		var label = document.createElement('label');
-		label.className = "item item-input no-border";
-		label.appendChild(input);
-
-		document.getElementById("ingredienslist").appendChild(label);
-
-	}
-
+	
 	var validate = function(){
 
 		if(document.getElementById('recipeName').value == "" || document.getElementById('recipeDesc') == "" || document.getElementById('recipeName').value.length > 30 || document.getElementById('recipeDesc').value.length > 500)
@@ -390,7 +548,7 @@ angular.module('starter.controllers', [])
 
 		//console.log("IMG PATH ", image_path);
 		
-		newRecipe = {id: newid, name: userRecipeName, fav: false, desc: userRecipeDesc, steps: newsteps, ingridients: newing, cookTime: '20', servings:'4-5', picUrl:'http://placehold.it/160x160', picUrlWide:'http://placehold.it/400x300', exists: true};
+		newRecipe = {id: newid, name: userRecipeName, fav: false, desc: userRecipeDesc, steps: newsteps, ingridients: newing, cookTime: document.getElementById("cookTime").options[document.getElementById("cookTime").selectedIndex].value, servings:document.getElementById("servings").options[document.getElementById("servings").selectedIndex].value, picUrl:'http://placehold.it/160x160', picUrlWide:'http://placehold.it/400x300', exists: true};
 
 		//takePicture();
 		storeFinalRecipe();
@@ -406,10 +564,17 @@ angular.module('starter.controllers', [])
 		else
 			newRecipe.picUrl = 'http://placehold.it/' + $scope.pic_height + 'x' + $scope.pic_height;
 
+
 		Recipes.addNewUserRecipe(newRecipe);
 
 		window.location.href = "#/recipes";
 		$ionicLoading.show({template: 'Receptet tillagt!', noBackdrop: true, duration: 2000 });
+
+		setTimeout(function() {
+			$scope.clearFields();
+		}, 500);
+
+		
 		//window.location.replace("#/recipes");*/
 		
 	}
@@ -433,12 +598,22 @@ angular.module('starter.controllers', [])
         	document.getElementById("userImage").style.display = 'block';
         	document.getElementById("addImage").style.display = 'none';
         	$scope.imgURI = "data:image/jpeg;base64," + imageData;
-        	//storeFinalRecipe($scope.imgURI);
         	document.getElementById("userImage").src = $scope.imgURI;
+
+        	sessionStorage.setItem("autosaveImg", $scope.imgURI);
+        	
+        	//Format picture
+
+        	if(document.getElementById("userImage").clientHeight < pic_squared || document.getElementById("userImage").clientWidth < pic_squared){
+        		document.getElementById("userImage").height = pic_squared;
+        		document.getElementById("userImage").width = pic_squared;
+        	}
+		
+        	//console.log("IMG HEIGHT after: ", document.getElementById("userImage").clientHeight);
 
         }, function(err) {
             // An error occured. Show a message to the user
-            alert("Fel uppstod vid inläsning av bild!");
+            //alert("Fel uppstod vid inläsning av bild!");
         });
     }
 

@@ -1,13 +1,17 @@
-// TODO: Lägg till så användaren kan välja sina egna recept som favoriter (Eller tänk till hur du ska ha det med användarens recept..).
-// Fixa kamerabilder, behövs iphone för detta.
+//TODO: knappar på radera popupen
+// Spara new recipe i session storage
 // Fixa souvlakireceptet (Jessica)
+//Splashscreens
+// antal portioner och tid
+
 
 angular.module('starter.services', [])
 
 .factory('Recipes', function(){
 
   console.log("hellorecipes");
-  localStorage.clear();
+  //localStorage.clear();
+  sessionStorage.clear();
 
   //init
 

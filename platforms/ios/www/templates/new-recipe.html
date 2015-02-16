@@ -16,40 +16,64 @@
 
     <ion-content class="has-header" has-bouncing="true">
 
-      <div style="height:21px; background-color:white;">
+      <div style="height:20px; background-color:white;">
       </div>
 
-      <div class="list">
+      <div style="float:left; border-top:1px solid #E0E0E0;" b ng-style="{'width': '{{window_width}}', 'height': '{{half_window_width}}'}">    
 
-        <label class="item item-input item-stacked-label">
-          <span style="margin-left:2px;" class="input-label">Receptets namn</span>
-          <input id="recipeName" type="text" placeholder="T.ex lasagne">
-        </label>
-        <label class="item item-input item-stacked-label">
-          <span style="margin-left:2px;"class="input-label">Receptbeskrivning</span>
-          <input id="recipeDesc" type="text" placeholder="En kort beskrvning av maträtten">
-        </label>
+        <div class="list" style="float:left; " ng-style="{'width': '{{half_window_width}}', 'height': '{{half_window_width}}'}">
+         
+          <div style="border-right:1px solid #E0E0E0; border-bottom:1px solid #E0E0E0;" ng-style="{'height': '{{quarter_window_width}}'}">
+          
+
+            <label style="border:0px;"class="item item-input item-stacked-label">
+
+              <span ng-style="{'margin-top': '{{margin_top_text}}'}" style="margin-left:2px;" class="input-label">Receptets namn</span>
+              <input ng-style="{'width': '{{textbox_width}}'}" id="recipeName" type="text" placeholder="T.ex lasagne">
+            </label>
+
+
+
+          </div>
+
+          <div style="border-right: 1px solid #E0E0E0;"ng-style="{'height': '{{quarter_window_width}}'}">
+          <label style="border:0;"class="item item-input item-stacked-label">
+            <span  ng-style="{'margin-top': '{{margin_top_text}}'}" style="margin-left:2px;" class="input-label">Receptbeskrivning</span>
+            <input ng-style="{'width': '{{textbox_width}}'}" id="recipeDesc" type="text" placeholder="En kort beskrivning">
+          </label>
+          </div>
+
+        </div>
+
+        <div id="userImageContainer" ng-click="takePicture()" style="float:left;" ng-style="{'width': '{{half_window_width}}', 'height': '{{half_window_width}}'}">
+ 
+            <p id = "addImage">Lägg till bild?<br/><label class="button-icon ion-plus-round plusButton"></label> </p>
+
+            <img id="userImage"/>
+         </div> 
+
+      </div>
         
-        <label style="border-bottom:0;"class="item item-input">
-          <span style="width:0px; padding-right:0;"class="input-label">Recept steg</span>
-        
-        <!--plus-knapp-->
-          <label ng-click="addNewRecipeStep()" class="button-icon ion-plus-round plusButton"></label>
+      <label style="border-bottom:0;"class="item item-input">
+        <span style="width:0px;padding-right:0;"class="input-label">Recept steg</span>
+      
+      <!--plus-knapp-->
+        <label ng-click="addNewRecipeStep()" class="button-icon ion-plus-round plusButton"></label>
 
+      </label>
+
+      <div id="stepslist">
+
+       <!--  <label class="item item-input no-border">
+          <input class="stepItem" id="step1" type="text" placeholder="Steg 1">
+        </label>
+        <label class="item item-input no-border">
+          <input class="stepItem" id="step2" type="text" placeholder="Steg 2">
         </label>
 
-        <div id="stepslist">
-
-          <label class="item item-input no-border">
-            <input class="stepItem" id="step1" type="text" placeholder="Steg 1">
-          </label>
-          <label class="item item-input no-border">
-            <input class="stepItem" id="step2" type="text" placeholder="Steg 2">
-          </label>
-
-          <label class="item item-input no-border">
-            <input style="width:60px;"type="text" class="stepItem" id="step3" placeholder="Steg 3">
-          </label>
+        <label class="item item-input no-border">
+          <input type="text" class="stepItem" id="step3" placeholder="Steg 3">
+        </label> -->
 
         </div>
 
@@ -62,7 +86,7 @@
 
         <div id="ingredienslist">
 
-          <label class="item item-input no-border">
+      <!--     <label class="item item-input no-border">
             <input id = "ing1" class = "stepItem" type="text" placeholder="Ingrediens 1">
           </label>
           <label class="item item-input no-border">
@@ -70,21 +94,46 @@
           </label>
           <label class="item item-input no-border">
             <input class="stepItem" id="ing3" type="text" placeholder="Ingrediens 3">
-          </label>
+          </label> -->
 
-        </div>        
-      </div>
+        </div> 
+
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Antal lådor
+          </div>
+          <select id="servings">
+            <option value="1">1 st</option>
+            <option value="2" >2 st</option>
+            <option value="3" selected>3 st</option>
+            <option value="4">4 st</option>
+            <option value="5">5 st</option>
+            <option value="6+">6+ st</option>
+          </select>
+        </label>
+
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Tid
+          </div>
+          <select id="cookTime">
+            <option value="15">15 min</option>
+            <option value="30">30 min</option>
+            <option value="45" selected>45 min</option>
+            <option value="60+">60+ min</option>
+          </select>
+        </label>
 
       <!-- <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
       <img ng-show="imgURI === undefined" ng-src="http://placehold.it/160x160"> -->
 
-      <div style="height:80px; width:100%; float:left; background-color:white;"></div>
+      <div style="height:100px; width:100%; float:left;"></div>
 
     </ion-content>
 
     <ion-footer-bar ng-click="storeRecipeInfo()" align-title="left" class="bar-balanced">
 
-        <h1 class="title">Välj en bild <label class="icon ion-arrow-right-c"></label></h1>
+        <h1 class="title">Spara <!-- <label class="icon ion-arrow-right-c"></label> --></h1>
 
     </ion-footer-bar>
 

@@ -74,7 +74,7 @@ div.paper{width:90%; padding:3px; height:480px;
 div.paper p{margin-left:10px;color:black;}
 
 div.cookTime1{margin-top:7px; margin-left:8px;float:left; height:40px; width:30px;}
-div.cookTime2{float:left; height:40px; width:70px; }
+div.cookTime2{float:left; height:40px; width:80px; }
 div.cookTime2 p{font-family: Verdana; margin-top:14px; margin-left:10px;}
 div.portionsText{ float:left; height:40px; width:120px; }
 div.portionsText p{font-family: Verdana; margin-top:14px; }
