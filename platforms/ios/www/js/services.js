@@ -1,9 +1,6 @@
 //TODO: knappar på radera popupen
-// Spara new recipe i session storage
 // Fixa souvlakireceptet (Jessica)
-//Splashscreens
-// antal portioner och tid
-
+// Splashscreens
 
 angular.module('starter.services', [])
 
