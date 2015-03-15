@@ -1,7 +1,7 @@
 //TODO: knappar på radera popupen
 // Fixa souvlakireceptet (Jessica)
 // Splashscreens
-// Crop funktion i rec user detail
+// Kodstäd..
 
 angular.module('starter.services', [])
 

@@ -133,13 +133,37 @@ angular.module('starter.controllers', [])
 	   });
 	 };
 
+	//Jr crop
+	var jrCropBig = function(imageIn){
+
+
+		$jrCrop.crop({
+	    url: imageIn,
+	    width: window.innerWidth,
+	    height: 180
+		}).then(function(canvas) {
+		    // success!
+		    var image = canvas.toDataURL();
+
+				$scope.recipe.picUrlWide =  image;
+				document.getElementById("recipeDetailImage").src = image;
+
+
+
+		}, function() {
+		    // User canceled or couldn't load image.
+		});
+	}
+
 	$scope.takePicture = function() {
 
         var options = {
             quality : 100,
             destinationType : Camera.DestinationType.DATA_URL,
             sourceType : Camera.PictureSourceType.PHOTOLIBRARY,
-            allowEdit : true,
+            allowEdit : false,
+						targetWidth: window.innerWidth,
+            targetHeight: window.innerHeight,
             encodingType: Camera.EncodingType.JPEG,
             popoverOptions: CameraPopoverOptions,
             saveToPhotoAlbum: false
@@ -149,17 +173,8 @@ angular.module('starter.controllers', [])
 
         	$scope.imgURI = "data:image/jpeg;base64," + imageData;
 
-					$scope.recipe.picUrlWide = $scope.imgURI
-        	document.getElementById("recipeDetailImage").src = $scope.imgURI;
+					jrCropBig($scope.imgURI);
 
-        	//Format picture
-					/*
-        	if(document.getElementById("userImage").clientHeight < pic_squared || document.getElementById("userImage").clientWidth < pic_squared){
-        		document.getElementById("userImage").height = pic_squared;
-        		document.getElementById("userImage").width = pic_squared;
-        	}*/
-
-        	//console.log("IMG HEIGHT after: ", document.getElementById("userImage").clientHeight);
 
         }, function(err) {
             // An error occured. Show a message to the user
@@ -258,8 +273,6 @@ angular.module('starter.controllers', [])
 
 
 .controller('NewRecipeCtrl', function($scope, $cordovaCamera, Recipes, $ionicLoading, $jrCrop) {
-
-
 
 	$scope.addNewRecipeStep = function(increment){
 
@@ -562,7 +575,7 @@ angular.module('starter.controllers', [])
 
 		var newid = localStorage.newRecipeCount - 1;
 
-		newRecipe = {id: newid, name: userRecipeName, fav: false, desc: userRecipeDesc, steps: newsteps, ingridients: newing, cookTime: document.getElementById("cookTime").options[document.getElementById("cookTime").selectedIndex].value, servings:document.getElementById("servings").options[document.getElementById("servings").selectedIndex].value, picUrl:'img/default_2.png', picUrlWide:'img/default_img_wide.png', exists: true};
+		newRecipe = {id: newid, name: userRecipeName, fav: false, desc: userRecipeDesc, steps: newsteps, ingridients: newing, cookTime: document.getElementById("cookTime").options[document.getElementById("cookTime").selectedIndex].value, servings:document.getElementById("servings").options[document.getElementById("servings").selectedIndex].value, picUrl:'img/default_2.png', picUrlWide:'img/default_wide.png', exists: true};
 
 		storeFinalRecipe();
 	}
@@ -575,6 +588,12 @@ angular.module('starter.controllers', [])
 
 		else // Scale is ok regardless of size
 			newRecipe.picUrl = 'img/default_2.png';
+
+		if(document.getElementById("userImageBig").src.length > 0)
+			newRecipe.picUrlWide = document.getElementById("userImageBig").src;
+
+		else // Scale is ok regardless of size
+			newRecipe.picUrlWide = 'img/default_wide.png';
 
 
 		Recipes.addNewUserRecipe(newRecipe);
@@ -589,16 +608,29 @@ angular.module('starter.controllers', [])
 	}
 
 	//Jr crop
-	var jrCrop = function(image){
+	var jrCropBig = function(image){
 
 
 		$jrCrop.crop({
 	    url: image,
-	    width: 200,
-	    height: 200
+	    width: window.innerWidth,
+	    height: 180
 		}).then(function(canvas) {
 		    // success!
 		    var image = canvas.toDataURL();
+
+				document.getElementById("userImageBig").style.display = 'block';
+				document.getElementById("addImageBig").style.display = 'none';
+
+				sessionStorage.setItem("autosaveImgBig", image);
+
+				document.getElementById("userImageBig").src = image;
+
+				document.getElementById("userImageBig").height = 180;
+				document.getElementById("userImageBig").width = window.innerWidth;
+
+
+
 		}, function() {
 		    // User canceled or couldn't load image.
 		});
@@ -607,6 +639,47 @@ angular.module('starter.controllers', [])
 
 	}
 
+	//Jr crop
+	var jrCropSmall = function(imageIn){
+
+
+		$jrCrop.crop({
+			url: imageIn,
+			width: pic_squared,
+			height: pic_squared
+		}).then(function(canvas) {
+				// success!
+				var image = canvas.toDataURL();
+
+				// Show user Image and hide text
+				document.getElementById("userImage").style.display = 'block';
+				document.getElementById("addImage").style.display = 'none';
+
+				document.getElementById("userImage").src = image;
+
+				document.getElementById("userImage").height = pic_squared;
+				document.getElementById("userImage").width = pic_squared;
+
+				// Save in session storage
+				sessionStorage.setItem("autosaveImg", image);
+
+				//Format picture
+/*
+				if(document.getElementById("userImage").clientHeight < pic_squared || document.getElementById("userImage").clientWidth < pic_squared){
+					document.getElementById("userImage").height = pic_squared;
+					document.getElementById("userImage").width = pic_squared;
+				}
+*/
+
+		}, function() {
+				// User canceled or couldn't load image.
+		});
+
+
+
+	}
+
+
 
 	$scope.takeBigPicture = function() {
 
@@ -614,7 +687,9 @@ angular.module('starter.controllers', [])
             quality : 100,
             destinationType : Camera.DestinationType.DATA_URL,
             sourceType : Camera.PictureSourceType.PHOTOLIBRARY,
-            allowEdit : true,
+						allowEdit : false,
+						targetWidth: window.innerWidth,
+            targetHeight: window.innerHeight,
             encodingType: Camera.EncodingType.JPEG,
             popoverOptions: CameraPopoverOptions,
             saveToPhotoAlbum: false
@@ -622,21 +697,11 @@ angular.module('starter.controllers', [])
 
         $cordovaCamera.getPicture(options).then(function(imageData) {
 
-
-						var afterJrCrop = jrCrop(imageData);
-
 						console.log("ok");
-/*
+
 						$scope.imgURI = "data:image/jpeg;base64," + imageData;
 
-						document.getElementById("userImageBig").style.display = 'block';
-	        	document.getElementById("addImageBig").style.display = 'none';
-
-						sessionStorage.setItem("autosaveImgBig", $scope.imgURI);
-						document.getElementById("userImageBig").src = $scope.imgURI;*/
-
-
-
+						jrCropBig($scope.imgURI);
 
 
         }, function(err) {
@@ -654,31 +719,20 @@ angular.module('starter.controllers', [])
             quality : 100,
             destinationType : Camera.DestinationType.DATA_URL,
             sourceType : Camera.PictureSourceType.PHOTOLIBRARY,
-            allowEdit : true,
+            allowEdit : false,
             encodingType: Camera.EncodingType.JPEG,
-            targetWidth: $scope.pic_height,
-            targetHeight: $scope.pic_height,
+            targetWidth: window.innerWidth,
+            targetHeight: window.innerHeight,
             popoverOptions: CameraPopoverOptions,
             saveToPhotoAlbum: false
         };
 
         $cordovaCamera.getPicture(options).then(function(imageData) {
 
-					// Show user Image and hide text
-        	document.getElementById("userImage").style.display = 'block';
-        	document.getElementById("addImage").style.display = 'none';
-        	$scope.imgURI = "data:image/jpeg;base64," + imageData;
-        	document.getElementById("userImage").src = $scope.imgURI;
+					$scope.imgURI = "data:image/jpeg;base64," + imageData;
 
-					// Save in session storage
-        	sessionStorage.setItem("autosaveImg", $scope.imgURI);
+					jrCropSmall($scope.imgURI);
 
-        	//Format picture
-
-        	if(document.getElementById("userImage").clientHeight < pic_squared || document.getElementById("userImage").clientWidth < pic_squared){
-        		document.getElementById("userImage").height = pic_squared;
-        		document.getElementById("userImage").width = pic_squared;
-        	}
 
         	//console.log("IMG HEIGHT after: ", document.getElementById("userImage").clientHeight);
 

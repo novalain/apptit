@@ -575,7 +575,7 @@ angular.module('starter.controllers', [])
 
 		var newid = localStorage.newRecipeCount - 1;
 
-		newRecipe = {id: newid, name: userRecipeName, fav: false, desc: userRecipeDesc, steps: newsteps, ingridients: newing, cookTime: document.getElementById("cookTime").options[document.getElementById("cookTime").selectedIndex].value, servings:document.getElementById("servings").options[document.getElementById("servings").selectedIndex].value, picUrl:'img/default_2.png', picUrlWide:'img/default_img_wide.png', exists: true};
+		newRecipe = {id: newid, name: userRecipeName, fav: false, desc: userRecipeDesc, steps: newsteps, ingridients: newing, cookTime: document.getElementById("cookTime").options[document.getElementById("cookTime").selectedIndex].value, servings:document.getElementById("servings").options[document.getElementById("servings").selectedIndex].value, picUrl:'img/default_2.png', picUrlWide:'img/default_wide.png', exists: true};
 
 		storeFinalRecipe();
 	}
@@ -593,7 +593,7 @@ angular.module('starter.controllers', [])
 			newRecipe.picUrlWide = document.getElementById("userImageBig").src;
 
 		else // Scale is ok regardless of size
-			newRecipe.picUrlWide = 'img/default_2.png';
+			newRecipe.picUrlWide = 'img/default_wide.png';
 
 
 		Recipes.addNewUserRecipe(newRecipe);
