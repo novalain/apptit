@@ -1746,3 +1746,667 @@
 2015-02-21 21:49:17.469 apptit[74548:2398178] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
 2015-02-21 21:49:18.686 apptit[74548:2398178] Resetting plugins due to page load.
 2015-02-21 21:49:18.929 apptit[74548:2398178] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-02-23 22:30:32.054 apptit[82716:2830643] Multi-tasking -> Device: YES, App: YES
+2015-02-23 22:30:32.073 apptit[82716:2830643] Unlimited access to network resources
+2015-02-23 22:30:32.761 apptit[82716:2830643] [CDVTimer][keyboard] 0.118017ms
+2015-02-23 22:30:32.761 apptit[82716:2830643] [CDVTimer][TotalPluginStartup] 0.429988ms
+2015-02-23 22:30:32.980 apptit[82716:2830643] Resetting plugins due to page load.
+2015-02-23 22:30:34.109 apptit[82716:2830643] Finished load of: http://192.168.0.19:8100/#/recipes
+2015-02-23 22:31:08.885 apptit[82716:2830643] Resetting plugins due to page load.
+2015-02-23 22:31:09.206 apptit[82716:2830643] Finished load of: http://192.168.0.19:8100/#/recipes
+2015-02-23 22:44:05.976 apptit[82716:2830643] Resetting plugins due to page load.
+2015-02-23 22:44:06.385 apptit[82716:2830643] Finished load of: http://192.168.0.19:8100/#/recipes
+2015-02-23 22:55:22.985 apptit[82716:2830643] Resetting plugins due to page load.
+2015-02-23 22:55:23.760 apptit[82716:2830643] Finished load of: http://192.168.0.19:8100/#/recipes
+2015-02-25 18:33:54.624 apptit[91267:3188528] Multi-tasking -> Device: YES, App: YES
+2015-02-25 18:33:54.653 apptit[91267:3188528] Unlimited access to network resources
+2015-02-25 18:33:55.301 apptit[91267:3188528] [CDVTimer][keyboard] 0.136971ms
+2015-02-25 18:33:55.301 apptit[91267:3188528] [CDVTimer][TotalPluginStartup] 0.415981ms
+2015-02-25 18:33:55.529 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:33:56.523 apptit[91267:3188528] hellorecipes
+2015-02-25 18:33:56.523 apptit[91267:3188528] []
+2015-02-25 18:33:56.524 apptit[91267:3188528] new recipe count 
+2015-02-25 18:33:56.698 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes
+2015-02-25 18:35:01.580 apptit[91267:3188528] THREAD WARNING: ['Camera'] took '175.911865' ms. Plugin should use a background thread.
+2015-02-25 18:35:06.346 apptit[91267:3188528] 1
+2015-02-25 18:35:16.838 apptit[91267:3188528] 1
+2015-02-25 18:35:19.906 apptit[91267:3188528] 1
+2015-02-25 18:35:22.714 apptit[91267:3188528] 1
+2015-02-25 18:35:24.931 apptit[91267:3188528] 1
+2015-02-25 18:35:29.258 apptit[91267:3188528] 1
+2015-02-25 18:35:38.200 apptit[91267:3188528] 1
+2015-02-25 18:35:42.468 apptit[91267:3188528] 1
+2015-02-25 18:40:31.157 apptit[91267:3188528] 1
+2015-02-25 18:40:53.171 apptit[91267:3188528] 1
+2015-02-25 18:40:58.615 apptit[91267:3188528] 1
+2015-02-25 18:41:02.743 apptit[91267:3188528] 1
+2015-02-25 18:41:20.900 apptit[91267:3188528] 1
+2015-02-25 18:42:28.013 apptit[91267:3188528] 1
+2015-02-25 18:42:38.043 apptit[91267:3188528] 1
+2015-02-25 18:42:40.100 apptit[91267:3188528] 1
+2015-02-25 18:42:51.457 apptit[91267:3188528] 1
+2015-02-25 18:43:09.272 apptit[91267:3188528] 1
+2015-02-25 18:43:17.340 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:43:17.653 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:43:52.007 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:43:52.188 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:44:53.854 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:44:53.976 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:45:27.489 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:45:27.671 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:45:52.649 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:45:52.837 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:46:01.512 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:46:01.691 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:46:08.451 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:46:08.623 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:46:09.259 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:46:09.457 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:46:13.887 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:46:14.072 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:46:15.704 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:46:15.832 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:46:23.568 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:46:23.708 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:46:27.091 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:46:27.260 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:47:14.756 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:47:15.020 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:47:54.904 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:47:55.056 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:49:57.486 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:49:57.706 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:50:17.741 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:50:17.997 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:50:22.079 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:50:22.248 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:50:52.012 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:50:52.194 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:51:06.830 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:51:07.017 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:51:14.486 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:51:14.662 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:51:26.583 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:51:26.764 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:51:42.286 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:51:42.518 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:52:00.189 apptit[91267:3188528] 1
+2015-02-25 18:52:06.646 apptit[91267:3188528] 1
+2015-02-25 18:53:23.926 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:53:24.102 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:53:42.250 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:53:42.433 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-02-25 18:53:52.448 apptit[91267:3188528] 1
+2015-02-25 18:54:13.906 apptit[91267:3188528] 1
+2015-02-25 18:54:24.920 apptit[91267:3188528] 2
+2015-02-25 18:55:27.696 apptit[91267:3188528] 2
+2015-02-25 18:55:29.693 apptit[91267:3188528] 2
+2015-02-25 18:55:36.671 apptit[91267:3188528] Resetting plugins due to page load.
+2015-02-25 18:55:36.851 apptit[91267:3188528] Finished load of: http://192.168.1.69:8100/#/recipes/new-recipe
+2015-03-01 11:01:02.916 apptit[97880:3661063] Multi-tasking -> Device: YES, App: YES
+2015-03-01 11:01:02.948 apptit[97880:3661063] Unlimited access to network resources
+2015-03-01 11:01:03.651 apptit[97880:3661063] [CDVTimer][keyboard] 0.075996ms
+2015-03-01 11:01:03.651 apptit[97880:3661063] [CDVTimer][TotalPluginStartup] 0.282049ms
+2015-03-01 11:01:03.883 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:01:04.860 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes
+2015-03-01 11:01:53.692 apptit[97880:3661063] THREAD WARNING: ['Camera'] took '177.460205' ms. Plugin should use a background thread.
+2015-03-01 11:02:07.482 apptit[97880:3661063] 1
+2015-03-01 11:02:20.920 apptit[97880:3661063] 1
+2015-03-01 11:02:31.497 apptit[97880:3661063] 1
+2015-03-01 11:02:34.559 apptit[97880:3661063] 1
+2015-03-01 11:02:42.506 apptit[97880:3661063] 1
+2015-03-01 11:26:19.882 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:26:20.160 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:26:23.400 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:26:23.572 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:27:08.427 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:27:08.650 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:32:28.916 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:32:29.269 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:32:37.158 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:32:37.424 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:33:06.638 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:33:06.913 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:33:13.168 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:33:13.335 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:33:15.775 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:33:15.994 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:33:22.803 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:33:23.008 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:33:26.725 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:33:26.944 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:33:47.631 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:33:48.049 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:33:53.966 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:33:54.184 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:33:55.878 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:33:56.110 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:33:57.089 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:33:57.387 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:33:59.096 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:33:59.331 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:35:54.363 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:35:54.491 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 11:35:58.292 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 11:35:58.443 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:36:40.702 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:36:40.951 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:36:41.601 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:36:41.779 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:36:42.207 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:36:42.428 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:36:43.714 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:36:43.821 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:36:48.537 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:36:48.699 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:36:49.347 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:36:49.473 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:37:14.588 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:37:14.738 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:37:15.891 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:37:16.076 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:37:16.809 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:37:16.933 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:37:17.913 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:37:18.047 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:37:25.970 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:37:26.114 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:37:27.074 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:37:27.164 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:37:31.706 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:37:31.842 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:37:33.117 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:37:33.246 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:37:40.657 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:37:40.799 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:37:46.587 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:37:46.756 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:37:47.192 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:37:47.319 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:37:55.440 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:37:55.630 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:38:10.029 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:38:10.243 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:38:38.805 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:38:38.933 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:38:39.915 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:38:40.083 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:38:43.634 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:38:43.797 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:38:45.238 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:38:45.336 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:38:49.960 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:38:50.083 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:38:56.096 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:38:56.325 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:39:18.318 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:39:18.451 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:40:31.450 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:40:31.581 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:40:33.863 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:40:34.046 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:40:35.266 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:40:35.369 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:40:38.086 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:40:38.419 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:41:23.355 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:41:23.483 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:41:24.466 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:41:24.576 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:41:51.934 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:41:52.163 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:42:31.939 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:42:32.091 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:42:45.331 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:42:45.625 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:43:06.346 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:43:06.629 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:43:24.396 apptit[97880:3661063] pis
+2015-03-01 12:43:35.503 apptit[97880:3661063] pis
+2015-03-01 12:43:54.525 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:43:54.753 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:43:58.115 apptit[97880:3661063] pis
+2015-03-01 12:43:59.918 apptit[97880:3661063] pis
+2015-03-01 12:44:02.526 apptit[97880:3661063] pis
+2015-03-01 12:44:45.331 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:44:45.613 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:44:50.463 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:44:50.759 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:44:53.717 apptit[97880:3661063] pis
+2015-03-01 12:45:00.516 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:45:00.728 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:45:01.420 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:45:01.661 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:45:03.536 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:45:03.828 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:45:07.705 apptit[97880:3661063] pis
+2015-03-01 12:45:09.518 apptit[97880:3661063] pis
+2015-03-01 12:45:12.948 apptit[97880:3661063] ok
+2015-03-01 12:46:40.070 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:46:40.244 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:46:40.725 apptit[97880:3661063] pis
+2015-03-01 12:46:43.378 apptit[97880:3661063] ok
+2015-03-01 12:48:41.976 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:48:42.177 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:48:42.905 apptit[97880:3661063] pis
+2015-03-01 12:48:45.136 apptit[97880:3661063] ok
+2015-03-01 12:51:35.317 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:51:35.532 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:51:36.413 apptit[97880:3661063] pis
+2015-03-01 12:51:38.726 apptit[97880:3661063] ok
+2015-03-01 12:51:49.692 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:51:49.911 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:51:55.521 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:51:55.750 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:51:57.936 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:51:58.150 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:51:58.773 apptit[97880:3661063] pis
+2015-03-01 12:52:01.829 apptit[97880:3661063] ok
+2015-03-01 12:52:07.791 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:52:08.002 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:52:08.406 apptit[97880:3661063] pis
+2015-03-01 12:52:11.394 apptit[97880:3661063] ok
+2015-03-01 12:52:13.025 apptit[97880:3661063] pis
+2015-03-01 12:52:15.450 apptit[97880:3661063] ok
+2015-03-01 12:52:24.980 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:52:25.160 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:52:26.153 apptit[97880:3661063] pis
+2015-03-01 12:52:27.852 apptit[97880:3661063] ok
+2015-03-01 12:52:54.450 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:52:54.742 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:52:55.224 apptit[97880:3661063] pis
+2015-03-01 12:52:57.694 apptit[97880:3661063] ok
+2015-03-01 12:53:08.223 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:53:08.392 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:53:08.950 apptit[97880:3661063] pis
+2015-03-01 12:53:11.518 apptit[97880:3661063] ok
+2015-03-01 12:53:13.532 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:53:13.698 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:53:17.460 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:53:17.851 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:53:18.256 apptit[97880:3661063] pis
+2015-03-01 12:53:19.807 apptit[97880:3661063] ok
+2015-03-01 12:53:34.164 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:53:34.371 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:53:44.126 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:53:44.344 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:53:52.770 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:53:53.012 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:53:56.886 apptit[97880:3661063] INNERWIDTH 320
+2015-03-01 12:53:58.581 apptit[97880:3661063] ok
+2015-03-01 12:54:05.037 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:54:05.206 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:54:07.708 apptit[97880:3661063] ok
+2015-03-01 12:54:10.584 apptit[97880:3661063] ok
+2015-03-01 12:54:44.278 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:54:44.517 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes/new-recipe
+2015-03-01 12:54:47.277 apptit[97880:3661063] ok
+2015-03-01 12:54:50.362 apptit[97880:3661063] ok
+2015-03-01 12:54:57.630 apptit[97880:3661063] 1
+2015-03-01 12:56:28.889 apptit[97880:3661063] Resetting plugins due to page load.
+2015-03-01 12:56:29.268 apptit[97880:3661063] Finished load of: http://192.168.0.19:8100/#/recipes-user/0
+2015-03-07 20:19:34.416 apptit[15062:1423315] Multi-tasking -> Device: YES, App: YES
+2015-03-07 20:19:34.430 apptit[15062:1423315] Unlimited access to network resources
+2015-03-07 20:19:35.056 apptit[15062:1423315] [CDVTimer][keyboard] 0.497997ms
+2015-03-07 20:19:35.057 apptit[15062:1423315] [CDVTimer][TotalPluginStartup] 0.836968ms
+2015-03-07 20:19:35.268 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 20:19:36.077 apptit[15062:1423315] Finished load of: http://192.168.1.95:8100/#/recipes
+2015-03-07 20:21:44.521 apptit[15062:1423315] THREAD WARNING: ['Camera'] took '257.229004' ms. Plugin should use a background thread.
+2015-03-07 20:21:53.781 apptit[15062:1423315] ok
+2015-03-07 20:22:26.110 apptit[15062:1423315] 1
+2015-03-07 20:22:33.785 apptit[15062:1423315] 1
+2015-03-07 20:22:40.595 apptit[15062:1423315] 1
+2015-03-07 20:23:57.997 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 20:23:58.802 apptit[15062:1423315] Finished load of: http://192.168.1.95:8100/#/recipes
+2015-03-07 20:37:54.895 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 20:37:54.905 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 20:42:19.876 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 20:42:19.882 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 20:45:11.898 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 20:45:11.911 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 20:48:30.778 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 20:48:30.795 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 21:06:09.823 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 21:06:09.927 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 21:06:16.668 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 21:06:16.680 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 21:06:25.477 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 21:06:25.483 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 21:06:59.220 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 21:06:59.250 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 21:07:34.203 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 21:07:34.215 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 21:08:53.166 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 21:08:53.196 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 21:09:27.213 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 21:09:27.223 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 21:09:32.848 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 21:09:32.856 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 21:10:24.106 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 21:10:24.117 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 21:11:48.144 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 21:11:48.149 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 21:11:59.819 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 21:11:59.896 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-07 21:15:57.857 apptit[15062:1423315] Resetting plugins due to page load.
+2015-03-07 21:15:57.868 apptit[15062:1423315] Failed to load webpage with error: Could not connect to the server.
+2015-03-09 22:45:32.762 apptit[1671:23886] Multi-tasking -> Device: YES, App: YES
+2015-03-09 22:45:32.778 apptit[1671:23886] Unlimited access to network resources
+2015-03-09 22:45:33.519 apptit[1671:23886] [CDVTimer][keyboard] 0.074983ms
+2015-03-09 22:45:33.519 apptit[1671:23886] [CDVTimer][TotalPluginStartup] 0.270009ms
+2015-03-09 22:45:33.712 apptit[1671:23886] Resetting plugins due to page load.
+2015-03-09 22:45:34.583 apptit[1671:23886] Finished load of: http://192.168.0.20:8100/#/recipes
+2015-03-09 22:50:03.337 apptit[2066:29414] Multi-tasking -> Device: YES, App: YES
+2015-03-09 22:50:03.346 apptit[2066:29414] Unlimited access to network resources
+2015-03-09 22:50:03.686 apptit[2066:29414] [CDVTimer][keyboard] 0.064969ms
+2015-03-09 22:50:03.686 apptit[2066:29414] [CDVTimer][TotalPluginStartup] 0.267982ms
+2015-03-09 22:50:03.787 apptit[2066:29414] Resetting plugins due to page load.
+2015-03-09 22:50:04.566 apptit[2066:29414] Finished load of: http://192.168.0.20:8100/#/recipes
+2015-03-15 12:03:11.186 apptit[23107:1961826] Multi-tasking -> Device: YES, App: YES
+2015-03-15 12:03:11.231 apptit[23107:1961826] Unlimited access to network resources
+2015-03-15 12:03:12.152 apptit[23107:1961826] [CDVTimer][keyboard] 0.097990ms
+2015-03-15 12:03:12.152 apptit[23107:1961826] [CDVTimer][TotalPluginStartup] 0.500977ms
+2015-03-15 12:03:12.400 apptit[23107:1961826] Resetting plugins due to page load.
+2015-03-15 12:03:13.425 apptit[23107:1961826] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 12:08:59.161 apptit[23741:1968567] Multi-tasking -> Device: YES, App: YES
+2015-03-15 12:08:59.170 apptit[23741:1968567] Unlimited access to network resources
+2015-03-15 12:08:59.587 apptit[23741:1968567] [CDVTimer][keyboard] 0.241995ms
+2015-03-15 12:08:59.587 apptit[23741:1968567] [CDVTimer][TotalPluginStartup] 0.697017ms
+2015-03-15 12:08:59.744 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 12:09:00.355 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 12:09:00.949 apptit[23741:1968567] hellorecipes
+2015-03-15 12:09:00.949 apptit[23741:1968567] []
+2015-03-15 12:09:00.950 apptit[23741:1968567] new recipe count 
+2015-03-15 12:11:01.732 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 12:11:02.157 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 12:11:03.235 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 12:11:03.579 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 12:11:04.148 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 12:11:04.481 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 12:11:05.858 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 12:11:06.198 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 12:11:06.665 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 12:11:06.987 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 12:11:07.372 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 12:11:07.681 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 12:11:10.798 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 12:11:11.145 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 12:16:01.701 apptit[23741:1968567] THREAD WARNING: ['Camera'] took '186.874756' ms. Plugin should use a background thread.
+2015-03-15 12:16:06.638 apptit[23741:1968567] ok
+2015-03-15 13:52:10.189 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 13:52:10.694 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 13:52:19.377 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 13:52:19.806 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 13:52:20.883 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 13:52:21.363 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 13:52:25.323 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 13:52:25.740 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 13:57:34.592 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 13:57:35.022 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:28:13.570 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:28:14.095 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:28:18.592 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:28:18.975 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:29:20.162 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:29:20.522 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:29:21.977 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:29:22.383 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:29:59.506 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:29:59.973 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:30:32.552 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:30:32.959 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:30:34.774 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:30:35.197 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:30:35.572 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:30:35.955 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:30:40.107 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:30:40.533 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:31:32.602 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:31:32.710 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:31:36.732 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:31:36.844 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:31:43.390 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:31:43.550 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:31:49.635 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:31:50.066 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:32:08.673 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:32:09.097 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:32:09.783 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:32:10.239 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:32:22.673 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:32:23.142 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:32:24.380 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:32:24.796 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:32:27.197 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:32:27.643 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:32:29.815 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:32:30.372 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:32:39.788 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:32:40.252 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:32:43.731 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:32:44.388 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:33:59.033 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:33:59.502 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:34:04.672 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:34:05.123 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:34:09.303 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:34:09.798 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:34:12.516 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:34:12.915 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:37:59.358 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:37:59.827 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:38:00.564 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:38:01.012 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:38:06.702 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:38:07.153 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:38:34.403 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:38:34.513 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:38:36.822 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:38:37.319 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:41:39.369 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:41:39.763 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:41:47.222 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:41:47.744 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:41:52.357 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:41:52.840 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:43:34.383 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:43:34.766 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:43:37.802 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:43:38.229 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:43:40.929 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:43:41.420 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:46:38.791 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:46:39.215 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:46:45.936 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:46:46.315 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:47:33.506 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:47:33.524 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:47:46.077 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:47:46.086 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:47:50.407 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:47:50.412 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:47:56.372 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:47:56.424 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:48:02.192 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:48:02.197 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:48:39.379 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:48:39.385 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:49:47.736 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:49:47.750 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:50:10.276 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:50:10.282 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:50:12.102 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:50:12.118 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:50:38.253 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:50:38.260 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:50:53.872 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:50:53.877 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:51:49.409 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:51:49.414 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:54:58.824 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:54:58.829 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:55:00.235 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:55:00.239 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:55:01.341 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:55:01.347 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:55:02.644 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:55:02.650 apptit[23741:1968567] Failed to load webpage with error: Could not connect to the server.
+2015-03-15 14:55:57.231 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:55:57.850 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:56:14.743 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:56:15.362 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:56:16.652 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:56:17.131 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:57:09.445 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:57:10.027 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:58:12.744 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:58:13.304 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 14:59:24.821 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 14:59:25.313 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:03:30.016 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:03:30.577 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:03:42.303 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:03:42.726 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:04:33.694 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:04:34.231 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:04:42.865 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:04:43.418 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:05:30.339 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:05:30.744 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:06:00.356 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:06:00.867 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:06:24.824 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:06:25.337 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:06:57.466 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:06:57.875 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:07:50.672 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:07:51.088 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:08:06.903 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:08:07.416 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:09:09.665 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:09:10.090 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:09:42.192 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:09:42.547 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:10:42.361 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:10:42.849 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:10:44.477 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:10:44.889 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:11:02.306 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:11:02.689 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:11:03.518 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:11:03.915 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:11:38.893 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:11:39.303 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:12:35.329 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:12:35.955 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:12:50.447 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:12:50.955 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 15:14:12.961 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 15:14:13.432 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:43:18.287 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:43:18.820 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:48:09.872 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:48:10.413 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:48:42.704 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:48:43.200 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:49:20.665 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:49:21.187 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:49:38.975 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:49:39.483 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:49:46.553 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:49:47.015 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:50:00.943 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:50:01.461 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:50:07.898 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:50:08.342 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:50:40.622 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:50:41.015 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:54:34.436 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:54:34.803 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:54:58.798 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:54:59.307 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:55:03.320 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:55:03.803 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:55:38.401 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:55:38.928 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:55:59.046 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:55:59.741 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:56:27.631 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:56:28.284 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:56:53.289 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:56:53.763 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:58:31.708 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:58:32.209 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:58:57.389 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:58:57.895 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 16:59:49.560 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 16:59:50.080 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:00:10.805 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:00:11.316 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:00:34.365 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:00:34.859 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:00:46.643 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:00:47.209 apptit[23741:1968567] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-03-15 17:00:47.209 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:00:47.610 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:00:54.804 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:00:55.242 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:01:02.668 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:01:03.008 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:01:06.797 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:01:07.142 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:01:07.806 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:01:08.194 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:01:08.611 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:01:09.013 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:01:24.122 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:01:24.575 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:01:39.023 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:01:39.435 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:02:00.075 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:02:00.458 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:02:50.726 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:02:51.158 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:03:09.668 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:03:10.102 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:03:11.164 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:03:11.570 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:03:14.076 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:03:14.592 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:03:27.660 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:03:28.026 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:05:08.710 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:05:09.114 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:08:03.496 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:08:04.120 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:08:30.501 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:08:30.845 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:12:14.153 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:12:14.244 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:12:24.527 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:12:24.603 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:12:52.125 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:12:52.212 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:12:53.430 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:12:53.540 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:13:58.533 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:13:58.643 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:13:59.937 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:14:00.054 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:14:21.672 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:14:22.070 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:15:32.087 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:15:32.486 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:29:42.750 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:29:43.103 apptit[23741:1968567] THREAD WARNING: ['Device'] took '13.865723' ms. Plugin should use a background thread.
+2015-03-15 17:29:43.161 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:33:01.020 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:33:01.462 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:37:31.470 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:37:31.778 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:37:45.681 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:37:46.095 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:38:14.356 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:38:14.712 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes
+2015-03-15 17:40:48.928 apptit[23741:1968567] Resetting plugins due to page load.
+2015-03-15 17:40:49.544 apptit[23741:1968567] Finished load of: http://192.168.0.10:8100/#/recipes

@@ -3,14 +3,13 @@
 
 
     <ion-nav-bar class="bar-stable">
-    
+
       <ion-nav-back-button class="button icon-left button-clear button-balanced">
       </ion-nav-back-button>
 
       <ion-nav-buttons side="right">
          <button style="color:#ef473a" ng-click="clearFields()" class="button button-icon ion-refresh"></button>
       </ion-nav-buttons>
-
 
     </ion-nav-bar>
 
@@ -19,12 +18,20 @@
       <div style="height:20px; background-color:white;">
       </div>
 
-      <div style="float:left; border-top:1px solid #E0E0E0;" b ng-style="{'width': '{{window_width}}', 'height': '{{half_window_width}}'}">    
+      <label ng-click="takeBigPicture()" style="padding:0;"class="item item-input">
+        <div class="recPicContainer">
+
+            <p class="newRecipeImage" id="addImageBig">Bild för recept<br/><label class="button-icon ion-plus-round plusButton"></label> </p>
+
+            <img id="userImageBig"/>
+        </div>
+      </label>
+
+      <div style="float:left; border-top:1px solid #E0E0E0;" ng-style="{'width': '{{window_width}}', 'height': '{{half_window_width}}'}">
 
         <div class="list" style="float:left; " ng-style="{'width': '{{half_window_width}}', 'height': '{{half_window_width}}'}">
-         
+
           <div style="border-right:1px solid #E0E0E0; border-bottom:1px solid #E0E0E0;" ng-style="{'height': '{{quarter_window_width}}'}">
-          
 
             <label style="border:0px;"class="item item-input item-stacked-label">
 
@@ -32,50 +39,36 @@
               <input ng-style="{'width': '{{textbox_width}}'}" id="recipeName" type="text" placeholder="T.ex lasagne">
             </label>
 
-
-
           </div>
 
           <div style="border-right: 1px solid #E0E0E0;"ng-style="{'height': '{{quarter_window_width}}'}">
           <label style="border:0;"class="item item-input item-stacked-label">
-            <span id="recipeDesc" ng-style="{'margin-top': '{{margin_top_text}}'}" style="margin-left:2px;" class="input-label">Receptbeskrivning</span>
-            <input ng-style="{'width': '{{textbox_width}}'}"id="recipeDesc" type="text" placeholder="En kort beskrivning">
+            <span  ng-style="{'margin-top': '{{margin_top_text}}'}" style="margin-left:2px;" class="input-label">Receptbeskrivning</span>
+            <input ng-style="{'width': '{{textbox_width}}'}" id="recipeDesc" type="text" placeholder="En kort beskrivning">
           </label>
           </div>
 
         </div>
 
         <div id="userImageContainer" ng-click="takePicture()" style="float:left;" ng-style="{'width': '{{half_window_width}}', 'height': '{{half_window_width}}'}">
- 
-            <p id = "addImage">Lägg till bild?<br/><label class="button-icon ion-plus-round plusButton"></label> </p>
+
+            <p class="newRecipeImage" id="addImage">Bild för menyn<br/><label class="button-icon ion-plus-round plusButton"></label> </p>
 
             <img id="userImage"/>
-         </div> 
+        </div>
 
       </div>
-        
+
+
       <label style="border-bottom:0;"class="item item-input">
         <span style="width:0px;padding-right:0;"class="input-label">Recept steg</span>
-      
+
       <!--plus-knapp-->
         <label ng-click="addNewRecipeStep()" class="button-icon ion-plus-round plusButton"></label>
 
       </label>
 
-      <div id="stepslist">
-
-        <label class="item item-input no-border">
-          <input class="stepItem" id="step1" type="text" placeholder="Steg 1">
-        </label>
-        <label class="item item-input no-border">
-          <input class="stepItem" id="step2" type="text" placeholder="Steg 2">
-        </label>
-
-        <label class="item item-input no-border">
-          <input style="width:60px;"type="text" class="stepItem" id="step3" placeholder="Steg 3">
-        </label>
-
-        </div>
+      <div id="stepslist"></div>
 
         <label class="item item-input">
           <span style="width:0px; padding-right:0;"class="input-label">Ingredienser</span>
@@ -84,19 +77,7 @@
           </label>
         </label>
 
-        <div id="ingredienslist">
-
-          <label class="item item-input no-border">
-            <input id = "ing1" class = "stepItem" type="text" placeholder="Ingrediens 1">
-          </label>
-          <label class="item item-input no-border">
-            <input id="ing2" class="stepItem" type="text" placeholder="Ingrediens 2">
-          </label>
-          <label class="item item-input no-border">
-            <input class="stepItem" id="ing3" type="text" placeholder="Ingrediens 3">
-          </label>
-
-        </div> 
+        <div id="ingredienslist"></div>
 
         <label class="item item-input item-select">
           <div class="input-label">
@@ -108,7 +89,7 @@
             <option value="3" selected>3 st</option>
             <option value="4">4 st</option>
             <option value="5">5 st</option>
-            <option value="6">6 st</option>
+            <option value="6+">6+ st</option>
           </select>
         </label>
 
@@ -120,15 +101,14 @@
             <option value="15">15 min</option>
             <option value="30">30 min</option>
             <option value="45" selected>45 min</option>
-            <option value="> 60">> 60 min</option>
-            <option></option>
+            <option value="60+">60+ min</option>
           </select>
         </label>
 
       <!-- <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
       <img ng-show="imgURI === undefined" ng-src="http://placehold.it/160x160"> -->
 
-      <div style="height:100px; width:100%; float:left;"></div>
+      <div style="height:88px; width:100%; float:left;"></div>
 
     </ion-content>
 
@@ -139,4 +119,3 @@
     </ion-footer-bar>
 
 </ion-modal-view>
-

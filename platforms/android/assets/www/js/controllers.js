@@ -25,10 +25,10 @@ angular.module('starter.controllers', [])
 	//console.log(window.localStorage.getItem($scope.recipe.id))
 	//visar alt bild om vi har lagt till favoriter redan
 	if(window.localStorage.getItem($scope.recipe.id) === 'true'){
-		$("#favHeartImg").hide(function() { 
-			  $(this).load(function() { $(this).show(); }); 
-			  $(this).attr("src", "img/hjarta2.png"); 
-		}); 
+		$("#favHeartImg").hide(function() {
+			  $(this).load(function() { $(this).show(); });
+			  $(this).attr("src", "img/hjarta2.png");
+		});
 	}
 
 
@@ -39,20 +39,20 @@ angular.module('starter.controllers', [])
 
 		if(window.localStorage.getItem($scope.recipe.id) == null){
 			//Gör lite animation
-			$("#favHeartImg").fadeOut(function() { 
-			  $(this).load(function() { $(this).fadeIn(); }); 
-			  $(this).attr("src", "img/hjarta2.png"); 
-			}); 
+			$("#favHeartImg").fadeOut(function() {
+			  $(this).load(function() { $(this).fadeIn(); });
+			  $(this).attr("src", "img/hjarta2.png");
+			});
 
 			window.localStorage.setItem($scope.recipe.id, 'true');
 		}
 
 		else{
 
-			$("#favHeartImg").fadeOut(function() { 
-			  $(this).load(function() { $(this).fadeIn(); }); 
-			  $(this).attr("src", "img/konturer1.png"); 
-			}); 
+			$("#favHeartImg").fadeOut(function() {
+			  $(this).load(function() { $(this).fadeIn(); });
+			  $(this).attr("src", "img/konturer1.png");
+			});
 
 			window.localStorage.removeItem($scope.recipe.id);
 		}
@@ -61,9 +61,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('RecipeUserDetailCtrl', function($scope, $ionicLoading, $ionicPopup, $stateParams, $ionicNavBarDelegate, Recipes){
-
-	//console.log("stateparams", $stateParams);
+.controller('RecipeUserDetailCtrl', function($scope, $ionicLoading, $ionicPopup, $stateParams, $ionicNavBarDelegate, Recipes, $cordovaCamera){
 
 	$scope.recipe = Recipes.get_user($stateParams.recipeId)
 
@@ -84,10 +82,10 @@ angular.module('starter.controllers', [])
 	//console.log(window.localStorage.getItem($scope.recipe.id))
 	//visar alt bild om vi har lagt till favoriter redan
 	if(window.localStorage.getItem($scope.recipe.id + 'u') === 'true'){
-		$("#favHeartImg").hide(function() { 
-			  $(this).load(function() { $(this).show(); }); 
-			  $(this).attr("src", "img/hjarta2.png"); 
-		}); 
+		$("#favHeartImg").hide(function() {
+			  $(this).load(function() { $(this).show(); });
+			  $(this).attr("src", "img/hjarta2.png");
+		});
 	}
 
 
@@ -98,20 +96,20 @@ angular.module('starter.controllers', [])
 
 		if(window.localStorage.getItem($scope.recipe.id + 'u') == null){
 			//Gör lite animation
-			$("#favHeartImg").fadeOut(function() { 
-			  $(this).load(function() { $(this).fadeIn(); }); 
-			  $(this).attr("src", "img/hjarta2.png"); 
-			}); 
+			$("#favHeartImg").fadeOut(function() {
+			  $(this).load(function() { $(this).fadeIn(); });
+			  $(this).attr("src", "img/hjarta2.png");
+			});
 
 			window.localStorage.setItem($scope.recipe.id + 'u', 'true');
 		}
 
 		else{
 
-			$("#favHeartImg").fadeOut(function() { 
-			  $(this).load(function() { $(this).fadeIn(); }); 
-			  $(this).attr("src", "img/konturer1.png"); 
-			}); 
+			$("#favHeartImg").fadeOut(function() {
+			  $(this).load(function() { $(this).fadeIn(); });
+			  $(this).attr("src", "img/konturer1.png");
+			});
 
 			window.localStorage.removeItem($scope.recipe.id + 'u');
 		}
@@ -130,10 +128,44 @@ angular.module('starter.controllers', [])
 	       $ionicLoading.show({template: 'Recept borttaget!', noBackdrop: true, duration: 2000 });
 
 	     } else {
-	       
+
 	     }
 	   });
 	 };
+
+	$scope.takePicture = function() {
+
+        var options = {
+            quality : 100,
+            destinationType : Camera.DestinationType.DATA_URL,
+            sourceType : Camera.PictureSourceType.PHOTOLIBRARY,
+            allowEdit : true,
+            encodingType: Camera.EncodingType.JPEG,
+            popoverOptions: CameraPopoverOptions,
+            saveToPhotoAlbum: false
+        };
+
+        $cordovaCamera.getPicture(options).then(function(imageData) {
+
+        	$scope.imgURI = "data:image/jpeg;base64," + imageData;
+
+					$scope.recipe.picUrlWide = $scope.imgURI
+        	document.getElementById("recipeDetailImage").src = $scope.imgURI;
+
+        	//Format picture
+					/*
+        	if(document.getElementById("userImage").clientHeight < pic_squared || document.getElementById("userImage").clientWidth < pic_squared){
+        		document.getElementById("userImage").height = pic_squared;
+        		document.getElementById("userImage").width = pic_squared;
+        	}*/
+
+        	//console.log("IMG HEIGHT after: ", document.getElementById("userImage").clientHeight);
+
+        }, function(err) {
+            // An error occured. Show a message to the user
+            alert("Fel vid inläsning av bild!");
+        });
+  }
 
 })
 
@@ -142,24 +174,10 @@ angular.module('starter.controllers', [])
 
 	$ionicScrollDelegate.resize();
 
-	console.log("RECIPE CTRL");
-
 	$scope.container_size = (window.innerWidth/2 - 9) + 'px';
 
 	$scope.pic_height = window.innerWidth/2 + 'px';
 
-
-	console.log("width", $scope.container_size);
-
-	//Set right format (Responsive"
-		/*
-	var recipeContainers1 = document.getElementsByClassName("recipeContainer1");
-	var recipeContainers2 = document.getElementsByClassName('recipeContainer2');
-
-	console.log("legnth", document.getElementsByClassName("recipeContainer1").length)
-	console.log(recipeContainers2.length)
-	console.log(images.length)*/
-	
 	var button = document.getElementById("heartButton");
 
 	if(window.sessionStorage.getItem('f') === 'true'){
@@ -168,8 +186,6 @@ angular.module('starter.controllers', [])
 		button.className = "button-icon icon ion-ios7-heart favHeartInMainMenu green"
 
 	}
-
-
 
 	/** About modal box **/
 	$ionicModal.fromTemplateUrl('templates/about.html', {
@@ -180,7 +196,7 @@ angular.module('starter.controllers', [])
 	});
 
 	$scope.openModal = function() {
-		
+
 	 	$scope.modal.show();
 
   	};
@@ -224,7 +240,7 @@ angular.module('starter.controllers', [])
 			$scope.checked = true;
 			window.sessionStorage.setItem('f', 'true');
 			button.className = "button-icon icon ion-ios7-heart favHeartInMainMenu green"
-		
+
 		}
 
 	}
@@ -243,6 +259,88 @@ angular.module('starter.controllers', [])
 
 .controller('NewRecipeCtrl', function($scope, $cordovaCamera, Recipes, $ionicLoading) {
 
+	$scope.addNewRecipeStep = function(increment){
+
+		if(stepsCount < 25){
+
+			stepsCount++;
+
+			//console.log("STEPSCOUNT", stepsCount)
+
+			var input = document.createElement('input');
+			input.className = "stepItem"
+			input.id = "step" + stepsCount;
+			input.setAttribute("type", "text");
+			input.setAttribute("placeholder", "Steg " + stepsCount);
+
+			var label = document.createElement('label');
+			label.className = "item item-input no-border";
+			label.appendChild(input);
+
+			document.getElementById("stepslist").appendChild(label);
+
+			if(stepsCount > 3){
+				sessionStorage.setItem("autosaveStepsCount", stepsCount - 3);
+
+				(function(stepsCount) {
+
+					document.getElementById('step' + stepsCount).addEventListener("change", function() {
+			    		sessionStorage.setItem("autosaveStep" + stepsCount, document.getElementById('step' + stepsCount).value);
+			    		console.log(document.getElementById('step' + stepsCount).value)
+
+		    		});
+
+		    	}(stepsCount));
+			}
+
+		}
+
+		else{
+			alert("För många steg")
+		}
+
+	}
+
+	//sessionStorage.clear();
+
+	$scope.addNewIngredientStep = function(){
+
+		if(ingCount < 15){
+
+			ingCount++;
+
+			var input = document.createElement('input');
+			input.className = "stepItem"
+			input.id = "ing" + ingCount;
+			input.setAttribute("type", "text");
+			input.setAttribute("placeholder", "Ingrediens " + ingCount);
+
+			var label = document.createElement('label');
+			label.className = "item item-input no-border";
+			label.appendChild(input);
+
+			document.getElementById("ingredienslist").appendChild(label);
+
+			if(ingCount > 3){
+				sessionStorage.setItem("autosaveIngCount", ingCount - 3);
+
+				(function(ingCount) {
+					document.getElementById('ing' + ingCount).addEventListener("change", function() {
+			    		sessionStorage.setItem("autosaveIng" + ingCount, document.getElementById('ing' + ingCount).value);
+			   		});
+
+		   		}(ingCount));
+			}
+
+		}
+
+		else{
+
+			alert("För många ingredienser");
+		}
+	}
+
+
 	var pic_squared = window.innerWidth/2;
 	$scope.pic_height = window.innerWidth/2 + 'px';
 	$scope.half_window_width = window.innerWidth/2 + 'px';
@@ -252,12 +350,18 @@ angular.module('starter.controllers', [])
 	$scope.margin_top_text = window.innerWidth/70 + 'px';
 	//console.log("newrecipectrl");
 	//Börjar på 3
-	var stepsCount = 3;
-	var ingCount = 3;
+	var stepsCount = 0;
+	var ingCount = 0;
 	var newRecipe;
+	var autosaveStepsCount = 0;
+	var autosaveIngCount = 0;
 
-	//Save in cache
-	
+	//Get from cache
+
+	//sessionStorage.clear();
+
+	// HELT BROKEN KRASHAR... Försöker implementera att skapa alla recipe och ingredienser from cache och direkt i javascrpt.
+
 	var input1 = document.getElementById("recipeName");
 	var input2 = document.getElementById("recipeDesc");
 
@@ -265,22 +369,82 @@ angular.module('starter.controllers', [])
 	    input1.value = sessionStorage.getItem("autosave1");
 	}
 	if (sessionStorage.getItem("autosave2")) {
-	    input1.value = sessionStorage.getItem("autosave2");
+	    input2.value = sessionStorage.getItem("autosave2");
 	}
 
-	for(var i = 1; i <= stepsCount; i++){
+	if(sessionStorage.getItem("autosaveStepsCount"))
+		autosaveStepsCount = parseInt(sessionStorage.getItem("autosaveStepsCount"));
 
-			if(document.getElementById('step' + i).value == "" || document.getElementById('step' + i).value.length > 100 )
-				return false;
-			
+	if(sessionStorage.getItem("autosaveIngCount"))
+		autosaveIngCount = parseInt(sessionStorage.getItem("autosaveIngCount"));
+
+
+	for(var i = 0; i < 3 + autosaveStepsCount; i++){
+		$scope.addNewRecipeStep();
 	}
-	 
-	// Listen for changes in the text field
+
+	for(var i = 0; i < 3 + autosaveIngCount; i++){
+		$scope.addNewIngredientStep();
+	}
+
+	for(var i = 1; i <= 3 + autosaveStepsCount; i++){
+		if(sessionStorage.getItem("autosaveStep" + i)){
+			document.getElementById("step" + i).value = sessionStorage.getItem("autosaveStep" + i);
+		}
+	}
+
+	// add text
+	for(var i = 1; i <= 3 + autosaveIngCount; i++){
+		if(sessionStorage.getItem("autosaveIng" + i)){
+			document.getElementById("ing" + i).value = sessionStorage.getItem("autosaveIng" + i);
+		}
+	}
+
+	// Add image
+
+	if(sessionStorage.getItem("autosaveImg")){
+
+		console.log("bildfanns")
+		document.getElementById("userImage").style.display = 'block';
+		document.getElementById("addImage").style.display = 'none';
+		document.getElementById("userImage").src = sessionStorage.getItem("autosaveImg");
+
+
+		//Format image
+		if(document.getElementById("userImage").clientHeight < pic_squared || document.getElementById("userImage").clientWidth < pic_squared){
+        		document.getElementById("userImage").height = pic_squared;
+        		document.getElementById("userImage").width = pic_squared;
+    	}
+
+	}
+
+	if($scope.imgURI)
+		sessionStorage.setItem("autosaveImg", $scope.imgURI);
+
 	input1.addEventListener("change", function() {
-	    // And save the results into the session storage object
 	    sessionStorage.setItem("autosave1", input1.value);
     });
 
+    input2.addEventListener("change", function() {
+	    sessionStorage.setItem("autosave2", input2.value);
+    });
+
+    // Add eventlisteners to the three first fields (Could probably do this in other function..)
+    for (var i = 1; i <= 3; i++) {
+	 	(function(i) {
+	    	document.getElementById('step' + i).addEventListener("change", function() {
+	    	sessionStorage.setItem("autosaveStep" + i, document.getElementById('step' + i).value);
+    	});
+	  }(i));
+	}
+
+    for (var i = 1; i <= 3; i++) {
+	 	(function(i) {
+	    	document.getElementById('ing' + i).addEventListener("change", function() {
+	    	sessionStorage.setItem("autosaveIng" + i, document.getElementById('ing' + i).value);
+    	});
+	  }(i));
+	}
 
 	$scope.clearFields = function(){
 
@@ -315,47 +479,31 @@ angular.module('starter.controllers', [])
 		document.getElementById("userImage").style.display = "none";
 		document.getElementById("addImage").style.display = 'block';
 
+		document.getElementById("userImageBig").style.display = "none";
+		document.getElementById("addImageBig").style.display = 'block';
+
+		//Remove from cache
+		sessionStorage.removeItem("autosave1");
+		sessionStorage.removeItem("autosave2");
+
+		sessionStorage.removeItem("autosaveStepsCount");
+		sessionStorage.removeItem("autosaveIngCount");
+
+		for(var i = 1; i <= stepsCount; i++){
+
+			sessionStorage.removeItem("autosaveStep" + i);
+		}
+
+		for(var j = 1; j <= ingCount; j++){
+
+			sessionStorage.removeItem("autosaveIng" + j);
+
+		}
+
+		sessionStorage.removeItem("autosaveImg");
+
 		stepsCount = 3;
 		ingCount = 3;
-
-
-
-
-	}
-
-	$scope.addNewRecipeStep = function(){
-
-		stepsCount++;
-
-		var input = document.createElement('input');
-		input.className = "stepItem"
-		input.id = "step" + stepsCount;
-		input.setAttribute("type", "text");
-		input.setAttribute("placeholder", "Steg " + stepsCount);
-
-		var label = document.createElement('label');
-		label.className = "item item-input no-border";
-		label.appendChild(input);
-
-		document.getElementById("stepslist").appendChild(label);
-
-	}
-
-	$scope.addNewIngredientStep = function(){
-
-		ingCount++;
-
-		var input = document.createElement('input');
-		input.className = "stepItem"
-		input.id = "ing" + ingCount;
-		input.setAttribute("type", "text");
-		input.setAttribute("placeholder", "Ingrediens " + ingCount);
-
-		var label = document.createElement('label');
-		label.className = "item item-input no-border";
-		label.appendChild(input);
-
-		document.getElementById("ingredienslist").appendChild(label);
 
 	}
 
@@ -373,20 +521,20 @@ angular.module('starter.controllers', [])
 				return false;
 
 		return true;
-		
+
 	}
 
 	$scope.storeRecipeInfo = function(){
 
-		
+/*
+		if(!validate()){
+			setTimeout(function() {
+				alert("För långt namn eller fält tomma");
+			}, 0);
+			return;
+		}
 
-		//setTimeout(function() {
-			//if(!validate()){
-		//	alert("Fel! För långt namn eller fält tomma.");
-		//	return;
-		//}
-  
-		//}, 0);
+*/
 
 		var userRecipeName = document.getElementById('recipeName').value;
 		var userRecipeDesc = document.getElementById('recipeDesc').value;
@@ -397,13 +545,11 @@ angular.module('starter.controllers', [])
 			var obj = {id:i-1, desc:document.getElementById('step' + i).value};
 			newsteps.push(obj);
 		}
-		
+
 		for(var i = 1; i <= ingCount; i++){
 			var obj = {id:i-1, desc:document.getElementById('ing' + i).value};
 			newing.push(obj);
 		}
-
-		//takePicture();
 
 		// Check if we have any new recipes
 		if (localStorage.newRecipeCount) {
@@ -411,43 +557,85 @@ angular.module('starter.controllers', [])
 		} else {
 		    localStorage.newRecipeCount = 1;
 		}
-		
-		//var newid = parseInt(localStorage.newRecipeCount) + Recipes.all().length - 1;
+
 		var newid = localStorage.newRecipeCount - 1;
-		//var image_path = takePicture();
 
-		//console.log("IMG PATH ", image_path);
-		
-		newRecipe = {id: newid, name: userRecipeName, fav: false, desc: userRecipeDesc, steps: newsteps, ingridients: newing, cookTime: document.getElementById("cookTime").options[document.getElementById("cookTime").selectedIndex].value, servings:document.getElementById("servings").options[document.getElementById("servings").selectedIndex].value, picUrl:'http://placehold.it/160x160', picUrlWide:'http://placehold.it/400x300', exists: true};
+		newRecipe = {id: newid, name: userRecipeName, fav: false, desc: userRecipeDesc, steps: newsteps, ingridients: newing, cookTime: document.getElementById("cookTime").options[document.getElementById("cookTime").selectedIndex].value, servings:document.getElementById("servings").options[document.getElementById("servings").selectedIndex].value, picUrl:'img/default_2.png', picUrlWide:'img/default_img_wide.png', exists: true};
 
-		//takePicture();
 		storeFinalRecipe();
-		//Recipes.addNewUserRecipe(newRecipe);
-
 	}
+
 	var storeFinalRecipe = function(){
 
-		
+
 		if(document.getElementById("userImage").src.length > 0)
 			newRecipe.picUrl = document.getElementById("userImage").src;
 
-		else
-			newRecipe.picUrl = 'http://placehold.it/' + $scope.pic_height + 'x' + $scope.pic_height;
+		else // Scale is ok regardless of size
+			newRecipe.picUrl = 'img/default_2.png';
+
 
 		Recipes.addNewUserRecipe(newRecipe);
 
+		setTimeout(function() {
+			$scope.clearFields();
+		}, 500);
+
 		window.location.href = "#/recipes";
 		$ionicLoading.show({template: 'Receptet tillagt!', noBackdrop: true, duration: 2000 });
-		//window.location.replace("#/recipes");*/
-		
+
+	}
+
+	//Jr crop
+
+	$scope.takeBigPicture = function() {
+
+        var options = {
+            quality : 100,
+            destinationType : Camera.DestinationType.DATA_URL,
+            sourceType : Camera.PictureSourceType.PHOTOLIBRARY,
+            allowEdit : true,
+            encodingType: Camera.EncodingType.JPEG,
+            popoverOptions: CameraPopoverOptions,
+            saveToPhotoAlbum: false
+        };
+
+        $cordovaCamera.getPicture(options).then(function(imageData) {
+
+						console.log("ok");
+
+						$scope.imgURI = "data:image/jpeg;base64," + imageData;
+
+						document.getElementById("userImageBig").style.display = 'block';
+	        	document.getElementById("addImageBig").style.display = 'none';
+
+						sessionStorage.setItem("autosaveImgBig", $scope.imgURI);
+						document.getElementById("userImageBig").src = $scope.imgURI;
+
+						/*
+						document.getElementById("userImageBig").style.display = 'block';
+	        	document.getElementById("addImageBig").style.display = 'none';
+	        	$scope.imgURI = "data:image/jpeg;base64," + imageData;
+	        	document.getElementById("userImageBig").src = $scope.imgURI;
+						*/
+
+
+
+        }, function(err) {
+            // An error occured. Show a message to the user
+            //alert("Fel uppstod vid inläsning av bild!");
+        });
+
 	}
 
 	$scope.takePicture = function() {
 
-        var options = { 
-            quality : 100, 
-            destinationType : Camera.DestinationType.DATA_URL, 
-            sourceType : Camera.PictureSourceType.PHOTOLIBRARY, 
+		//console.log("pis")
+
+        var options = {
+            quality : 100,
+            destinationType : Camera.DestinationType.DATA_URL,
+            sourceType : Camera.PictureSourceType.PHOTOLIBRARY,
             allowEdit : true,
             encodingType: Camera.EncodingType.JPEG,
             targetWidth: $scope.pic_height,
@@ -455,31 +643,32 @@ angular.module('starter.controllers', [])
             popoverOptions: CameraPopoverOptions,
             saveToPhotoAlbum: false
         };
- 
+
         $cordovaCamera.getPicture(options).then(function(imageData) {
 
+					// Show user Image and hide text
         	document.getElementById("userImage").style.display = 'block';
         	document.getElementById("addImage").style.display = 'none';
         	$scope.imgURI = "data:image/jpeg;base64," + imageData;
         	document.getElementById("userImage").src = $scope.imgURI;
-        	
+
+					// Save in session storage
+        	sessionStorage.setItem("autosaveImg", $scope.imgURI);
+
+        	//Format picture
 
         	if(document.getElementById("userImage").clientHeight < pic_squared || document.getElementById("userImage").clientWidth < pic_squared){
         		document.getElementById("userImage").height = pic_squared;
         		document.getElementById("userImage").width = pic_squared;
         	}
-		
-        	console.log("IMG HEIGHT after: ", document.getElementById("userImage").clientHeight);
+
+        	//console.log("IMG HEIGHT after: ", document.getElementById("userImage").clientHeight);
 
         }, function(err) {
             // An error occured. Show a message to the user
             //alert("Fel uppstod vid inläsning av bild!");
         });
-    }
+		}
 
-
-
+// End controller
 });
-
-
-

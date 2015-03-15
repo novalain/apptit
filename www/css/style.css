@@ -216,4 +216,4 @@ label.plusButton{margin-top:0px; color:#33cd5f; margin-left:2px;}
 
 /** NEW RECIPE**/
 
-p#addImage{position: relative;top: 40%;text-align:center;}
+p.newRecipeImage{position: relative;top: 40%;text-align:center; color:gray;}

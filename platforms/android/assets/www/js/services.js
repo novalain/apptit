@@ -1,9 +1,7 @@
 //TODO: knappar på radera popupen
-// Spara new recipe i session storage
 // Fixa souvlakireceptet (Jessica)
-//Splashscreens
-// antal portioner och tid
-
+// Splashscreens
+// Crop funktion i rec user detail
 
 angular.module('starter.services', [])
 
@@ -11,12 +9,13 @@ angular.module('starter.services', [])
 
   console.log("hellorecipes");
   localStorage.clear();
+  sessionStorage.clear();
 
   //init
 
   var recipes = [
     {id: 0, name:'Fläskfilé med sås på soltorkade tomater', fav:false, desc: desc0, steps: steps0, ingridients: ingredients0, cookTime: '20', servings:'4-5', picUrl:'img/mat/0.png', picUrlWide:'img/mat/wide/0wide.png'},
-    {id: 1, name:'Krämig pasta med skinka och paprika', fav:false, desc: desc1, steps: steps1, ingridients: ingredients1, cookTime: '30', servings:'4', picUrl:'img/mat/1.png', picUrlWide:'img/mat/wide/1wide.png'}, 
+    {id: 1, name:'Krämig pasta med skinka och paprika', fav:false, desc: desc1, steps: steps1, ingridients: ingredients1, cookTime: '30', servings:'4', picUrl:'img/mat/1.png', picUrlWide:'img/mat/wide/1wide.png'},
     {id: 2, name:'Somrig couscoussallad', fav:false, desc: desc2, steps: steps2, ingridients: ingredients2, cookTime: '30', servings:'2-3', picUrl:'img/mat/2.png', picUrlWide:'img/mat/wide/2wide.png'},
     {id: 3, name:'Nudlar med grönsakswook och kyckling', fav:false, desc: desc3, steps: steps3, ingridients: ingredients3, cookTime: '40', servings:'3-4', picUrl:'img/mat/3.png', picUrlWide:'img/mat/wide/3wide.png'},
     {id: 4, name:'Chili con carne', fav:false, desc: desc4, steps: steps4, ingridients: ingredients4, cookTime: '30', servings:'4-5', picUrl:'img/mat/4.png', picUrlWide:'img/mat/wide/4wide.png'},
@@ -52,7 +51,7 @@ angular.module('starter.services', [])
         var obj = JSON.parse(localStorage.getItem(i));
         if(obj && obj.id > 0)
           user_recipes.push(obj);
-      
+
   }
 
 
@@ -74,7 +73,7 @@ angular.module('starter.services', [])
           if (user_recipes[i].id === parseInt(recipeId))
             return user_recipes[i];
         }
-      
+
     },
 
     getAllFavoriteRecipes: function(){
@@ -84,7 +83,7 @@ angular.module('starter.services', [])
       for(var i = 0; i < recipes.length; i++)
           if(window.localStorage.getItem(recipes[i].id) === 'true')
             favRecipes.push(recipes[i]);
-      
+
       return favRecipes;
 
     },
@@ -96,7 +95,7 @@ angular.module('starter.services', [])
       for(var i = 0; i < user_recipes.length; i++)
           if(window.localStorage.getItem(user_recipes[i].id + 'u') === 'true')
             favRecipes_user.push(user_recipes[i]);
-      
+
       //console.log(favRecipes_user);
       return favRecipes_user;
 
@@ -110,13 +109,13 @@ angular.module('starter.services', [])
     },
 
     removeUserRecipe: function(recipeId){
-        
+
         for(var i = 0; i < user_recipes.length; i++){
 
           if (user_recipes[i].id === parseInt(recipeId))
               user_recipes.splice(i, 1);
 
-            
+
         }
 
        // user_recipes[recipeId].exists = false;
@@ -148,7 +147,7 @@ angular.module('starter.services', [])
 
     if (image.complete) {
       deffered.resolve(url);
-    } 
+    }
 
     else {
       image.addEventListener('load', function() {
@@ -161,6 +160,3 @@ angular.module('starter.services', [])
     return deffered.promise;
   };
 });
-
-
-

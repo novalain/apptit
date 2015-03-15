@@ -54,14 +54,14 @@ var ingredients1 = [
     {id:10, quantity:'', desc:'spaghetti'},
     {id:11, quantity:'', desc:'broccoli'},
     {id:12, quantity:'', desc:'riven parmesan'}
-   
+
 ];
 
 /** Somrig couscoussallad **/
 
 var desc2 = 'Enkel låda när man vill ha en lite lättare lunch. Skönt att slippa stå i mikrokön.';
 
-var steps2 = [                                          
+var steps2 = [
     {id:0, desc: 'Koka couscous och låt svalna.'},
     {id:1, desc: 'Finhacka salladslöken och skär tomaterna, rädisorna och paprikan i tärningar.'},
     {id:2, desc: 'Blanda ihop grönsakerna, babyspenaten och sojabönorna med couscousen.'},
@@ -88,7 +88,7 @@ var ingredients2 = [
 
 var desc3 = 'För dig som gillar stark mat: tillsätt mer chilipeppar och garam-masala för ett kryddigare resultat.';
 
-var steps3 = [ 
+var steps3 = [
     {id:0, desc: 'Finhacka chilipeppar, vitlök, garam-masala och ingefära. Blanda ingredienserna till en kryddmix.'},
     {id:1, desc: 'Skiva champinjoner och morötter. Finhacka salladslöken och skär vitkålen i små bitar.'},
     {id:2, desc: 'Putsa kycklingfiléerna. Salta och krydda sedan med hälften av kryddblandingen.'},
@@ -255,7 +255,7 @@ var steps9 = [
     {id:5, desc: 'Lägg över i en ugnsform och ställ sedan in i ugnen 10-15 minuter för att steka klart.'},
     {id:6, desc: 'Rör ihop en dressing på majonäs, bostongurka, ketchup och grillkrydda.'},
     {id:7, desc: 'Serveras med hamburgerbröd, dressing och valfria tillbehör.'}
-   
+
 ];
 
 var ingredients9 = [
@@ -283,7 +283,7 @@ var steps10 = [
     {id:4, desc: 'Skär upp tomaterna, gurkan och rödlöken och lägg i en skål. Lägg på oliverna, toppa med en bit fetaost och ringla över lite olivolja. Krydda med oregano.'},
     {id:5, desc: 'Gnid in kotletterna med lite olivolja. Salta, peppra och krydda med rosmarin.'},
     {id:6, desc: 'Grilla kotletterna högt upp i ugnen på högsta värmen, cirka 5 min på varje sida. Servera med den grekiska salladen och kall tzatziki.'}
-   
+
 ];
 
 var ingredients10 = [
@@ -315,7 +315,7 @@ var steps11 = [
     {id:2, desc: 'Blanda ner grönsakerna och de frysta ärtorna i skålen tillsammans med tonfisken. Tillsätt majonäs och gräddfil och rör om. Salta och peppra tills du är nöjd med smaken.'},
     {id:3, desc: 'Låt stå i kylen i ca en halvtimma.'},
     {id:4, desc: 'Servera med kokta ägg och valfritt bröd.'}
-   
+
 ];
 
 var ingredients11 = [
@@ -376,7 +376,7 @@ var steps13 = [
     {id:4, desc: ''},
     {id:5, desc: ''},
     {id:6, desc: ''}
-   
+
 ];
 
 var ingredients13 = [
@@ -475,7 +475,7 @@ var ingredients16 = [
     {id:11, quantity:'', desc:'peppar'}
 ];
 
-/**Renskavsgryta**/ 
+/**Renskavsgryta**/
 //Här slutade vi.
 
 var desc17 = 'Mustig gryta som passar bra när man vill ha något varmt på kalla vinterdagar.';
@@ -571,7 +571,7 @@ var steps20 = [
     {id:2, desc: 'Tillsätt lite mjölk i taget och vispa hela tiden medan såsen tjocknar. Låt såsen koka ihop i några minuter.'},
     {id:3, desc: 'Smaka av med salt, peppar och en nypa socker. Tillsätt blomkålen.'},
     {id:4, desc: 'Skiva upp falukorven och stek i smör. Servera sedan tillsammans med blomkålssåsen.'},
-    
+
 
 ];
 

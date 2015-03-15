@@ -112,7 +112,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   return function(scope, elem, attr) {
     var start = 0;
     var threshold = 50;
-    
+
     elem.bind('scroll', function(e) {
 
       if(e.detail.scrollTop - start > threshold) {
@@ -124,7 +124,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         $rootScope.slideHeader = false;
       }
       $rootScope.slideHeaderPrevious = e.detail.scrollTop - start;
-      
+
       if(!scope.$$phase) {
           scope.$apply();
       }
@@ -136,11 +136,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 .directive('imageonload', function() {
     return {
         restrict: 'A',
-      
+
         link: function(scope, element) {
 
           //console.log(scope.recipe.id);
-       
+
           element.on('load', function() {
             // Set visibility: true + remove spinner overlay
               element.removeClass('spinner-hide');
@@ -177,13 +177,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
       header = document.getElementById("navBar");
 
-      ionic.requestAnimationFrame(function() { 
+      ionic.requestAnimationFrame(function() {
         // Threshold is equal to bar-height
         var threshold = 44;
         // Scrolling down
         if(dir === 1) {
           var _amt = Math.min(threshold, amt - threshold);
-        } 
+        }
 
         // Scrolling up
         else if(dir === -1) {
@@ -192,26 +192,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         // The translation amounts should never be negative
         _amt = _amt < 0 ? 0 : _amt;
         amt = amt < 0 ? 0 : amt;
-        tabs_amt = tabs_amt < 0 ? 0 : tabs_amt; 
+        tabs_amt = tabs_amt < 0 ? 0 : tabs_amt;
         // Re-position the header
         header.style[ionic.CSS.TRANSFORM] = 'translate3d(0,-' + _amt + 'px, 0)';
-        fadeAmt = 1 - _amt / threshold; 
+        fadeAmt = 1 - _amt / threshold;
         for(var i = 0, j = header.children.length; i < j; i++) {
           header.children[i].style.opacity = fadeAmt;
         }
 
         // Re-position the sub-header
 
-       // $('input').toggleClass('force-redraw');       
+       // $('input').toggleClass('force-redraw');
         document.getElementById("input").blur();
 /*
         if(amt > 15){
           document.getElementById('userInput').disabled = true;
           document.getElementById('userInput').style.color = "transparent";
         }
-        
-        
-        
+
+
+
 
         else{
           document.getElementById('userInput').disabled = false;
@@ -248,7 +248,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         var prevDir = 1
         var prevShrinkAmt = 0;
         var prevTabsShrinkAmt = 0;
-        
+
         $element.bind('scroll', function(e) {
           // if negative scrolling (eg: pull to refresh don't do anything)
           if(e.detail.scrollTop < 0)
@@ -258,7 +258,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
           // Claculate direction of scrolling
           dir = delta >= 0 ? 1 : -1;
           // Capture change of direction
-          if(dir !== prevDir) 
+          if(dir !== prevDir)
             starty = e.detail.scrollTop;
           // If scrolling up
           if(dir === 1) {
@@ -281,12 +281,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
             // Start shrink
             shrink(tabs, tabs_amt, subHeader, header, shrinkAmt, dir);
           }
-          // Save prev states for comparison 
+          // Save prev states for comparison
           prevDir = dir;
           prev = e.detail.scrollTop;
         });
       }
     }
-  });  
-
-
+  });

@@ -7,10 +7,10 @@
             <i class="icon ion-search placeholder-icon"></i>
             <input id="input" ng-model="searchText.name" type="text" placeholder="Recept eller ingrediens">
 
-  
-            <button id="heartButton" class="button-icon icon ion-ios7-heart-outline favHeartInMainMenu"></button>
-     
-    
+
+            <button ng-click="showFavRecipesChange()"id="heartButton" class="button-icon icon ion-ios7-heart-outline favHeartInMainMenu"></button>
+
+
         </div>
     </div>
 
@@ -20,7 +20,7 @@
       <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back"></ion-nav-back-button>
 
       <a ng-href="#/recipes/new-recipe" class="button button-icon icon ion-compose"></a>
-      
+
       <!--fixat-->
       <ion-nav-buttons side="right">
          <button ng-click="openModal()" class="button button-icon icon ion-ios7-information-outline"></button>
@@ -34,7 +34,7 @@
 
       <!-- Ännu en tokbugg container, blir ultramycket padding utan denna..-->
       <div style="height:55px;"></div>
-    
+
           <!-- För att den ska reagera på scroll event.. sen exempel-->
           <div class="tabs"></div>
 
@@ -54,12 +54,16 @@
                 </div>
 
               </span>
+
             </div>
           </a>
 
           <!--Ej favoriter användarrecept -->
           <a ng-if = "!checked" ng-repeat="recipe in user_recipes | filter:searchText:strict" ng-href="#/recipes-user/{{recipe.id}}">
-            <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="$index%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'">
+            <!-- <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="$index%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'"> -->
+
+            <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="(recipes | filter:searchText:strict).length % 2 == 0 ? ($index % 2 == 0 ? 'recipeContainer1' : 'recipeContainer2') :
+            ($index % 2 == 0 ? 'recipeContainer2' : 'recipeContainer1')">
 
               <div id="picTextContainer_user{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
 
@@ -81,7 +85,7 @@
         		<div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="$index%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'">
 
         			<div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
-        			
+
               <img ng-style="{'height': '{{pic_height}}'}" class="recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
 
               <span class="loading">
@@ -99,11 +103,11 @@
 
            <!--  <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="$index%2 == 0 && favRecipes.length % 2 == 0 ? 'recipeContainer1' : 'recipeContainer2'"> -->
 
-            <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="favRecipes.length % 2 == 0 ? ($index % 2 == 0 ? 'recipeContainer1' : 'recipeContainer2') : 
-            ($index % 2 == 0 ? 'recipeContainer2' : 'recipeContainer1')">  
+            <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="(favRecipes | filter:searchText:strict).length % 2 == 0 ? ($index % 2 == 0 ? 'recipeContainer1' : 'recipeContainer2') :
+            ($index % 2 == 0 ? 'recipeContainer2' : 'recipeContainer1')">
 
               <div id="picTextContainer{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
-              
+
               <img ng-style="{'height': '{{pic_height}}', 'width':'{{pic_height}}'}" class="recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
 
               <span class="loading">
@@ -116,7 +120,7 @@
             </div>
           </a>
 
-        
+
         	<p class ="noResults">
 
             <span ng-if="!checked && (recipes | filter:searchText).length == 0 && (user_recipes | filter:searchText).length == 0  ">Inga recept hittade</span>
@@ -132,10 +136,9 @@
 
         <div style="height:45px; width:100%; float:left; background-color:white;"></div>
         <!--Ännu en bugg container -->
-  
+
     </ion-content>
 
 
 
 </ion-view>
-

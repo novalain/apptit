@@ -18,6 +18,15 @@
       <div style="height:20px; background-color:white;">
       </div>
 
+      <label ng-click="takeBigPicture()" style="padding:0;"class="item item-input">
+        <div class="recPicContainer">
+
+            <p class="newRecipeImage" id="addImageBig">Bild för recept<br/><label class="button-icon ion-plus-round plusButton"></label> </p>
+
+            <img id="userImageBig"/>
+        </div>
+      </label>
+
       <div style="float:left; border-top:1px solid #E0E0E0;" ng-style="{'width': '{{window_width}}', 'height': '{{half_window_width}}'}">
 
         <div class="list" style="float:left; " ng-style="{'width': '{{half_window_width}}', 'height': '{{half_window_width}}'}">
@@ -43,12 +52,13 @@
 
         <div id="userImageContainer" ng-click="takePicture()" style="float:left;" ng-style="{'width': '{{half_window_width}}', 'height': '{{half_window_width}}'}">
 
-            <p id="addImage">Lägg till bild?<br/><label class="button-icon ion-plus-round plusButton"></label> </p>
+            <p class="newRecipeImage" id="addImage">Bild för menyn<br/><label class="button-icon ion-plus-round plusButton"></label> </p>
 
             <img id="userImage"/>
-         </div>
+        </div>
 
       </div>
+
 
       <label style="border-bottom:0;"class="item item-input">
         <span style="width:0px;padding-right:0;"class="input-label">Recept steg</span>
@@ -58,20 +68,7 @@
 
       </label>
 
-      <div id="stepslist">
-
-       <!--  <label class="item item-input no-border">
-          <input class="stepItem" id="step1" type="text" placeholder="Steg 1">
-        </label>
-        <label class="item item-input no-border">
-          <input class="stepItem" id="step2" type="text" placeholder="Steg 2">
-        </label>
-
-        <label class="item item-input no-border">
-          <input type="text" class="stepItem" id="step3" placeholder="Steg 3">
-        </label> -->
-
-        </div>
+      <div id="stepslist"></div>
 
         <label class="item item-input">
           <span style="width:0px; padding-right:0;"class="input-label">Ingredienser</span>
@@ -80,19 +77,7 @@
           </label>
         </label>
 
-        <div id="ingredienslist">
-
-      <!--     <label class="item item-input no-border">
-            <input id = "ing1" class = "stepItem" type="text" placeholder="Ingrediens 1">
-          </label>
-          <label class="item item-input no-border">
-            <input id="ing2" class="stepItem" type="text" placeholder="Ingrediens 2">
-          </label>
-          <label class="item item-input no-border">
-            <input class="stepItem" id="ing3" type="text" placeholder="Ingrediens 3">
-          </label> -->
-
-        </div>
+        <div id="ingredienslist"></div>
 
         <label class="item item-input item-select">
           <div class="input-label">
@@ -123,7 +108,7 @@
       <!-- <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
       <img ng-show="imgURI === undefined" ng-src="http://placehold.it/160x160"> -->
 
-      <div style="height:100px; width:100%; float:left;"></div>
+      <div style="height:88px; width:100%; float:left;"></div>
 
     </ion-content>
 
