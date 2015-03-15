@@ -21,21 +21,18 @@
 
       <a ng-href="#/recipes/new-recipe" class="button button-icon icon ion-compose"></a>
 
-      <!--fixat-->
       <ion-nav-buttons side="right">
          <button ng-click="openModal()" class="button button-icon icon ion-ios7-information-outline"></button>
       </ion-nav-buttons>
 
     </ion-nav-bar>
 
-    <!-- Här börjar sidan -->
-
     <ion-content class="has-header contentContainer" header-shrink scroll-event-interval="5" has-bouncing="true">
 
-      <!-- Ännu en tokbugg container, blir ultramycket padding utan denna..-->
+      <!-- Pga shrinking header -->
       <div style="height:55px;"></div>
 
-          <!-- För att den ska reagera på scroll event.. sen exempel-->
+          <!-- För att den ska reagera på scroll event..-->
           <div class="tabs"></div>
 
           <!--Ej favoriter-->
@@ -60,14 +57,13 @@
 
           <!--Ej favoriter användarrecept -->
           <a ng-if = "!checked" ng-repeat="recipe in user_recipes | filter:searchText:strict" ng-href="#/recipes-user/{{recipe.id}}">
-            <!-- <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="$index%2 == 0 ? 'recipeContainer1' : 'recipeContainer2'"> -->
 
             <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="(recipes | filter:searchText:strict).length % 2 == 0 ? ($index % 2 == 0 ? 'recipeContainer1' : 'recipeContainer2') :
             ($index % 2 == 0 ? 'recipeContainer2' : 'recipeContainer1')">
 
               <div id="picTextContainer_user{{recipe.id}}" class="picTextContainer"><p>{{recipe.name}}</p></div>
 
-              <img ng-style="{'height': '{{pic_height}}', 'width':'{{pic_height}}'}"  class = "recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
+              <img id = "user_recipe_img{{recipe.id}}" ng-style="{'height': '{{pic_height}}', 'width':'{{pic_height}}'}"  on-hold = "takePicture({{recipe.id}})" class = "recipePicInMainMenu" imageonload ng-src= "{{recipe.picUrl}}"/>
 
               <span class="loading">
 
@@ -99,9 +95,7 @@
           </a>
 
           <!-- Favoriter USER recipes-->
-          <a ng-if = "checked" ng-repeat="recipe in favUserRecipes | filter:searchText:strict" href="#/recipes-user/{{recipe.id}}">
-
-           <!--  <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="$index%2 == 0 && favRecipes.length % 2 == 0 ? 'recipeContainer1' : 'recipeContainer2'"> -->
+          <a ng-if = "checked" ng-repeat="recipe in favUserRecipes | filter:searchText:strict"  href="#/recipes-user/{{recipe.id}}">
 
             <div ng-style="{'width': '{{container_size}}', 'height': '{{container_size}}'}" ng-class="(favRecipes | filter:searchText:strict).length % 2 == 0 ? ($index % 2 == 0 ? 'recipeContainer1' : 'recipeContainer2') :
             ($index % 2 == 0 ? 'recipeContainer2' : 'recipeContainer1')">
@@ -131,11 +125,10 @@
 
           </p>
 
-        <!-- Bugg container end
-        </div>-->
 
-        <div style="height:45px; width:100%; float:left; background-color:white;"></div>
-        <!--Ännu en bugg container -->
+        <!--Lite space på slutet pga shrinking header -->
+
+        <div style="height:53px; width:100%; float:left; "></div>
 
     </ion-content>
 

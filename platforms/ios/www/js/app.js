@@ -1,22 +1,10 @@
-// Ionic Starter App
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngCordova'])
 
 
-.run(function($ionicPlatform, $cordovaSplashscreen) {
-
-  setTimeout(function() {
-    $cordovaSplashscreen.hide();
-  }, 5000)
+.run(function($ionicPlatform) {
 
   $ionicPlatform.ready(function() {
-
-    ionic.Platform.fullscreen();
 
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -30,34 +18,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   });
 })
 
-/** För moddad splashscreen **/
-/*
-
-.run(function($cordovaSplashScreen) {
-  setTimeout(function() {
-    $cordovaSplashScreen.hide()
-  }, 5000)
-})*/
-
 .config(function($stateProvider, $urlRouterProvider) {
 
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
   $stateProvider
 
-
-    // setup an abstract state for the tabs directive
-    /*
-    .state('tab', {
-      url: "/tab",
-      abstract: true,
-    })*/
-
-    /** NÄR URL ÄR PÅ DET SOM STÅR I URL, ÄNDRAR VI STATE I APPEN*/
-
-    // Each tab has its own nav history stack:
     .state('recipes', {
       url: '/recipes',
       views: {
@@ -104,42 +68,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 })
 
 
-/**DIRECTIVES FÖR DOM**/
-
-/*
-.directive('scrollWatch', function($rootScope) {
-
-  return function(scope, elem, attr) {
-    var start = 0;
-    var threshold = 50;
-
-    elem.bind('scroll', function(e) {
-
-      if(e.detail.scrollTop - start > threshold) {
-        $rootScope.slideHeader = true;
-      } else {
-        $rootScope.slideHeader = false;
-      }
-      if ($rootScope.slideHeaderPrevious >= e.detail.scrollTop - start) {
-        $rootScope.slideHeader = false;
-      }
-      $rootScope.slideHeaderPrevious = e.detail.scrollTop - start;
-
-      if(!scope.$$phase) {
-          scope.$apply();
-      }
-
-    });
-  };
-})
-*/
 .directive('imageonload', function() {
     return {
         restrict: 'A',
 
         link: function(scope, element) {
-
-          //console.log(scope.recipe.id);
 
           element.on('load', function() {
             // Set visibility: true + remove spinner overlay
@@ -154,21 +87,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
           scope.$watch('ngSrc', function() {
             // Set visibility: false + inject temporary spinner overlay
               element.addClass('spinner-hide');
-             // console.log("lel")
-              //element.parent().append('<span class="spinner"></span>');
           });
         }
     };
 })
 
-/*
-.directive('fakeStatusbar', function() {
-  return {
-    restrict: 'E',
-    replace: true,
-    template: '<div class="fake-statusbar"><div class="pull-left">Carrier</div><div class="time">3:30 PM</div><div class="pull-right">50%</div></div>'
-  }
-})*/
 
 .directive('headerShrink', function($document) {
     var fadeAmt;
@@ -204,20 +127,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
        // $('input').toggleClass('force-redraw');
         document.getElementById("input").blur();
-/*
-        if(amt > 15){
-          document.getElementById('userInput').disabled = true;
-          document.getElementById('userInput').style.color = "transparent";
-        }
 
-
-
-
-        else{
-          document.getElementById('userInput').disabled = false;
-         // document.getElementById('userInput').style.color = "black";
-        }
-*/
         subHeader.style[ionic.CSS.TRANSFORM] = 'translate3d(0,-' + amt + 'px, 0)';
         // Re-position the tabs
         tabs.style[ionic.CSS.TRANSFORM] = 'translate3d(0,' + tabs_amt + 'px, 0)';

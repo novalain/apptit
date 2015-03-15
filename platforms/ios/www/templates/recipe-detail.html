@@ -3,16 +3,16 @@
   	<ion-nav-bar class="bar-stable">
 	 	<ion-nav-back-button class="button icon-left button-clear button-balanced">
 	 	</ion-nav-back-button>
- 
+
  	</ion-nav-bar>
 
   	<ion-content class="has-header">
 
-  		<!--buggish-->
-  		<div style="height:20px; background-color:white;"></div>
+  		<!-- Space efter header-->
+  		<div style="height:20px;"></div>
 
 		<div class="recPicContainer">
-			<img style="width:100%; height:180px;"imageonload ng-src="{{recipe.picUrlWide}}" >
+			<img id = "recipeDetailImage" imageonload ng-src="{{recipe.picUrlWide}}" >
 			<span class="loading">
 
 				<div class="loadIconRecipeContainer">
@@ -22,14 +22,14 @@
 			</span>
 		</div>
 
-		<!-- TIME -->
+		<!-- Tid -->
 		<div class="cookTime1">
 			<label class="button-icon icon ion-ios7-clock-outline"></label>
 		</div>
 
 		<div class="cookTime2"><p>{{recipe.cookTime}} min</p></div>
 
-		<!-- ANTAL MATLÅDOR -->
+		<!-- Antal lådor -->
 
 		<div id="fork">
 			<label class="button-icon icon ion-fork"></label>
@@ -40,35 +40,35 @@
 
 		<div class="portionsText"><p>{{recipe.servings}} Lådor</p></div>
 
-		<!-- DESCRIPTION -->
-		
+		<!-- Beskrivning -->
+
 	  	<div id="recipeDesc" class="item item-text-wrap">
 		     <p>{{recipe.desc}}</p>
 	  	</div>
 
 		<ul class="item-text-wrap">
-			
+
 		    <li ng-repeat="steps in recipe.steps" class="item item-checkbox item-checkbox-right">
 	    	<label class="checkbox checkbox-balanced">
 	      		<input type="checkbox">
 	     	</label>
 		    	<p>{{steps.id+1}}. {{steps.desc}}</p>
 		    </li>
-	
+
 		</ul>
-		
+
 		<!-- Favoriter -->
 		<p id = "favText">Lägg till bland favoriter?</p>
-		<div id="favContainer">  
+		<div id="favContainer">
 	  		<img id="favHeartImg" ng-click="addToFavorites()" ng-src = "img/konturer1.png">
 	 	</div>
 
+     <!-- Space på slutet -->
 	 	<div style="height:60px;"></div>
 	</ion-content>
 
 
-
-	<!--Inköpslistan nedre -->
+	<!--Inköpslistan -->
 	<div class="paper"><p class="igrText">Inköpslista</p>
 
 	  	<ul>

@@ -22,7 +22,6 @@ angular.module('starter.controllers', [])
 		}
 	});
 
-	//console.log(window.localStorage.getItem($scope.recipe.id))
 	//visar alt bild om vi har lagt till favoriter redan
 	if(window.localStorage.getItem($scope.recipe.id) === 'true'){
 		$("#favHeartImg").hide(function() {
@@ -61,7 +60,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('RecipeUserDetailCtrl', function($scope, $ionicLoading, $ionicPopup, $stateParams, $ionicNavBarDelegate, Recipes, $cordovaCamera){
+.controller('RecipeUserDetailCtrl', function($scope, $ionicLoading, $ionicPopup, $stateParams, $ionicNavBarDelegate, Recipes, $cordovaCamera, $jrCrop){
 
 	$scope.recipe = Recipes.get_user($stateParams.recipeId)
 
@@ -145,9 +144,11 @@ angular.module('starter.controllers', [])
 		    // success!
 		    var image = canvas.toDataURL();
 
-				$scope.recipe.picUrlWide =  image;
+				$scope.recipe.picUrlWide = image;
 				document.getElementById("recipeDetailImage").src = image;
 
+				//Update
+				localStorage.setItem($scope.recipe.id, JSON.stringify($scope.recipe));
 
 
 		}, function() {
@@ -185,7 +186,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('RecipesCtrl', function($scope, Recipes, $ionicModal, $ionicScrollDelegate) {
+.controller('RecipesCtrl', function($scope, Recipes, $ionicModal, $ionicScrollDelegate, $cordovaCamera, $jrCrop) {
 
 	$ionicScrollDelegate.resize();
 
@@ -239,8 +240,6 @@ angular.module('starter.controllers', [])
 	$scope.recipes = Recipes.all();
 	$scope.user_recipes = Recipes.getAllUserRecipes();
 
-	console.log(localStorage.newRecipeCount)
-
 	$scope.showFavRecipesChange = function(){
 
 		$ionicScrollDelegate.scrollTop();
@@ -260,9 +259,70 @@ angular.module('starter.controllers', [])
 
 	}
 
+	//Jr crop
+	var jrCropSmall = function(imageIn, id){
+
+		$jrCrop.crop({
+			url: imageIn,
+			width: window.innerWidth/2,
+			height: window.innerWidth/2
+		}).then(function(canvas) {
+				// success!
+				var image = canvas.toDataURL();
+
+				document.getElementById("user_recipe_img" + id).src = image;
+
+				console.log("ID: ", id);
+				console.log(recipes.get_user(id).id.id);
+				console.log("ALL user recipes", user_recipes);
+
+				Recipes.get_user(id).picUrl = image;
+
+			//	$scope.user_recipes[id].picUrl = image;
+			//	Recipes.get_user(id).picUrl = image;
+		//	console.log($scope.user_recipes[id]);
+
+				localStorage.setItem(id, JSON.stringify(Recipes.get_user(id)));
+			//	Recipes.removeUserRecipe(id);
+			//	Recipes.addNewUserRecipe($scope.user_recipes[id]);
+
+		}, function() {
+				// User canceled or couldn't load image.
+		});
+	}
+
+	$scope.takePicture = function(id) {
+
+				var options = {
+						quality : 100,
+						destinationType : Camera.DestinationType.DATA_URL,
+						sourceType : Camera.PictureSourceType.PHOTOLIBRARY,
+						allowEdit : false,
+						targetWidth: window.innerWidth,
+						targetHeight: window.innerHeight,
+						encodingType: Camera.EncodingType.JPEG,
+						popoverOptions: CameraPopoverOptions,
+						saveToPhotoAlbum: false
+				};
+
+				$cordovaCamera.getPicture(options).then(function(imageData) {
+
+					$scope.imgURI = "data:image/jpeg;base64," + imageData;
+
+					jrCropSmall($scope.imgURI, id);
+
+
+				}, function(err) {
+						// An error occured. Show a message to the user
+						alert("Fel vid inläsning av bild!");
+				});
+	}
 
 
 })
+
+
+
 
 
 .controller('AboutCtrl', function($scope) {
@@ -279,8 +339,6 @@ angular.module('starter.controllers', [])
 		if(stepsCount < 25){
 
 			stepsCount++;
-
-			//console.log("STEPSCOUNT", stepsCount)
 
 			var input = document.createElement('input');
 			input.className = "stepItem"
@@ -301,7 +359,6 @@ angular.module('starter.controllers', [])
 
 					document.getElementById('step' + stepsCount).addEventListener("change", function() {
 			    		sessionStorage.setItem("autosaveStep" + stepsCount, document.getElementById('step' + stepsCount).value);
-			    		console.log(document.getElementById('step' + stepsCount).value)
 
 		    		});
 
@@ -363,8 +420,7 @@ angular.module('starter.controllers', [])
 	$scope.quarter_window_width = window.innerWidth/4 + 2 + 'px';
 	$scope.textbox_width = window.innerWidth/2 - 8 + 'px';
 	$scope.margin_top_text = window.innerWidth/70 + 'px';
-	//console.log("newrecipectrl");
-	//Börjar på 3
+
 	var stepsCount = 0;
 	var ingCount = 0;
 	var newRecipe;
@@ -372,8 +428,6 @@ angular.module('starter.controllers', [])
 	var autosaveIngCount = 0;
 
 	//Get from cache
-
-	//sessionStorage.clear();
 
 	// HELT BROKEN KRASHAR... Försöker implementera att skapa alla recipe och ingredienser from cache och direkt i javascrpt.
 
@@ -419,7 +473,6 @@ angular.module('starter.controllers', [])
 
 	if(sessionStorage.getItem("autosaveImg")){
 
-		console.log("bildfanns")
 		document.getElementById("userImage").style.display = 'block';
 		document.getElementById("addImage").style.display = 'none';
 		document.getElementById("userImage").src = sessionStorage.getItem("autosaveImg");
@@ -595,7 +648,6 @@ angular.module('starter.controllers', [])
 		else // Scale is ok regardless of size
 			newRecipe.picUrlWide = 'img/default_wide.png';
 
-
 		Recipes.addNewUserRecipe(newRecipe);
 
 		setTimeout(function() {
@@ -663,14 +715,6 @@ angular.module('starter.controllers', [])
 				// Save in session storage
 				sessionStorage.setItem("autosaveImg", image);
 
-				//Format picture
-/*
-				if(document.getElementById("userImage").clientHeight < pic_squared || document.getElementById("userImage").clientWidth < pic_squared){
-					document.getElementById("userImage").height = pic_squared;
-					document.getElementById("userImage").width = pic_squared;
-				}
-*/
-
 		}, function() {
 				// User canceled or couldn't load image.
 		});
@@ -697,8 +741,6 @@ angular.module('starter.controllers', [])
 
         $cordovaCamera.getPicture(options).then(function(imageData) {
 
-						console.log("ok");
-
 						$scope.imgURI = "data:image/jpeg;base64," + imageData;
 
 						jrCropBig($scope.imgURI);
@@ -712,8 +754,6 @@ angular.module('starter.controllers', [])
 	}
 
 	$scope.takePicture = function() {
-
-		//console.log("pis")
 
         var options = {
             quality : 100,
@@ -733,8 +773,6 @@ angular.module('starter.controllers', [])
 
 					jrCropSmall($scope.imgURI);
 
-
-        	//console.log("IMG HEIGHT after: ", document.getElementById("userImage").clientHeight);
 
         }, function(err) {
             // An error occured. Show a message to the user

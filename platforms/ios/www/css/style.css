@@ -102,8 +102,6 @@ div.recipeContainer2{cursor:pointer;
 
 .contentContainer{padding:0px;}
 
-.hej{width:300 !important;}
-
 
 /*width: 158px;*/
 img.recipePicInMainMenu{border-radius:0px;
@@ -213,6 +211,8 @@ label.plusButton{margin-top:0px; color:#33cd5f; margin-left:2px;}
   bottom: 0 !important;
   padding-top: 44px !important;
 }
+
+#recipeDetailImage{width:100%; height:180px;}
 
 /** NEW RECIPE**/
 

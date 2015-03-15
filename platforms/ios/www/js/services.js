@@ -1,18 +1,15 @@
 //TODO: knappar på radera popupen
-// Fixa souvlakireceptet (Jessica)
-// Splashscreens
+// Fixa souvlakireceptet och about (Jessica)
 // Kodstäd..
 
 angular.module('starter.services', [])
 
 .factory('Recipes', function(){
 
-  console.log("hellorecipes");
-  localStorage.clear();
-  sessionStorage.clear();
+  //localStorage.clear();
+  //sessionStorage.clear();
 
   //init
-
   var recipes = [
     {id: 0, name:'Fläskfilé med sås på soltorkade tomater', fav:false, desc: desc0, steps: steps0, ingridients: ingredients0, cookTime: '20', servings:'4-5', picUrl:'img/mat/0.png', picUrlWide:'img/mat/wide/0wide.png'},
     {id: 1, name:'Krämig pasta med skinka och paprika', fav:false, desc: desc1, steps: steps1, ingridients: ingredients1, cookTime: '30', servings:'4', picUrl:'img/mat/1.png', picUrlWide:'img/mat/wide/1wide.png'},
@@ -54,10 +51,6 @@ angular.module('starter.services', [])
 
   }
 
-
-  console.log(user_recipes);
-  console.log("new recipe count", localStorage.newRecipeCount)
-
   return{
     all: function(){
       return recipes;
@@ -96,7 +89,6 @@ angular.module('starter.services', [])
           if(window.localStorage.getItem(user_recipes[i].id + 'u') === 'true')
             favRecipes_user.push(user_recipes[i]);
 
-      //console.log(favRecipes_user);
       return favRecipes_user;
 
     },
@@ -118,11 +110,8 @@ angular.module('starter.services', [])
 
         }
 
-       // user_recipes[recipeId].exists = false;
-
         // Remove from local storage
         localStorage.removeItem(recipeId);
-        //localStorage.newRecipeCount--;
 
     },
 
