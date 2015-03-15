@@ -121,6 +121,7 @@ angular.module('starter.controllers', [])
 	   });
 	   confirmPopup.then(function(res) {
 	     if(res) {
+
 	       Recipes.removeUserRecipe($scope.recipe.id);
 
 	       window.location.href = "#/recipes";
@@ -267,24 +268,15 @@ angular.module('starter.controllers', [])
 			width: window.innerWidth/2,
 			height: window.innerWidth/2
 		}).then(function(canvas) {
+
 				// success!
 				var image = canvas.toDataURL();
 
 				document.getElementById("user_recipe_img" + id).src = image;
 
-				console.log("ID: ", id);
-				console.log(recipes.get_user(id).id.id);
-				console.log("ALL user recipes", user_recipes);
-
 				Recipes.get_user(id).picUrl = image;
-
-			//	$scope.user_recipes[id].picUrl = image;
-			//	Recipes.get_user(id).picUrl = image;
-		//	console.log($scope.user_recipes[id]);
-
 				localStorage.setItem(id, JSON.stringify(Recipes.get_user(id)));
-			//	Recipes.removeUserRecipe(id);
-			//	Recipes.addNewUserRecipe($scope.user_recipes[id]);
+
 
 		}, function() {
 				// User canceled or couldn't load image.
@@ -594,15 +586,14 @@ angular.module('starter.controllers', [])
 
 	$scope.storeRecipeInfo = function(){
 
-/*
+		// Validate user input
+
 		if(!validate()){
 			setTimeout(function() {
 				alert("För långt namn eller fält tomma");
 			}, 0);
 			return;
 		}
-
-*/
 
 		var userRecipeName = document.getElementById('recipeName').value;
 		var userRecipeDesc = document.getElementById('recipeDesc').value;

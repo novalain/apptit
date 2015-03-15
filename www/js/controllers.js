@@ -121,6 +121,7 @@ angular.module('starter.controllers', [])
 	   });
 	   confirmPopup.then(function(res) {
 	     if(res) {
+
 	       Recipes.removeUserRecipe($scope.recipe.id);
 
 	       window.location.href = "#/recipes";
@@ -267,13 +268,11 @@ angular.module('starter.controllers', [])
 			width: window.innerWidth/2,
 			height: window.innerWidth/2
 		}).then(function(canvas) {
+
 				// success!
 				var image = canvas.toDataURL();
 
 				document.getElementById("user_recipe_img" + id).src = image;
-
-				//console.log("ID: ", id);
-			//	console.log(Recipes.get_user(id).id);
 
 				Recipes.get_user(id).picUrl = image;
 				localStorage.setItem(id, JSON.stringify(Recipes.get_user(id)));
@@ -587,15 +586,14 @@ angular.module('starter.controllers', [])
 
 	$scope.storeRecipeInfo = function(){
 
-/*
+		// Validate user input
+
 		if(!validate()){
 			setTimeout(function() {
 				alert("För långt namn eller fält tomma");
 			}, 0);
 			return;
 		}
-
-*/
 
 		var userRecipeName = document.getElementById('recipeName').value;
 		var userRecipeDesc = document.getElementById('recipeDesc').value;
