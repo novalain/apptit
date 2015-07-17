@@ -1,6 +1,5 @@
 //TODO: knappar på radera popupen
 // Fixa souvlakireceptet och about (Jessica)
-// Kodstäd..
 
 angular.module('starter.services', [])
 

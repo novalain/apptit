@@ -372,10 +372,8 @@ var steps13 = [
     {id:0, desc: 'Påbörja tzatzikin genom att riva 1/3 av gurkan på den grövsta sidan av ett rivjärn. Salta och låt stå en stund tills vätskan runnit av.'},
     {id:1, desc: 'Häll bort vätskan och blanda gurkan med yoghurten. Pressa i en vitlöksklyfta och häll i en tesked olivolja. Salta, peppra och rör om. Ställ sedan in i kylskåpet.'},
     {id:2, desc: 'Skär potatisen i klyftor och lägg i en ugnssäker form med bakplåtspapper. Ringla över rikligt med olivolja. Salta, peppra och toppa med lite timjan. Ställ in i ugnen ca 20-25 minuter på 200 grader.'},
-    {id:3, desc: 'dela kycklingfiléerna .'},
-    {id:4, desc: ''},
-    {id:5, desc: ''},
-    {id:6, desc: ''}
+    {id:3, desc: 'Dela kycklingfiléerna i ca 2 cm tjocka bitar och skär upp paprikorna. Sätt dem sedan på ett spett och stek i en panna med olja tills kycklingen är helt genomstekt.'},
+    {id:4, desc: 'Ta ur tzatzikin ur kylen och servera kycklingspetten tillsammans med klyftpotatisen och pitabröden.'}
 
 ];
 
@@ -383,10 +381,10 @@ var ingredients13 = [
     {id:0, quantity:'4', desc: 'kycklingfiléer'},
     {id:1, quantity:'2', desc: 'gröna eller röda paprikor'},
     {id:2, quantity:'1', desc: 'rödlök'},
-    {id:3, quantity:'1', desc: 'psotatisar'},
+    {id:3, quantity:'1', desc: 'potatisar'},
     {id:3, quantity:'1', desc: 'gurka'},
     {id:5, quantity:'2', desc: 'vitlöksklyftor'},
-    {id:6, quantity:'1', desc: 'pitabröd'},
+    {id:6, quantity:'2', desc: 'pitabröd'},
     {id:7, quantity:'2 dl', desc: 'turkisk yoghurt'},
     {id:11, quantity:'', desc:'salt'},
     {id:12, quantity:'', desc:'timjan'},
