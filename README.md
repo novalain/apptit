@@ -6,6 +6,6 @@ Setup Ionic and your emulators and run
 
 ```ionic emulate ios``` or ```ionic emulate android```
 
-you can also run just ```ionic serve```, but that is going to be quite an ugly experience.
+you can also run just ```ionic serve``` to run the app in your browser, but that is going to be quite an ugly experience.
 This project really needs to be refactored and cleaned.
 
